@@ -96,3 +96,13 @@
 - MIT / 0BSD / Apache-2.0 内容：保留目录内 LICENSE 与版权声明，即可修改、商用与再分发。Apache-2.0 另需标注修改过的文件。
 - CC BY 4.0 内容：署名作者并回链原仓。
 - 标注「许可见上游」或「Complete terms in LICENSE.txt」的技能：以原仓当前条款为准，本库不替上游作授权解释。
+
+## 许可待核实清单
+
+下表技能在收录时既没有随目录附带 LICENSE 文件，CONTRIBUTORS 里也没有记录上游仓库地址，SKILL.md 的 frontmatter 同样未声明 license。它们来自私有技能库的整理稿，多数为按模板写的轻量页面配方，但本库无法替上游作授权解释。商用或再分发前请逐条核对原始出处。
+
+共 38 个：`baoyu-design`（components）、`canvas-design`（components）、`ecommerce-image-workflow`（components）、`image-enhancer`（components）、`mockup-device-3d`（components）、`shader-dev`（components）、`threejs`（components）、`admin-form-schema`（enterprise）、`admin-ia-patterns`（enterprise）、`dashboard`（enterprise）、`iga-pages`（enterprise）、`live-dashboard`（enterprise）、`brand-extract`（foundations）、`brand-guidelines`（foundations）、`design-md-library`（foundations）、`frontend-spec`（foundations）、`reference-design-contract`（foundations）、`ui-ux-pro-max`（foundations）、`mobile-app`（mobile）、`mobile-onboarding`（mobile）、`agent-browser`（tooling）、`chrome-devtools`（tooling）、`card-xiaohongshu`（web）、`docs-page`（web）、`faq-page`（web）、`frontend-design`（web）、`magazine-poster`（web）、`poster-hero`（web）、`pricing-page`（web）、`prototype-web`（web）、`saas-landing`（web）、`social-reddit-card`（web）、`social-spotify-card`（web）、`social-x-post-card`（web）、`waitlist-page`（web）、`web-design`（web）、`web-i18n-storefront`（web）、`wireframe-sketch`（web）。
+
+另有 0 个技能在 frontmatter 写的是 `Complete terms in LICENSE.txt`，但收录目录里没有该文件：无。条款以原仓当前版本为准，本库未替上游补文件。
+
+本节的诚实口径比笼统写一句「见上游」更重要：能核实的逐条列在上表，核不出来的集中列在这里，不混在一起。
