@@ -94,3 +94,20 @@ state now, use
 `.workbuddy/scripts/github_contrib.py` 与 `.workbuddy/scripts/daily_log_index.py` 是改造前留下的脚本，前者仍按日程往 `notes/`、`snippets/`、`assets/` 写文件并推送，后者按这三个目录生成一份日志索引 README。本库的 `.gitignore` 特意不忽略这三个目录，否则前者 `git add <path>` 会失败。
 
 如果有人手动运行 `daily_log_index.py`，它会用日志索引覆盖本库的 README。需要彻底隔离时，把这两个脚本迁到独立仓库，再改对应的定时任务。
+
+## 改名后本地 remote 仍指向旧名
+
+仓库从 daily-log 改名为 ui-design-skills 时，验证旧地址重定向的真实输出：
+
+```
+$ gh api repos/YardonYan/daily-log --jq='.full_name'
+YardonYan/ui-design-skills
+```
+
+重定向在 GitHub 侧自动生效，旧的 git remote 仍能推送，但会一直显示旧地址。本地要显式改一次：
+
+```bash
+git remote set-url origin git@github.com:YardonYan/ui-design-skills.git
+```
+
+改完用 `git remote -v` 核对。本地工作副本的目录名仍是 daily-log，因为贡献脚本按这个路径写文件，改目录名会让脚本找不到仓库；只改 remote，不改目录。
