@@ -1,0 +1,7 @@
+YardonYan
+
+上游 https://github.com/twbs/bootstrap（MIT），版本 5.3.8（2025-08-26 发布），2026-10-28 收录。
+来源四件：官方 release 的 bootstrap-5.3.8-dist.zip 与 -examples.zip、npm 包 bootstrap@5.3.8 里的 scss/、tag v5.3.8 的 site/src/content（文档正文 117 篇 mdx）。
+剔除：全部 .map（dist 里 6.1MB、examples 里 1.5MB）、.github/workflows、node_modules、网站构建脚本、JS 打包源码（js/src）。
+references/INDEX.md 由本地脚本从目录实际文件生成，上游没有这份清单。
+上游另有 6.0.0-alpha.1，属 alpha，未收录，别拿它上生产。

@@ -1,0 +1,6 @@
+YardonYan
+
+上游 https://github.com/nolly-studio/cult-ui 仓库内 .agents/skills/components-build（MIT），commit 7f031dc，2026-10-28 原样收录。
+这份规范本身由 Hayden Bleasel 与 shadcn 合著（components.build 规格，16 类规则），cult-ui 只是内置了它。
+SKILL.md 与 rules/ 未改动一字；目录名按 frontmatter name=components-build 命名。
+上游另有 .agents/skills/components-build/AGENTS.md（48KB，与 rules/ 内容重叠），未收录以免重复占上下文。

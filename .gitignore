@@ -1,0 +1,8 @@
+# 不要忽略 notes/ snippets/ assets/：每日贡献图脚本仍往这三个目录写文件，
+# 忽略后 `git add <path>` 会失败，导致自动化断掉。
+.DS_Store
+Thumbs.db
+node_modules/
+__pycache__/
+*.pyc
+.workbuddy/

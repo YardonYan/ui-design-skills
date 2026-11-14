@@ -1,0 +1,15 @@
+oil-oil (oil-ui 开源版)
+YardonYan
+
+来源：https://github.com/oil-oil/oil-ui（v0.33.3，2026-11-10 拉取）
+归档：https://github.com/YardonYan/for-my-self → collected_skills/oil_ui
+许可：MIT，见目录内 LICENSE.txt，原样保留
+载荷：SKILL.md + references/ + scripts/ + tests/ + assets/
+裁剪：去掉 assets/readme/ 的 README 截图（948 KB）与 4 份 README 变体，其余未改
+
+运行依赖（本机已装，换机器要补）：
+- Python 3.10+（scripts/build_explorer.py 生成对比页、check_update.py 查版本）
+- Node + Chrome（scripts/shoot.mjs 跑真实视口截图，可选；不装就只能靠人眼看）
+
+分工：这个管「还没有」——从零定产品事实与设计北极星，出灰度结构，要多方案就拼同屏对比页。
+已有界面做整改走 unslop；直接要整页代码走 frontend-design。三者不重叠。

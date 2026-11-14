@@ -1,0 +1,4 @@
+上游：https://github.com/kubai087/kubai-icons
+许可：MIT（LICENSE-ICONS），Copyright (c) 2026 Kubai087。
+收录范围：仅 icons/ badges/ packages/ 三个 MIT 目录，原样收录，保留相对路径依赖。
+说明：SKILL.md 与 references/ 由本库编写；上游的 PROMPT.md、SKILL.md、展示页与技能文档未收录、未改编。

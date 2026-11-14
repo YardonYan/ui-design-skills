@@ -1,0 +1,10 @@
+# 载荷按 LF 存储：dist/scss/examples 是上游编译与源文件，Git 的行尾改写会让每次 pull 都产生无意义 diff
+*.css text eol=lf
+*.js text eol=lf
+*.scss text eol=lf
+*.md text eol=lf
+*.mdx text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.svg text eol=lf
+LICENSE text eol=lf

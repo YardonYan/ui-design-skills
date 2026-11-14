@@ -1,0 +1,196 @@
+{
+  "doc": "production_order",
+  "label": "生产单",
+  "numbering": {
+    "prefix": "PO",
+    "date_segment": "YYYYMM",
+    "seq_length": 4,
+    "reset": "monthly"
+  },
+  "groups": [
+    { "key": "basic", "label": "基本信息", "order": 1 },
+    { "key": "product", "label": "产品与工艺", "order": 2 },
+    { "key": "delivery", "label": "交付", "order": 3 }
+  ],
+  "fields": [
+    {
+      "fieldname": "order_no",
+      "label": "单号",
+      "type": "text",
+      "required": true,
+      "group": "basic",
+      "order": 0,
+      "readonly_when": "always",
+      "in_list": true,
+      "help": "由编号规则自动生成，不可修改"
+    },
+    {
+      "fieldname": "customer_id",
+      "label": "客户",
+      "type": "reference",
+      "options": "customer",
+      "required": true,
+      "group": "basic",
+      "order": 1,
+      "in_list": true
+    },
+    {
+      "fieldname": "contact",
+      "label": "联系人",
+      "type": "text",
+      "required": false,
+      "group": "basic",
+      "order": 2,
+      "in_list": false,
+      "max_length": 32
+    },
+    {
+      "fieldname": "phone",
+      "label": "联系电话",
+      "type": "text",
+      "required": false,
+      "group": "basic",
+      "order": 3,
+      "in_list": false,
+      "pattern": "^[0-9+\\-() ]{6,20}$"
+    },
+    {
+      "fieldname": "material",
+      "label": "材质",
+      "type": "select",
+      "options": "dict:material_type",
+      "required": true,
+      "group": "product",
+      "order": 1,
+      "in_list": false
+    },
+    {
+      "fieldname": "process",
+      "label": "工艺",
+      "type": "multiselect",
+      "options": "dict:process_type",
+      "required": false,
+      "group": "product",
+      "order": 2,
+      "in_list": false
+    },
+    {
+      "fieldname": "width_mm",
+      "label": "宽",
+      "type": "number",
+      "unit": "mm",
+      "required": true,
+      "group": "product",
+      "order": 3,
+      "min": 1,
+      "max": 20000,
+      "in_list": false
+    },
+    {
+      "fieldname": "height_mm",
+      "label": "高",
+      "type": "number",
+      "unit": "mm",
+      "required": true,
+      "group": "product",
+      "order": 4,
+      "min": 1,
+      "max": 20000,
+      "in_list": false
+    },
+    {
+      "fieldname": "qty",
+      "label": "数量",
+      "type": "integer",
+      "required": true,
+      "group": "product",
+      "order": 5,
+      "min": 1,
+      "default": 1,
+      "in_list": true
+    },
+    {
+      "fieldname": "remark",
+      "label": "备注",
+      "type": "textarea",
+      "required": false,
+      "group": "product",
+      "order": 6,
+      "max_length": 500,
+      "in_list": false
+    },
+    {
+      "fieldname": "order_date",
+      "label": "下单日",
+      "type": "date",
+      "required": true,
+      "group": "delivery",
+      "order": 1,
+      "default": "today",
+      "in_list": false
+    },
+    {
+      "fieldname": "delivery_date",
+      "label": "交期",
+      "type": "date",
+      "required": true,
+      "group": "delivery",
+      "order": 2,
+      "min_field": "order_date",
+      "in_list": true
+    },
+    {
+      "fieldname": "address",
+      "label": "送货地址",
+      "type": "textarea",
+      "required": false,
+      "group": "delivery",
+      "order": 3,
+      "max_length": 200,
+      "in_list": false
+    }
+  ],
+  "validations": [
+    {
+      "level": "block",
+      "rule": "delivery_date >= order_date",
+      "message": "交期不能早于下单日",
+      "fields": ["delivery_date"]
+    },
+    {
+      "level": "block",
+      "rule": "material in dict:material_type",
+      "message": "材质必须是有效选项",
+      "fields": ["material"]
+    },
+    {
+      "level": "warn",
+      "rule": "qty > 1000",
+      "message": "数量偏大，请复核",
+      "fields": ["qty"]
+    },
+    {
+      "level": "info",
+      "rule": "duplicate(customer_id, order_date, material)",
+      "message": "疑似重复单，同日同客户同材质已有记录",
+      "fields": ["customer_id", "order_date", "material"]
+    }
+  ],
+  "permissions": [
+    {
+      "role": "sales",
+      "actions": ["read", "create", "update", "export"],
+      "scope": "own"
+    },
+    {
+      "role": "production",
+      "actions": ["read", "update", "export"],
+      "scope": "dept"
+    },
+    {
+      "role": "finance",
+      "actions": ["read", "export", "approve"],
+      "scope": "all"
+    }
+  ]
+}

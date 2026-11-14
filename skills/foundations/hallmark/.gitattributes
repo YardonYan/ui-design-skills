@@ -1,0 +1,17 @@
+# Hallmark 的 scripts/*.mjs 用 /^---\n/ 解析主题头的 YAML front matter，
+# 行尾被 core.autocrlf 改成 CRLF 会让 theme.mjs 直接报 "no header block"。
+# 所以本目录的文本载荷强制以 LF 落盘，与提交者的 autocrlf 无关。
+* text=auto eol=lf
+*.md text eol=lf
+*.mjs text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.tsx text eol=lf
+*.ts text eol=lf
+*.vue text eol=lf
+*.jpg binary
+*.png binary
+*.gif binary

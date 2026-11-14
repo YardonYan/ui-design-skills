@@ -1,0 +1,3 @@
+上游：本库 enterprise-admin 技能的参考资料，二次拆分编写。
+许可：与本库自撰内容一致，见根目录 LICENSE。
+说明：SKILL.md 为本库编写，references/ 为原样引用的结构与字段约定。

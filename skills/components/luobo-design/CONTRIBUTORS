@@ -1,0 +1,45 @@
+YardonYan
+
+上游 https://github.com/zhouwei713/luobo-design（MIT，作者 周萝卜），
+skill 版本 0.10.1，commit c4c1d8fcb5951c5ae348a9fa0c199281927fecdb（"luobo-design v0.10.1"，上游 2026-10-30）。
+2026-10-30 整仓浅克隆收录，根目录即 skill 目录，无套娃。
+
+载荷 89 个文件 / 1.9MB，与上游逐字节一致（文本已按 .gitattributes 统一为 LF）：
+- SKILL.md 16KB，含完整工作流（听需求 → 想创意 → 三方向 → 冻结规格 → 出图 → 自检）。
+- scripts/ 27 个 Python：render.py 渲染、layouts*.py 各品类版式、art*.py 十种画风程序插画、
+  h5.py 电子请柬、brandkit.py 名片与 logo、check.py 溢出与对比度与广告法检查、prompts.py 生图提示词、
+  imagegen.py 接生图模型、setup_check.py 环境自检。
+- references/ 34 份：11 个行业包、物料说明、brief/critique、23 个节日包数据、字体与方向 JSON。
+- examples/ 6 套样例 spec.json、docs/ 9 张演示图、templates/ 2 份生图模型配置示例。
+- 上游自带 install.sh / install.ps1 / install.bat（装到各 Agent 目录，入库后不需要跑）。
+
+本地只加三个文件，未改上游内容：
+- .gitattributes：本目录文本载荷强制 eol=lf，图片二进制。脚本按行解析 md / json，
+  core.autocrlf 把 checkout 出来的副本改成 CRLF 会让匹配失效。
+- CONTRIBUTORS：本文件。
+- 无 .gitignore 改动，上游自带的已排除 __pycache__、*.pyc、config.json（含 API key）、examples/out/、work/。
+
+运行依赖不在载荷里，需要本机自备：
+- Python 3.9+（本机 3.13.14 验证）。
+- Pillow（必需，位图合成）。
+- playwright + Chromium（必需，渲染 HTML 到图片）。缺 Chromium 时 render.py 直接退出。
+  国内下载慢，用 PLAYWRIGHT_DOWNLOAD_HOST=https://cdn.npmmirror.com/binaries/playwright 再 install chromium。
+- fontTools + brotli（推荐，logo 转矢量、H5 字体子集）、requests（推荐，调生图模型 API）。
+- 生图模型可选：不配也能用，配图改为程序插画。配置放 config.json 或 ~/.config/luobo-design/config.json。
+
+2026-10-30 本机验证（在已下发的 ~/.codex/skills/luobo-design 副本里跑，不是仓库目录）：
+- setup_check.py --quick 全绿，9 项必需与推荐项除"生图模型"外全部通过。
+- setup_check.py --selftest 端到端出 2 张图（poster-square 1080x1080、cover-portrait 1080x1440）。
+- render / check / directions / imagegen / brandkit / h5 六个核心脚本 --help 全部正常退出。
+
+与库里同类 skill 的分工（选错会白跑一遍）：
+- 本 skill 是从一句话需求走到成品物料的完整链路，多物料、多尺寸、带中文程序排版与交付前自检。
+- web-ui/poster-hero 只做竖版强冲击海报，web-ui/magazine-poster 只做 Sunday-paper 风格，
+  web-ui/card-xiaohongshu 只做轮播知识卡，web-ui/brandkit 只做品牌套件，都是单点风格件。
+  需要整套物料或要中文不出错字时用本 skill；只要某个指定视觉风格时可以先用单点件。
+- 文章封面与配图归 article-visual-director，PPT 归 luobo-ppt（两者本库未收）。
+
+更新方式：
+git clone --depth 1 https://github.com/zhouwei713/luobo-design.git，整目录覆盖本目录
+（保留 .gitattributes 与 CONTRIBUTORS），把所有文本文件行尾转成 LF，
+再跑一次 setup_check.py --selftest 确认能出图。

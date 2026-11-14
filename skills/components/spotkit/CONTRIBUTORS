@@ -1,0 +1,38 @@
+YardonYan（2026-11-04 收录，载荷原样）
+
+上游：https://github.com/Devesh-Shirsath/spotkit（MIT，作者 Devesh Shirsath，2026）
+上游是什么：把一句功能描述变成抽象的产品界面插图，产物是手写规则生成的确定性 SVG，不是图片。
+十二种版式、一套视觉语言（0.5 单一描边、发丝边框、等半径、占位条），同一份文件用 CSS 变量切亮暗两版。
+
+收的是什么：上游仓库根目录即 skill 目录，无套娃，`name: spotkit` 与目录名一致。
+60 个文件 / 741KB：
+- SKILL.md 10KB，流程五步（一句话解释功能 → 选关系隐喻 → 挑 2 到 5 个基元 → 选十二版式之一再改 → 出 SVG）
+- SPEC.md 20KB，全部数字、SVG 模板、构件清单与一个完整示例；SKILL.md 要求先读它
+- references/ 11 份（隐喻、基元、版式原型、图标、主题、缩略、成套一致性、截图改造、清单、image-prompt）
+- assets/illustration.css，十二个 CSS 变量管两套主题
+- examples/ 12 张示例 SVG + 双主题 contact sheet + gallery.html + flat/ 平铺导出
+- 脚本四个：build.py 生成 12 张示例与画廊、check.py 校验（第二描边宽度、第二描边色、多个阴影、背景矩形、文字、无后缀 id、fade 线移位）、icons.py 图标路径字典、flatten.py 平铺导出
+
+未收的三项及原因：
+- site/（678KB）：上游落地页，含作者个人照片，不是 skill 载荷，收了每次 pull 都会多复制三份。
+- vercel.json：部署配置，同属展现面。
+- AGENTS.md：写给"改这个仓库"的编码代理的说明，对使用者无意义，且正文提到 site/。
+
+运行依赖：Python 3（本机 3.13.14 验证），只用标准库，无第三方包，不需要网络。
+这一点比多数作图类 skill 都省事：不装 Pillow、不装浏览器、不生图模型也能出图。
+
+2026-11-04 本机验证（在临时副本里跑，LF 行尾）：
+- `python build.py` 输出 `wrote 12 svgs + gallery + references/icons.md; all pass check.py`，退出 0。
+- 生成物与上游逐字节一致（examples/ 与 references/icons.md 对 diff 为空），说明是真确定性，不是"每次重排一遍"。
+- `python check.py --docs` 输出 `docs: 14 files, 0 problems`，退出 0。
+- `python check.py examples/approval.svg` 输出 ok。
+- `python flatten.py` 输出 `flat exports + contact sheets written`，产物与上游 examples/flat 逐字节一致。
+
+与库里同类 skill 的分工（选错会白画一遍）：
+- 本 skill 只做抽象界面插图：功能说明 → 几何构成的小图，用于功能卡、空状态、文档配图、成组的产品插图族。
+- web-ui/luobo-design 是从一句话需求走到整套物料（版式、程序插画、电子请柬、名片），要成品物料时用它。
+- web-ui/poster-hero、magazine-poster、card-xiaohongshu 是单点视觉风格件，做海报与知识卡，不做功能插图。
+- 要"像产品截图的手绘/写实图"用 image-to-code 或生图模型；本 skill 明确反对做成截图的样子。
+
+更新方式：整目录覆盖（保留 .gitattributes 与 CONTRIBUTORS），把文本文件行尾统一为 LF，
+再跑一次 build.py 与 check.py --docs，确认生成物与上游一致。

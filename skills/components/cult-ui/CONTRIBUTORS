@@ -1,0 +1,8 @@
+YardonYan
+
+上游 https://github.com/nolly-studio/cult-ui（MIT），commit 7f031dc812f7bda10213bab62752dd6d080297ff，2026-10-28 稀疏克隆收录。
+只取 apps/www/registry（154 组件 + 136 示例 + block）、apps/www/content/docs（143 篇 mdx）、registry.json 与 LICENSE.md；
+未取 apps/www/public（985 个演示图片/视频，221MB 仓库里的大头）。
+references/INDEX.md 由本地脚本从 registry.json 生成（分类按风格族与用途），上游没有这份索引。
+
+更新方式：git clone --depth 1 --filter=blob:none --sparse <上游> && git sparse-checkout set apps/www/registry apps/www/content/docs && 覆盖 registry/ docs/ registry.json 后重跑索引生成。

@@ -1,0 +1,36 @@
+YardonYan
+
+上游 https://github.com/Nutlope/hallmark（MIT），skill 版本 2.0.0，commit 6033bab2a8051b5454552d2e8e6cb8f27c483a42
+（"Merge pull request #96 from Nutlope/fifty-themes"，上游 2026-10-27 推送），2026-10-28 稀疏克隆收录。
+替换 2026-10-26 收的 v1.1.0 副本（当时来自本地 hallmark-main.zip，上游地址查不到，如今已确认就是这一家）。
+
+载荷 182 个文件，与上游逐字节一致（其中 130 个文本文件只差行尾，已统一为 LF）：
+SKILL.md 18KB + references/ 151（50 套主题各一份 md 与一张预览 jpg、21 个 macrostructure、4 个 genre、gates/flow/layout/craft/imagery 等）
++ scripts/ 28（theme.mjs 发牌与脚手架、sloplint.mjs 检查器与 render 层、capture/picture/imagegen/install/refcheck、fixtures 自评样本）
++ agents/openai.yaml + LICENSE。
+
+v2 相对 v1 的结构性变化，升级时别按旧路径找文件：
+v1 的 references/components（52 个组件原型）与 references/verbs 在 v2 已删除；
+SKILL.md 从 68KB 收缩到 18KB，硬约束下沉为 The Floor 16 条 + references/gates.md；
+主题从 21 套扩到 50 套（每套带预览图，deal 时要求"看三张图再挑"）；
+新增 scripts/，v1 副本里没有，等于只有说明书没有工具。
+
+本地只加两个文件，未改上游内容：
+- .gitattributes：本目录文本载荷强制 eol=lf。原因是 theme.mjs 的 parseHeader 用 /^---\n/ 匹配主题的 front matter，
+  行尾被 core.autocrlf 改成 CRLF 时所有主题一律报 "coral: no header block"，deal/draw/scaffold 全废。
+- CONTRIBUTORS：本文件。
+
+运行依赖不在载荷里，需要本机自备：
+- Node 18+（脚本用 node:fs、node:crypto 等内置模块，无第三方 import）。
+- sloplint --render 需要 puppeteer-core：脚本按 $HALLMARK_PUPPETEER → 本地 node_modules → `npm root -g` 的上级目录依次找。
+  本机已 npm install -g puppeteer-core（不下载 Chromium）。缺它时 render 层会打印 "render tier not run" 后正常降级，不阻塞。
+- Chrome 路径内置了 C:\Program Files\Google\Chrome\Application\chrome.exe，非默认安装位可设 CHROME_PATH。
+
+2026-10-28 本机验证跑通：deal（发三套主题）、draw（发结构）、scaffold（写出 tokens.css + base.css）、photos、
+sloplint（对 slopped.html 报 24 条 FAIL/REFLEX）、sloplint --render（1280/1440/1920 fold + 1440/375 全页共 5 张截图）。
+
+更新方式：
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Nutlope/hallmark.git && cd hallmark &&
+git sparse-checkout init --cone && git sparse-checkout set skills && git checkout <新 commit> &&
+用 skills/hallmark 整目录覆盖本目录（保留 .gitattributes 与 CONTRIBUTORS），然后把所有文本文件行尾转成 LF，
+再跑一次 theme.mjs deal 与 sloplint --render 确认可用。

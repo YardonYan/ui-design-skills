@@ -1,0 +1,19 @@
+{
+  "name": "ui-design-skills",
+  "version": "1.0.0",
+  "description": "面向 AI 技能场景的界面设计资料库：65 个技能、六类组织，覆盖网页端 UI、企业内部 UI、移动端 UI 与设计规范、组件素材和工程链路。",
+  "author": {"name": "Yardon", "url": "https://github.com/YardonYan"},
+  "homepage": "https://github.com/YardonYan/daily-log",
+  "repository": "https://github.com/YardonYan/daily-log",
+  "license": "Apache-2.0",
+  "keywords": ["agent-skill", "ai-skill", "ui-design", "web-ui", "enterprise-ui", "mobile-ui"],
+  "skills": "./skills",
+  "hooks": {},
+  "interface": {
+    "displayName": "UI Design Skills",
+    "shortDescription": "界面设计资料库，六类共 65 个技能",
+    "longDescription": "面向 AI 技能场景的界面设计资料库：65 个技能、六类组织，覆盖网页端 UI、企业内部 UI、移动端 UI 与设计规范、组件素材和工程链路。",
+    "developerName": "Yardon",
+    "category": "Developer Tools"
+  }
+}

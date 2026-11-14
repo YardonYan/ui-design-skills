@@ -1,0 +1,16 @@
+Damir Sokolovsky (@heydamir)
+YardonYan
+
+来源：https://github.com/heydamir/unslop（2026-11-10 拉取）
+归档：https://github.com/YardonYan/for-my-self → collected_skills/unslop
+许可：CC BY 4.0，见目录内 LICENSE.txt。协议要求署名作者并回链原仓，
+      SKILL.md 第 13 行那句 credit 不得删除或改写；改内容可以，署名不能动
+载荷：SKILL.md + agents/ + references/ + scripts/
+裁剪：examples/ 两屏练习素材留在归档目录，未带入本仓
+
+运行依赖（本机已装，换机器要补）：
+- Node + Playwright + Chromium（scripts/snapshot.mjs 存整站、story.mjs 出整改视频）
+- ffmpeg（story 视频需要；本机未装，不影响界面整改主流程）
+
+分工：这个管「有了但不行」——先找 slop 特征，再按间距、配色、图标、文案、字体、
+布局、细节、配图、动效九轮依次改。从零定方向走 oil-ui。

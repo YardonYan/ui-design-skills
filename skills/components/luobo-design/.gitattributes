@@ -1,0 +1,14 @@
+# 文本载荷统一按 LF 存储：脚本里有按行解析 md/json 的正则，
+# core.autocrlf 把 checkout 出来的副本改成 CRLF 会让这些匹配失效。
+* text=auto eol=lf
+*.bat text eol=crlf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary

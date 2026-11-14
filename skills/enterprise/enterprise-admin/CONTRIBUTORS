@@ -1,0 +1,28 @@
+YardonYan
+WorkBuddy Agent（执笔）
+
+结构参照，未收录上游代码：
+
+- satnaing/shadcn-admin（MIT，https://github.com/satnaing/shadcn-admin）
+  取了页面组织方式：features 下按业务切 auth / dashboard / users / tasks / apps / chats / settings / errors；
+  data-table 拆成 bulk-actions / column-header / faceted-filter / pagination / toolbar / view-options 六部件；
+  errors 五页对应 401 / 403 / 404 / 500 / 503。组件映射表里标"shadcn-admin"的条目指这些组合部件。
+  MIT 允许直接使用，若要引入可运行骨架，建议单独开仓而非塞进本 skill 载荷。
+
+- frappe/erpnext（GPL-3.0，https://github.com/frappe/erpnext）
+  只读了 erpnext/selling/doctype/sales_order/sales_order.json 的结构并写成方法描述：
+  176 个字段中 Section Break 29 / Column Break 24 / Tab Break 5 共 58 个是布局标记；
+  depends_on（如 eval:doc.po_no）管联动；permissions 按角色给 read/write/create/delete/submit/cancel/amend 等动作。
+  未复制任何代码，字段 Schema 的十二属性与三层分组是按这套结构重新写的，不是上游格式。
+
+- twentyhq/twenty（AGPL-3.0 + 部分文件商用许可，https://github.com/twentyhq/twenty）
+  只取模块切分思路：object-metadata / views / record-export / spreadsheet-import / workflow /
+  command-menu / keyboard-shortcut-menu / page-layout / side-panel。未复制代码。
+
+- 1Panel-dev/CordysCRM（GPL-3.0 另有 logo 保留条款，https://github.com/1Panel-dev/CordysCRM）
+  只取业务域划分与 Vue3 + Tailwind 后台布局的观察。未复制代码。
+
+本 skill 的 markdown 正文与 templates/ 下的 tsx 骨架为原创撰写，按上述结构重新表达，
+可直接用于内部项目。若要把上游代码整段搬进项目，需按其许可证单独处理，与本文件无关。
+
+上游许可原文核对日期：2026-11-08。
