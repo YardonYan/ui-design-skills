@@ -19,6 +19,8 @@
 | 做 App 界面 / 引导页 | `mobile` | `mobile-app` |
 | 查五端移动端尺寸规范 | `mobile` | `mobile-design-spec` |
 | 要 React 动效组件源码 | `components` | `cult-ui` |
+| 做 AI 聊天界面 / 助手面板 / 工具调用卡片 | `components` | `assistant-ui` |
+| 列 AI 对话界面要处理的状态、审交互规范 | `foundations` | `ai-chat-patterns` |
 | 要单个高辨识度交互区块 | `components` | `ricoui-blocks` |
 | 要一套风格统一的图标 | `components` | `icon-system` |
 | 要功能插图 / 空状态图 | `components` | `spotkit` |

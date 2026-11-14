@@ -1,0 +1,4 @@
+本技能文字由本库编写，Apache-2.0。
+事实参照：https://github.com/assistant-ui/assistant-ui （MIT）的仓库约定与界面元素文档，
+          仅借用界面元素名称与状态分类，未复制上游正文。
+配套技能：assistant-ui（组件落地与源码）。

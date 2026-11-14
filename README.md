@@ -2,7 +2,7 @@
 
 中文 · [English](README.en.md)
 
-面向 AI 技能场景的界面设计资料库：65 个技能、六类组织、三千多份可直接取用的规范、模板、组件源码与素材。每个技能是一个标准 `SKILL.md` 目录，AI 助手读到即可按其中的规则工作。
+面向 AI 技能场景的界面设计资料库：67 个技能、六类组织、四千多份可直接取用的规范、模板、组件源码与素材。每个技能是一个标准 `SKILL.md` 目录，AI 助手读到即可按其中的规则工作。
 
 内容覆盖企业内部 UI、网页端 UI、移动端 UI，以及支撑它们的组件、图标、配色、验收规范与工程链路。资料来自一个私有技能库、一个公开技能库，以及若干公开上游项目，已按许可与隐私口径筛选。
 
@@ -10,11 +10,11 @@
 
 | 目录 | 内容 | 技能数 |
 |---|---|---:|
-| [`skills/foundations/`](skills/foundations/) | 设计基础与验收 | 14 |
+| [`skills/foundations/`](skills/foundations/) | 设计基础与验收 | 15 |
 | [`skills/web/`](skills/web/) | 网页端 UI | 20 |
 | [`skills/enterprise/`](skills/enterprise/) | 企业内部 UI | 6 |
 | [`skills/mobile/`](skills/mobile/) | 移动端 UI | 3 |
-| [`skills/components/`](skills/components/) | 组件、区块与素材 | 16 |
+| [`skills/components/`](skills/components/) | 组件、区块与素材 | 17 |
 | [`skills/tooling/`](skills/tooling/) | 工程链路与格式 | 6 |
 
 | [`references/`](references/) | 跨技能共享语料：84 家设计语料、配色值、画布规范 | 171 份 |

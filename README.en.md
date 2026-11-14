@@ -2,7 +2,7 @@
 
 [中文](README.md) · English
 
-A skill library for AI agents working on interface design: 65 skills in six categories, with over three thousand ready-to-use guidelines, templates, component sources and assets. Every skill is a standard `SKILL.md` directory that an agent can read and act on.
+A skill library for AI agents working on interface design: 67 skills in six categories, with over four thousand ready-to-use guidelines, templates, component sources and assets. Every skill is a standard `SKILL.md` directory that an agent can read and act on.
 
 Coverage includes enterprise back-office UI, web UI and mobile UI, plus the components, icons, palettes, review rules and tooling behind them. Material is drawn from a private skill library, a public skill library and several public upstream projects, filtered for licensing and privacy.
 
@@ -10,11 +10,11 @@ Coverage includes enterprise back-office UI, web UI and mobile UI, plus the comp
 
 | Path | Contents | Skills |
 |---|---|---:|
-| [`skills/foundations/`](skills/foundations/) | Foundations & Review | 14 |
+| [`skills/foundations/`](skills/foundations/) | Foundations & Review | 15 |
 | [`skills/web/`](skills/web/) | Web UI | 20 |
 | [`skills/enterprise/`](skills/enterprise/) | Enterprise UI | 6 |
 | [`skills/mobile/`](skills/mobile/) | Mobile UI | 3 |
-| [`skills/components/`](skills/components/) | Components & Assets | 16 |
+| [`skills/components/`](skills/components/) | Components & Assets | 17 |
 | [`skills/tooling/`](skills/tooling/) | Tooling & Formats | 6 |
 
 | [`references/`](references/) | Shared corpus: 84 design-system references, palette values, canvas spec | 171 files |

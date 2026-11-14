@@ -4,9 +4,9 @@
 
 | 段 | 主要落在 | 入口技能 |
 |---|---|---|
-| 一、定方向 | foundations | `oil-ui`、`ui-ux-pro-max`、`reference-design-contract` |
+| 一、定方向 | foundations | `oil-ui`、`ui-ux-pro-max`、`reference-design-contract`、`ai-chat-patterns` |
 | 二、出结构 | web / enterprise | `wireframe-sketch`、`prototype-web`、`admin-ia-patterns` |
-| 三、出稿 | web / enterprise / mobile | `frontend-design`、`hallmark`、`enterprise-admin` |
+| 三、出稿 | web / enterprise / mobile | `frontend-design`、`hallmark`、`enterprise-admin`、`assistant-ui` |
 | 四、套类型 | web / mobile | `saas-landing`、`pricing-page`、`mobile-app` |
 | 五、配素材 | components / foundations | `icon-system`、`spotkit`、`flexoki-palette` |
 | 六、验收 | foundations / tooling | `web-design-guidelines`、`unslop`、`review-animations` |
@@ -19,6 +19,7 @@
 
 | 技能 | 说明 |
 |---|---|
+| `ai-chat-patterns` | AI 对话界面的状态与交互规范：空态、流式输出、中断与重连、错误恢复、工具调用与人工审批、输入区排队、分支切换、追问建议、可访问性与动效降级。当要评审或设计一个聊天式产品界面、要列出所有要处理… |
 | `brand-extract` | | Extract a complete Brand Kit from a live website by driving the in-app browser. Use when a bra… |
 | `brand-guidelines` | | Apply Anthropic's official brand colors and typography to artifacts for consistent visual iden… |
 | `brandkit` | | Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo s… |
@@ -82,6 +83,7 @@
 
 | 技能 | 说明 |
 |---|---|
+| `assistant-ui` | 用 assistant-ui 搭生产级 AI 对话界面：运行时与组件分层、Thread / Composer / Message / Attachment 等原语、128 个成品界面元素、工具… |
 | `baoyu-design` | >- Create polished design artifacts as self-contained HTML: UI mockups, interactive prototypes, … |
 | `bootstrap` | Bootstrap 5.3.8 离线全套（编译好的 CSS/JS、SCSS 主题变量、42 个官方示例、117 篇官方文档正文）的选型与落地手册。当要做 SaaS 后台/管理端、需要不引构建链… |
 | `canvas-design` | Create beautiful visual art in .png and .pdf documents using design philosophy. You should use t… |
@@ -123,3 +125,4 @@
 | 要动效组件源码 | `cult-ui` | `ricoui-blocks` | 前者是通用组件库，后者只有 15 个高辨识度区块 |
 | 复刻一个站 | `web-clone` | `image-to-code` | 后者只吃图，前者能顺着真实站点结构还原 |
 | 做移动端尺寸适配 | `mobile-design-spec` | `mobile-app` | 前者给规范数值，后者给页面配方 |
+| 只定 AI 对话界面的状态与规范 | `ai-chat-patterns` | `assistant-ui` | 前者不落地代码，后者是组件实现 |

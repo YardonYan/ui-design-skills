@@ -2,10 +2,11 @@
 
 本库自有内容（README、NOTICE、docs/、tools/、四个新编技能及各技能的 SKILL.md 改编部分）采用 Apache-2.0，见根目录 `LICENSE`。其余内容保留各自上游许可，逐条列在下面。
 
-共 65 个技能。许可分布：Apache-2.0 8 个, CC BY 4.0 1 个, MIT 14 个, 其他 / 见上游 42 个。
+共 67 个技能。许可分布：Apache-2.0 9 个, CC BY 4.0 1 个, MIT 15 个, 其他 / 见上游 42 个。
 
 | 技能 | 分类 | 上游 | 许可 | 收录方式 |
 |---|---|---|---|---|
+| `ai-chat-patterns` | `foundations` | 本库编写，事实参照 https://github.com/assistant-ui/assistant-ui | Apache-2.0（见根目录 LICENSE） | 自撰规范，正文经敏感词扫描 |
 | `brand-extract` | `foundations` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
 | `brand-guidelines` | `foundations` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
 | `brandkit` | `foundations` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
@@ -49,6 +50,7 @@
 | `mobile-app` | `mobile` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
 | `mobile-design-spec` | `mobile` | https://github.com/YardonYan/for-my-self-skills | Apache-2.0（来源仓 LICENSE） | 目录原样收录，正文经敏感词扫描 |
 | `mobile-onboarding` | `mobile` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
+| `assistant-ui` | `components` | https://github.com/assistant-ui/assistant-ui | MIT，Copyright (c) 2026 AgentbaseAI Inc. | 上游文档/源码/模板按目录裁剪原样收录，见技能内 CONTRIBUTORS |
 | `baoyu-design` | `components` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
 | `bootstrap` | `components` | https://github.com/twbs/bootstrap | MIT | 目录原样收录，正文经敏感词扫描 |
 | `canvas-design` | `components` | https://github.com/YardonYan/yan-teamai | Complete terms in LICENSE.txt | 目录原样收录，正文经敏感词扫描 |
@@ -101,8 +103,10 @@
 
 下列技能在收录时既没有随目录附带 LICENSE 文件，CONTRIBUTORS 里也没有上游仓库地址，SKILL.md 的 frontmatter 同样未声明 license。它们来自私有技能库的整理稿，多数为按模板写的轻量页面配方，但本库无法替上游作授权解释。商用或再分发前请逐条核对原始出处。
 
-共 34 个：`baoyu-design`（components）、`ecommerce-image-workflow`（components）、`image-enhancer`（components）、`mockup-device-3d`（components）、`shader-dev`（components）、`threejs`（components）、`admin-form-schema`（enterprise）、`admin-ia-patterns`（enterprise）、`dashboard`（enterprise）、`iga-pages`（enterprise）、`live-dashboard`（enterprise）、`brand-extract`（foundations）、`brand-guidelines`（foundations）、`design-md-library`（foundations）、`reference-design-contract`（foundations）、`ui-ux-pro-max`（foundations）、`mobile-app`（mobile）、`mobile-onboarding`（mobile）、`chrome-devtools`（tooling）、`card-xiaohongshu`（web）、`docs-page`（web）、`faq-page`（web）、`magazine-poster`（web）、`poster-hero`（web）、`pricing-page`（web）、`prototype-web`（web）、`saas-landing`（web）、`social-reddit-card`（web）、`social-spotify-card`（web）、`social-x-post-card`（web）、`waitlist-page`（web）、`web-design`（web）、`web-i18n-storefront`（web）、`wireframe-sketch`（web）。
+共 34 个：`brand-extract`（foundations）、`brand-guidelines`（foundations）、`design-md-library`（foundations）、`reference-design-contract`（foundations）、`ui-ux-pro-max`（foundations）、`card-xiaohongshu`（web）、`docs-page`（web）、`faq-page`（web）、`magazine-poster`（web）、`poster-hero`（web）、`pricing-page`（web）、`prototype-web`（web）、`saas-landing`（web）、`social-reddit-card`（web）、`social-spotify-card`（web）、`social-x-post-card`（web）、`waitlist-page`（web）、`web-design`（web）、`web-i18n-storefront`（web）、`wireframe-sketch`（web）、`admin-form-schema`（enterprise）、`admin-ia-patterns`（enterprise）、`dashboard`（enterprise）、`iga-pages`（enterprise）、`live-dashboard`（enterprise）、`mobile-app`（mobile）、`mobile-onboarding`（mobile）、`baoyu-design`（components）、`ecommerce-image-workflow`（components）、`image-enhancer`（components）、`mockup-device-3d`（components）、`shader-dev`（components）、`threejs`（components）、`chrome-devtools`（tooling）。
 
-另有 2 个技能在 frontmatter 写的是 `Complete terms in LICENSE.txt`，但收录目录里没有该文件：`canvas-design`、`frontend-design`。条款以原仓当前版本为准，本库未替上游补文件，使用前请到原仓核对。
+另有 2 个技能在 frontmatter 写的是 `Complete terms in LICENSE.txt`，但收录目录里没有该文件：`frontend-design`、`canvas-design`。条款以原仓当前版本为准，本库未替上游补文件，使用前请到原仓核对。
 
 其余技能要么目录内自带 LICENSE，要么在 frontmatter 或 CONTRIBUTORS 里记录了上游与许可，逐条列在上表。能核实的和核不出来的分开列，不混成一句「见上游」。
+
+2026-11-15 补入的 `assistant-ui` 自带 MIT LICENSE 与显式 license 声明，`ai-chat-patterns` 为本库自撰，两者都不进本清单。

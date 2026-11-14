@@ -1,0 +1,7 @@
+上游：https://github.com/assistant-ui/assistant-ui
+许可：MIT，Copyright (c) 2026 AgentbaseAI Inc.，全文见 LICENSE。
+收录口径：从 8470 文件 / 173MB 的 monorepo 中精选文档、API 声明、组件源码与 starter 模板，
+          排除文档站应用代码、云端服务文档、Vue 版文档、图片/视频/字体、lockfile、构建产物与测试快照。
+          上游源码与文档均原样收录，未改动内容；SKILL.md、references/OVERVIEW.md、CONTRIBUTORS 为本库编写。
+          上游 README 未整篇收录，其图片链接指向上游站点，安装与用法要点已写进 SKILL.md 与 OVERVIEW.md。
+          许可要求保留的版权声明保留在 LICENSE 与各源码文件头部。
