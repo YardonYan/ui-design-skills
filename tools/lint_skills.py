@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Validate the UI skill tree.
 
-Checks: every skill directory has SKILL.md; frontmatter has name and
-description; name equals the directory name; descriptions are long enough
-to be useful; skill names are unique across categories.
+Checks: the repository root SKILL.md is a valid router entry; every skill
+directory has SKILL.md; frontmatter has name and description; name equals
+the directory name; descriptions are long enough to be useful; skill names
+are unique across categories.
 
 Run from anywhere:  python tools/lint_skills.py
 Exit 0 when clean, 1 otherwise.
@@ -48,6 +49,21 @@ def main() -> int:
     errors: list[str] = []
     seen: dict[str, str] = {}
     total = 0
+
+    # The repository root is itself a router skill. Validate its entry too,
+    # but do not apply the "name equals directory name" rule to it.
+    entry = ROOT / "SKILL.md"
+    if not entry.exists():
+        errors.append("仓库根缺 SKILL.md，整体调用时没有入口")
+    else:
+        fm = frontmatter(entry.read_text(encoding="utf-8", errors="replace"))
+        if not fm:
+            errors.append("根 SKILL.md 没有合法的 YAML frontmatter")
+        else:
+            if not fm.get("name"):
+                errors.append("根 SKILL.md 缺 name")
+            if len(fm.get("description", "").strip().strip("'\"").strip(">-|")) < 40:
+                errors.append("根 SKILL.md 的 description 过短，需写清触发条件与边界")
 
     for cat in sorted(p for p in SKILLS.iterdir() if p.is_dir()):
         for d in sorted(p for p in cat.iterdir() if p.is_dir()):

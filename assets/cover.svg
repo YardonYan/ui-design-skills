@@ -52,17 +52,17 @@
 <line x1="0" y1="640" x2="1280" y2="640" stroke="#efe9d9" stroke-width="1"/>
 <rect x="0" y="0" width="12" height="640" rx="0" fill="#c96442" />
 <text x="72" y="92" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="15" font-weight="700" fill="#c96442" text-anchor="start" >AGENT SKILLS  /  INTERFACE DESIGN</text>
-<text x="72" y="176" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="68" font-weight="700" fill="#1c1b1a" text-anchor="start" >UI Design</text>
-<text x="72" y="250" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="68" font-weight="700" fill="#1c1b1a" text-anchor="start" >Skills</text>
-<text x="72" y="306" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="24" font-weight="400" fill="#6f6e69" text-anchor="start" >从一句话需求，到一页能用的界面</text>
-<text x="72" y="346" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="19" font-weight="400" fill="#6f6e69" text-anchor="start" >67 个技能  ·  6 类界面  ·  可直接复制的话术</text>
+<text x="72" y="180" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="62" font-weight="700" fill="#1c1b1a" text-anchor="start" >说清产品</text>
+<text x="72" y="252" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="62" font-weight="700" fill="#1c1b1a" text-anchor="start" >自动匹配</text>
+<text x="72" y="306" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="22" font-weight="400" fill="#6f6e69" text-anchor="start" >AI 按意图挑选技能，不需要你记名字</text>
+<text x="72" y="346" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="17" font-weight="400" fill="#6f6e69" text-anchor="start" >67 个技能  ·  6 类界面  ·  整个仓库作为一个 Skill 调用</text>
 <rect x="72" y="390" width="128" height="40" rx="20" fill="#ffffff" stroke="#e3e0d5" stroke-width="1.5" />
-<text x="136" y="416" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="16" font-weight="600" fill="#1c1b1a" text-anchor="middle" >选场景</text>
+<text x="136" y="416" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="16" font-weight="600" fill="#1c1b1a" text-anchor="middle" >说产品</text>
 <rect x="218" y="390" width="128" height="40" rx="20" fill="#ffffff" stroke="#e3e0d5" stroke-width="1.5" />
-<text x="282" y="416" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="16" font-weight="600" fill="#1c1b1a" text-anchor="middle" >抄话术</text>
+<text x="282" y="416" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="16" font-weight="600" fill="#1c1b1a" text-anchor="middle" >自动匹配</text>
 <rect x="364" y="390" width="128" height="40" rx="20" fill="#ffffff" stroke="#e3e0d5" stroke-width="1.5" />
 <text x="428" y="416" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="16" font-weight="600" fill="#1c1b1a" text-anchor="middle" >出界面</text>
-<text x="72" y="500" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="18" font-weight="600" fill="#1c1b1a" text-anchor="start" >装上 → 挑场景 → 复制话术 → 交给 AI 助手</text>
+<text x="72" y="500" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="17" font-weight="600" fill="#1c1b1a" text-anchor="start" >装上整个仓库 → 说清产品 → AI 自动匹配技能 → 出界面</text>
 <text x="72" y="534" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#6f6e69" text-anchor="start" >网页  /  中后台  /  移动端  /  AI 对话  /  组件  /  验收</text>
 <text x="72" y="596" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="14" font-weight="400" fill="#6f6e69" text-anchor="start" >Apache-2.0  ·  第三方逐条署名  ·  国内工具优先</text>
 <rect x="660" y="90" width="268" height="138" rx="14" fill="#ffffff" stroke="#e3e0d5" stroke-width="1.5" />

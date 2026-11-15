@@ -76,16 +76,16 @@ def cover() -> str:
         o.append(f'<line x1="0" y1="{gy}" x2="1280" y2="{gy}" stroke="#efe9d9" stroke-width="1"/>')
     o.append(rect(0, 0, 12, 640, ACCENT))
     o.append(txt(72, 92, "AGENT SKILLS  /  INTERFACE DESIGN", 15, ACCENT, 700))
-    o.append(txt(72, 176, "UI Design", 68, INK, 700))
-    o.append(txt(72, 250, "Skills", 68, INK, 700))
-    o.append(txt(72, 306, "从一句话需求，到一页能用的界面", 24, MUTED))
-    o.append(txt(72, 346, "67 个技能  ·  6 类界面  ·  可直接复制的话术", 19, MUTED))
+    o.append(txt(72, 180, "说清产品", 62, INK, 700))
+    o.append(txt(72, 252, "自动匹配", 62, INK, 700))
+    o.append(txt(72, 306, "AI 按意图挑选技能，不需要你记名字", 22, MUTED))
+    o.append(txt(72, 346, "67 个技能  ·  6 类界面  ·  整个仓库作为一个 Skill 调用", 17, MUTED))
 
-    pills = [("选场景", 72), ("抄话术", 218), ("出界面", 364)]
+    pills = [("说产品", 72), ("自动匹配", 218), ("出界面", 364)]
     for label, x in pills:
         o.append(rect(x, 390, 128, 40, "#ffffff", LINE, 20))
         o.append(txt(x + 64, 416, label, 16, INK, 600, "middle"))
-    o.append(txt(72, 500, "装上 → 挑场景 → 复制话术 → 交给 AI 助手", 18, INK, 600))
+    o.append(txt(72, 500, "装上整个仓库 → 说清产品 → AI 自动匹配技能 → 出界面", 17, INK, 600))
     o.append(txt(72, 534, "网页  /  中后台  /  移动端  /  AI 对话  /  组件  /  验收", 15, MUTED))
     o.append(txt(72, 596, "Apache-2.0  ·  第三方逐条署名  ·  国内工具优先", 14, MUTED))
 
