@@ -6,19 +6,19 @@ Describe the product you want. The AI matches the right skill out of 67. No dire
 
 </div>
 
-<img src="./assets/cover.svg" alt="UI Design Skills cover: describe the product, skills match themselves, 67 skills in six categories" width="100%">
+<img src="./assets/cover.svg" alt="UI Design Skills cover: describe the product, skills match themselves, 72 skills in six categories" width="100%">
 
 <div align="center">
 
-<img src="./assets/badges.svg" alt="v2.3 · 67 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
+<img src="./assets/badges.svg" alt="v2.3 · 72 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
 
 <img src="./assets/tech-stack.svg" alt="Stack: standard Agent Skills and SKILL.md, frameworks React TypeScript Tailwind CSS HTML/CSS, components shadcn/ui Bootstrap React Native, tooling and output Node.js Python SVG JSON Canvas" width="100%">
 
-Current release v2.3 · 67 skills · Apache-2.0
+Current release v2.3 · 72 skills · Apache-2.0
 
 [中文](./README.md) · English · [Contribute a translation](https://github.com/YardonYan/ui-design-skills/issues)
 
-[See it working](#see-it-working) · [30-second start](#30-second-start) · [Install](#install-and-supported-assistants) · [Describe the product](#just-describe-the-product) · [Copy-paste prompts](#copy-paste-prompts) · [Intent & fallback](#intent-routing-and-fallback) · [Resources & wisdom](#resource-and-wisdom-layers) · [Six categories](#whats-in-the-six-categories) · [FAQ](#faq)
+[See it working](#see-it-working) · [30-second start](#30-second-start) · [Install](#install-and-supported-assistants) · [Describe the product](#just-describe-the-product) · [Copy-paste prompts](#copy-paste-prompts) · [Intent & fallback](#intent-routing-and-fallback) · [Resources & skills](#external-resources-and-integrated-skills) · [Six categories](#whats-in-the-six-categories) · [FAQ](#faq)
 
 </div>
 
@@ -313,38 +313,37 @@ Conflicts have explicit rules: create/read/update/delete and fields go to enterp
 
 If the user says the match was wrong, switch skills and redo. They should not have to explain the request again.
 
-## Resource and wisdom layers
+## External resources and integrated skills
 
-Alongside the 67 skills, the repository carries two layers of external material so that other people's UI design experience is collected in one place. Calling this one repository is enough; there is no need to hunt through other skill libraries. Both layers load on demand and are not read by default.
+The repository has 72 skills, five of them adapted from other people's UI skill content and promoted into `skills/`. Calling this one repository is enough; there is no need to hunt through other skill libraries. A nine-class resource index is available for on-demand lookup.
 
-| Layer | Path | Contents | When to read |
+| Part | Path | Contents | When |
 |---|---|---|---|
-| Resources | `references/resources/` | Nine classes of link indexes, 37 GitHub links + 103 sites | Looking for component libraries, inspiration galleries, colour tools, UI prompt libraries or templates |
-| Wisdom | `references/wisdom/` | Text snapshots of five upstream skill repos, 169 Markdown files | Improving polish, art direction, accessibility, motion or prompt writing |
+| Integrated skills | `skills/foundations/` | `design-vocabulary`, `art-direction`, `a11y-rules`, `motion-craft`, `motion-prompts` | Polish, art direction, accessibility, motion, prompt writing |
+| Resource index | `references/resources/` | 37 repository links + 103 sites | Component libraries, inspiration galleries, colour tools, UI prompt libraries, templates |
 
-The wisdom layer contains real skill content, not links: `impeccable` design vocabulary and refinement commands, `taste-skill` art direction, `jakubkrehel` accessibility and colour rules, `emilkowalski` motion skills, and `motion-prompt` motion-prompt authoring. Each source has one uniform note; attribution and licences are registered in `THIRD-PARTY.md`. The `hallmark`, `ui-ux-pro-max`, `frontend-design` and `emil-design-eng` skills and the 84-brand DESIGN.md corpus already in this repository are not duplicated.
+The integrated skills are real skills with uniform names and `SKILL.md` files: installable, routable and validated. Their rule text has been adapted into each skill's `references/`. The `hallmark`, `ui-ux-pro-max`, `frontend-design` and `emil-design-eng` skills and the 84-brand DESIGN.md corpus already here are not duplicated. Attribution and licences are registered in `THIRD-PARTY.md`.
 
-The loading rule is simple: when the user wants an output, go straight to a skill and do not read either layer. Only signals such as find, is there, reference, inspiration or improve polish open them. Then read that layer's `INDEX.md` first and load only the one matching class file or one source directory, three files at most. Full rules are in `docs/resource-routing.md`.
+The resource index is skipped by default. When the user wants an output, go straight to a skill; only signals such as find, is there, reference or inspiration open it, and then read `references/resources/INDEX.md` plus the one matching class file. Full rules are in `docs/resource-routing.md`.
 
 To use a skill and external experience together, a prompt can look like this:
 
 ```
 Use the UI Design Skills repository. I'm building a landing page for an AI notes product.
-Match the right skill and build the page, then use the external design vocabulary
-to check spacing and colour polish.
+Match the right skill and build the page, then use design-vocabulary to check spacing and colour polish.
 ```
 
-The link truth source is `references/resources/SOURCE.md`. Class files and both INDEX files are generated by `tools/build_resource_index.py`; change the truth source and re-run the script.
+The link truth source is `references/resources/SOURCE.md`. Class files and the INDEX are generated by `tools/build_resource_index.py`; change the truth source and re-run the script.
 
 ## What's in the six categories
 
 Once you can use a skill, take in the whole library so you can add skills as needed instead of searching from scratch every time.
 
-<img src="./assets/category-bar.svg" alt="Six categories: foundations 15, web 20, enterprise 6, mobile 3, components 17, tooling 6" width="100%">
+<img src="./assets/category-bar.svg" alt="Six categories: foundations 20, web 20, enterprise 6, mobile 3, components 17, tooling 6" width="100%">
 
 | Category | Scope | Skills | Representative |
 |---|---|---:|---|
-| `foundations` | Direction, colour, branding, interaction states, review | 15 | `oil-ui`, `flexoki-palette`, `ai-chat-patterns`, `unslop` |
+| `foundations` | Direction, colour, branding, interaction states, review | 20 | `oil-ui`, `flexoki-palette`, `ai-chat-patterns`, `unslop` |
 | `web` | Public-facing pages and page types | 20 | `saas-landing`, `pricing-page`, `web-clone` |
 | `enterprise` | Back office, forms, information architecture, dashboards | 6 | `enterprise-admin`, `admin-form-schema` |
 | `mobile` | App screens, onboarding, platform dimensions | 3 | `mobile-app`, `mobile-design-spec` |
@@ -357,7 +356,7 @@ With the map in mind, understanding how a single skill directory is read makes t
 
 <img src="./assets/skill-anatomy.svg" alt="Anatomy of a skill directory and the four steps an agent takes" width="100%">
 
-Each skill is a directory. `SKILL.md` is the entry point; its YAML frontmatter requires `name` and `description`, and the description states what it does, when to use it and when not to. The agent loads only matched files instead of pushing all 67 skills into context. Run `python tools/lint_skills.py` to validate the format.
+Each skill is a directory. `SKILL.md` is the entry point; its YAML frontmatter requires `name` and `description`, and the description states what it does, when to use it and when not to. The agent loads only matched files instead of pushing all 72 skills into context. Run `python tools/lint_skills.py` to validate the format.
 
 ## What's new in v2.3
 
@@ -365,9 +364,9 @@ Current release: v2.3. What this release contains:
 
 | Update | Detail |
 |---|---|
-| Resource and wisdom layers | Nine classes of external link indexes (37 GitHub + 103 sites) and text snapshots of five upstream skill repos (169 Markdown files); not loaded by default, only the matching file is read on demand |
+| External resources and integrated skills | Nine classes of resource links (37 repositories + 103 sites); five external skill sets adapted into real skills under `skills/foundations/`, uniformly named, installable, routable and validated |
 | Intent routing entry | Added the root `SKILL.md` and `docs/intent-routing.md` so the whole repository can be called as one Skill; users describe the product and the AI matches skills, with conflict rules and a six-step fallback |
-| Six-category reorganisation | 67 skills grouped by final output into foundations, web, enterprise, mobile, components and tooling |
+| Six-category reorganisation | 72 skills grouped by final output into foundations, web, enterprise, mobile, components and tooling |
 | AI chat interface track | Added the `assistant-ui` component payload and the `ai-chat-patterns` interaction spec, covering streaming, tool approval, branching and accessibility review |
 | Assets and colour | Added the `icon-system` icon set, `ricoui-blocks` motion blocks and the `flexoki-palette` ink palette |
 | Prompt library | A universal formula, ten scenario prompts, a before/after comparison table and four follow-up prompts, all phrased as product descriptions with no skill paths |

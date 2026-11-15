@@ -38,7 +38,7 @@ LINE = "#e3e0d5"
 ACCENT = "#c96442"
 
 CATS = [
-    ("foundations", "设计基础", 15, "#8a6f4a"),
+    ("foundations", "设计基础", 20, "#8a6f4a"),
     ("web", "网页端", 20, "#c96442"),
     ("enterprise", "企业后台", 6, "#4b6b8a"),
     ("mobile", "移动端", 3, "#7a6b9a"),
@@ -79,7 +79,7 @@ def cover() -> str:
     o.append(txt(72, 180, "说清产品", 62, INK, 700))
     o.append(txt(72, 252, "自动匹配", 62, INK, 700))
     o.append(txt(72, 306, "AI 按意图挑选技能，不需要你记名字", 22, MUTED))
-    o.append(txt(72, 346, "67 个技能  ·  6 类界面  ·  整个仓库作为一个 Skill 调用", 17, MUTED))
+    o.append(txt(72, 346, "72 个技能  ·  6 类界面  ·  整个仓库作为一个 Skill 调用", 17, MUTED))
 
     pills = [("说产品", 72), ("自动匹配", 218), ("出界面", 364)]
     for label, x in pills:
@@ -136,7 +136,7 @@ def cover() -> str:
 
 # ---------------------------------------------------------------- badges.svg
 def badges() -> str:
-    items = [("v2.3", ACCENT), ("67 SKILLS", "#4b6b8a"),
+    items = [("v2.3", ACCENT), ("72 SKILLS", "#4b6b8a"),
              ("AGENT SKILLS", "#3f7d6a"), ("APACHE-2.0", "#7a6b9a"),
              ("CN TOOLS FIRST", "#8a6f4a"), ("NO CDN", "#c96442")]
     x = 4
@@ -181,7 +181,7 @@ def tech_stack() -> str:
 def category_bar() -> str:
     o = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 180" width="1200" height="180">',
          rect(0, 0, 1200, 180, PAPER)]
-    o.append(txt(20, 34, "67 个技能，按最终产物分成六类", 20, INK, 700))
+    o.append(txt(20, 34, "72 个技能，按最终产物分成六类", 20, INK, 700))
     for i, (name, zh, n, color) in enumerate(CATS):
         x = 20 + i * 194
         o.append(rect(x, 56, 184, 84, color, rx=10))

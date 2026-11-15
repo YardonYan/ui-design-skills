@@ -9,7 +9,8 @@
 | 三、出稿 | web / enterprise / mobile | `frontend-design`、`hallmark`、`enterprise-admin`、`assistant-ui` |
 | 四、套类型 | web / mobile | `saas-landing`、`pricing-page`、`mobile-app` |
 | 五、配素材 | components / foundations | `icon-system`、`spotkit`、`flexoki-palette` |
-| 六、验收 | foundations / tooling | `web-design-guidelines`、`unslop`、`review-animations` |
+| 六、验收 | foundations / tooling | `web-design-guidelines`、`unslop`、`review-animations`、`a11y-rules` |
+| 附、整合技能 | foundations | `design-vocabulary`、`art-direction`、`a11y-rules`、`motion-craft`、`motion-prompts` |
 
 ## 按类逐条清单
 
@@ -19,15 +20,20 @@
 
 | 技能 | 说明 |
 |---|---|
+| `a11y-rules` | 逐条核对界面的可访问性：语义与 ARIA、焦点与键盘、表单、触控热区、读屏、动效与缩放。当要审一份界面哪里对键盘或读屏不友好，或要在写代码前把无障碍要求列全时用。产出是分项规则与检查清单。做通… |
 | `ai-chat-patterns` | AI 对话界面的状态与交互规范：空态、流式输出、中断与重连、错误恢复、工具调用与人工审批、输入区排队、分支切换、追问建议、可访问性与动效降级。当要评审或设计一个聊天式产品界面、要列出所有要处理… |
+| `art-direction` | 给界面先定艺术方向：参考图拆解、背景、卡片、文案动作与视觉语气。当产品要有性格、不要模板感、或需要在动手前并排比较几种视觉路线时用。产出是方向描述与可落地的视觉要素清单。只要一页能用的落地页用… |
 | `brand-extract` | | Extract a complete Brand Kit from a live website by driving the in-app browser. Use when a bra… |
 | `brand-guidelines` | | Apply Anthropic's official brand colors and typography to artifacts for consistent visual iden… |
 | `brandkit` | | Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo s… |
 | `design-md-library` | 84 家网站的设计语言分析库（DESIGN.md）查询入口。当需要具体视觉 token 而不是形容词时使用：定落地页/后台/品牌页的配色与字号、要"像 Linear 那样""Airbnb 那种… |
+| `design-vocabulary` | 用一套可点名的设计词汇给界面下准确指令，并按间距、配色、字体、动效、层级逐维整改。当已有界面看着平、要提升质感、或需要把模糊的`改好看点`拆成可执行动作时用。产出是整改清单与可直接交给编码助手… |
 | `emil-design-eng` | | This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisi… |
 | `flexoki-palette` | 一套面向屏幕阅读与写作的低饱和油墨色板，含 16 级中性灰阶与 8 组彩色各 11 级，深浅双底色。当要给笔记应用、文档站、编辑器或代码高亮定颜色，且希望暖纸底而不是纯白、纯黑灰或紫蓝渐变时用… |
 | `frontend-spec` | 企业级前端开发规范 Skill，包含命名、目录、CSS/JS/TS、Vue/React、Git、构建、性能、安全完整规范 trigger: 前端规范|代码规范|命名规范|目录规范|css规范|… |
 | `hallmark` | Design skill for websites and new pages that look designed, not generated. Use when the user ask… |
+| `motion-craft` | 做界面动效：动画词汇、缓动与配方、动画性能、苹果风格界面与组件细节。当要给交互补上动效、要判断该不该动、或动效卡顿要定位性能原因时用。产出是动效配方与实现约束。只审动效合规用 review-a… |
+| `motion-prompts` | 把动效需求写成可复用的提示词：格式约定、字段拆解、参考图转提示词。当要让 AI 稳定产出动效描述、或要把一个动效效果沉淀成可复用的提示词模板时用。产出是格式说明与提示词模板。做动效实现用 mo… |
 | `oil-ui` | 设计、改进和评审网站、App、后台与组件的界面：探索设计方向、生成多风格同屏对比页，并基于真实截图打磨视觉层级；按请求交付对比页、设计说明、设计稿或可运行界面。只负责设计判断，不用于纯业务逻辑… |
 | `reference-design-contract` | | Turn vague taste, screenshots, URLs, product notes, or "make it feel like this" references int… |
 | `review-animations` | | Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design… |

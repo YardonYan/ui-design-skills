@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 180" width="1200" height="180">
 <rect x="0" y="0" width="1200" height="180" rx="0" fill="#FFFCF0" />
-<text x="20" y="34" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="20" font-weight="700" fill="#1c1b1a" text-anchor="start" >67 个技能，按最终产物分成六类</text>
+<text x="20" y="34" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="20" font-weight="700" fill="#1c1b1a" text-anchor="start" >72 个技能，按最终产物分成六类</text>
 <rect x="20" y="56" width="184" height="84" rx="10" fill="#8a6f4a" />
-<text x="36" y="98" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="start" >15</text>
+<text x="36" y="98" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="start" >20</text>
 <text x="36" y="124" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#ffffff" text-anchor="start" >设计基础</text>
 <text x="28" y="162" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="400" fill="#6f6e69" text-anchor="start" >foundations</text>
 <rect x="214" y="56" width="184" height="84" rx="10" fill="#c96442" />

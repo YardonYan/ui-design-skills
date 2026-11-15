@@ -2,23 +2,23 @@
 
 # UI Design Skills
 
-说清要做什么产品，AI 自动从 67 个技能里匹配该用哪一个。你不需要查目录，也不需要记技能名。
+说清要做什么产品，AI 自动从 72 个技能里匹配该用哪一个。你不需要查目录，也不需要记技能名。
 
 </div>
 
-<img src="./assets/cover.svg" alt="UI Design Skills 封面：说清产品，自动匹配，67 个技能分六类" width="100%">
+<img src="./assets/cover.svg" alt="UI Design Skills 封面：说清产品，自动匹配，72 个技能分六类" width="100%">
 
 <div align="center">
 
-<img src="./assets/badges.svg" alt="v2.3 · 67 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
+<img src="./assets/badges.svg" alt="v2.3 · 72 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
 
 <img src="./assets/tech-stack.svg" alt="技术栈：标准 Agent Skills 与 SKILL.md，框架 React、TypeScript、Tailwind CSS、HTML/CSS，组件 shadcn/ui、Bootstrap、React Native，工具与产物 Node.js、Python、SVG、JSON Canvas" width="100%">
 
-当前版本 v2.3 · 67 个技能 · Apache-2.0
+当前版本 v2.3 · 72 个技能 · Apache-2.0
 
 中文 · [English](./README.en.md) · [贡献其他语言](https://github.com/YardonYan/ui-design-skills/issues)
 
-[看效果](#先看效果) · [30 秒上手](#30-秒上手) · [安装](#安装与支持的助手) · [说清产品](#你只需说清产品) · [抄话术](#话术模板) · [意图与兜底](#意图识别与兜底) · [资源与智慧](#资源与智慧层) · [六类](#六类里有什么) · [常见问题](#常见问题)
+[看效果](#先看效果) · [30 秒上手](#30-秒上手) · [安装](#安装与支持的助手) · [说清产品](#你只需说清产品) · [抄话术](#话术模板) · [意图与兜底](#意图识别与兜底) · [资源与技能](#外部资源与整合技能) · [六类](#六类里有什么) · [常见问题](#常见问题)
 
 </div>
 
@@ -305,37 +305,37 @@ AI 对话界面
 
 使用者反馈匹配错了，换一个技能重做即可，不需要重新解释需求。
 
-## 资源与智慧层
+## 外部资源与整合技能
 
-除了 67 个技能，仓库还收了两层外部资料，把别人分享的 UI 设计经验统合进来。调用这一个仓库就够，不用再到处翻别的技能库。两层都按需加载，默认不读。
+仓库共 72 个技能，其中 5 个是把别人分享的 UI 技能内容改编后正式纳入的。调用这一个仓库就够，不用再到处翻别的技能库。另有共具 9 类资源索引，按需查询。
 
-| 层 | 路径 | 内容 | 什么时候读 |
+| 部分 | 路径 | 内容 | 什么时候用 |
 |---|---|---|---|
-| 资源层 | `references/resources/` | 9 类网址索引，37 条 GitHub 链接 + 103 条站点 | 找组件库、灵感站、配色工具、UI 提示词库、模板 |
-| 智慧层 | `references/wisdom/` | 5 个上游技能仓库的文本快照，169 份 Markdown | 提升质感、艺术方向、可访问性、动效、提示词写法 |
+| 整合技能 | `skills/foundations/` | `design-vocabulary`、`art-direction`、`a11y-rules`、`motion-craft`、`motion-prompts` | 提升质感、艺术方向、可访问性、动效、提示词写法 |
+| 资源索引 | `references/resources/` | 37 条仓库链接 + 103 条站点 | 找组件库、灵感站、配色工具、UI 提示词库、模板 |
 
-智慧层收的是别人的实际技能内容，不是链接：`impeccable` 的设计词汇与整改命令、`taste-skill` 的艺术方向、`jakubkrehel` 的可访问性与配色细则、`emilkowalski` 的动效技能、`motion-prompt` 的动效提示词写法。每个来源一份统一格式的说明文件，归属与许可集中登记在 `THIRD-PARTY.md`。本库已有的 `hallmark`、`ui-ux-pro-max`、`frontend-design`、`emil-design-eng` 与 84 家 DESIGN.md 语料不重复收。
+整合技能是正式技能，有统一命名的 `SKILL.md`，能安装、能被路由、能被校验；外部技能的规则文本已改编进各自的 `references/`。本库已有的 `hallmark`、`ui-ux-pro-max`、`frontend-design`、`emil-design-eng` 与 84 家 DESIGN.md 语料不重复收。归属与许可统一登记在 `THIRD-PARTY.md`。
 
-加载规则很简单：使用者要的是产物，就直接走技能，不读这两层；只有出现找、有没有、参考、灵感、提升质感这类信号才进入。进入后先读该层的 `INDEX.md`，再只读命中的一份分类文件或一个来源目录，一次最多三份。完整规则见 `docs/resource-routing.md`。
+资源索引默认不读。使用者要的是产物就走技能；只有出现找、有没有、参考、灵感这类信号，才读 `references/resources/INDEX.md` 再取命中的一份分类文件。完整规则见 `docs/resource-routing.md`。
 
 要同时用技能与外部经验，话术可以这样写：
 
 ```
 调用 UI Design Skills 仓库，我要做一个 AI 笔记产品的落地页。
-先按意图匹配技能完成页面，再借外部设计词汇检查间距与配色的质感问题。
+先按意图匹配技能完成页面，再用 design-vocabulary 检查间距与配色的质感问题。
 ```
 
-链接清单的真相源是 `references/resources/SOURCE.md`，分类文件与两个 INDEX 都由 `tools/build_resource_index.py` 生成，改链接只改真相源再重跑脚本。
+链接清单的真相源是 `references/resources/SOURCE.md`，分类文件与 INDEX 都由 `tools/build_resource_index.py` 生成，改链接只改真相源再重跑脚本。
 
 ## 六类里有什么
 
 会用之后，回头看一下整个库的全貌，方便按需补技能，而不是每次都从头找。
 
-<img src="./assets/category-bar.svg" alt="六类构成：设计基础 15、网页端 20、企业后台 6、移动端 3、组件素材 17、工程链路 6" width="100%">
+<img src="./assets/category-bar.svg" alt="六类构成：设计基础 20、网页端 20、企业后台 6、移动端 3、组件素材 17、工程链路 6" width="100%">
 
 | 类别 | 管什么 | 技能数 | 代表技能 |
 |---|---|---:|---|
-| `foundations` | 方向、配色、品牌、交互状态、验收整改 | 15 | `oil-ui`、`flexoki-palette`、`ai-chat-patterns`、`unslop` |
+| `foundations` | 方向、配色、品牌、交互状态、验收整改 | 20 | `oil-ui`、`flexoki-palette`、`ai-chat-patterns`、`unslop` |
 | `web` | 面向公众的网页与页面类型 | 20 | `saas-landing`、`pricing-page`、`web-clone` |
 | `enterprise` | 中后台、表单、信息架构、看板 | 6 | `enterprise-admin`、`admin-form-schema` |
 | `mobile` | App 界面、引导页、多端尺寸 | 3 | `mobile-app`、`mobile-design-spec` |
@@ -348,7 +348,7 @@ AI 对话界面
 
 <img src="./assets/skill-anatomy.svg" alt="一个技能目录的结构，以及 AI 助手读取它的四步" width="100%">
 
-每个技能是一个目录，`SKILL.md` 是入口，YAML frontmatter 里 `name` 与 `description` 必填，`description` 写清做什么、什么时候用、什么时候别用。AI 只加载被匹配到的文件，不会把 67 个技能全灌进上下文。想核对格式可以跑 `python tools/lint_skills.py`。
+每个技能是一个目录，`SKILL.md` 是入口，YAML frontmatter 里 `name` 与 `description` 必填，`description` 写清做什么、什么时候用、什么时候别用。AI 只加载被匹配到的文件，不会把 72 个技能全灌进上下文。想核对格式可以跑 `python tools/lint_skills.py`。
 
 ## v2.3 更新内容
 
@@ -356,9 +356,9 @@ AI 对话界面
 
 | 更新 | 说明 |
 |---|---|
-| 资源与智慧两层 | 收 9 类外部资源索引（37 条 GitHub + 103 条站点）与 5 家上游技能文本快照（169 份 Markdown），默认不加载，按意图只读命中的一份 |
+| 外部资源与整合技能 | 共具 9 类资源索引（37 条仓库 + 103 条站点）；把 5 家外部技能改编成正式技能纳入 `skills/foundations/`，统一命名、可安装、可校验、可路由 |
 | 意图识别入口 | 新增根目录 `SKILL.md` 与 `docs/intent-routing.md`，整个仓库可作为一个 Skill 调用；使用者只说产品，AI 自动匹配技能，含冲突裁决与六步兜底 |
-| 六类重组 | 67 个技能按最终产物分成 foundations、web、enterprise、mobile、components、tooling，选型不再靠猜 |
+| 六类重组 | 72 个技能按最终产物分成 foundations、web、enterprise、mobile、components、tooling，选型不再靠猜 |
 | AI 对话界面主线 | 新增 `assistant-ui` 组件载荷与 `ai-chat-patterns` 交互规范，覆盖流式输出、工具审批、分支与可访问性验收 |
 | 素材与配色 | 新增成套图标 `icon-system`、动效区块 `ricoui-blocks`、油墨配色 `flexoki-palette` |
 | 话术模板库 | 万能公式、10 个场景话术、反面对照与续接话术，全部改成产品描述式，不需要写技能路径 |
@@ -375,10 +375,10 @@ AI 对话界面
 | 我需要知道具体技能名吗 | 不需要。说清要做什么产品即可，AI 按根 `SKILL.md` 与 `docs/intent-routing.md` 自动匹配 |
 | AI 匹配错了怎么办 | 补一句产物形态或平台约束；仍不对就说明期望拿到什么，它会换主技能重做 |
 | 不装能用吗 | 能。把根 `SKILL.md` 贴进对话，再让 AI 按需读仓库里对应的技能文件 |
-| 要一次装 67 个吗 | 不用。整体调用时 clone 一次就够，不必逐个安装 |
+| 要一次装 72 个吗 | 不用。整体调用时 clone 一次就够，不必逐个安装 |
 | 生成的界面能直接上线吗 | 模板是起点，还要接真实数据、品牌与后端；上线前按规范审一遍 |
 | 说得太笼统会卡住吗 | 不会。仓库有六步兜底，最多问两个澄清问题，或直接给方向稿让你挑 |
-| 会不会把链接和外部技能全灌进上下文 | 不会。两层参考资料默认不加载；命中才读一份分类文件，或最多三份外部文件 |
+| 会不会把链接和外部技能全灌进上下文 | 不会。资源索引默认不加载；整合技能按常规流程只命中 1 到 3 个 |
 | 图片里的界面怎么复现 | `assets/demos/` 里有全部源码，`python tools/gen_readme_images.py` 可重新出图 |
 | 想要别的风格 | 直接说风格即可；拿不准时让仓库先给两三个方向稿再挑 |
 

@@ -32,8 +32,12 @@
 | 出单文件 HTML 工件 | `tooling` | `html-skill-effectiveness` |
 | HTML 转 PDF / Markdown 渲染修复 | `tooling` | `html-to-pdf` |
 | 读写无限画布数据 | `tooling` | `json-canvas` |
-| 找组件库、灵感站、UI 提示词库 | 资源层 | `references/resources/INDEX.md` |
-| 借外部经验提升质感、动效、可访问性 | 智慧层 | `references/wisdom/INDEX.md` |
+| 找组件库、灵感站、UI 提示词库 | 资源索引 | `references/resources/INDEX.md` |
+| 界面质感不行，要按间距配色逐维整改 | `foundations` | `design-vocabulary` |
+| 要先定艺术方向、拆解参考图 | `foundations` | `art-direction` |
+| 逐条核对可访问性、表单、触控热区 | `foundations` | `a11y-rules` |
+| 做动效、动画性能、苹果风格界面 | `foundations` | `motion-craft` |
+| 把动效需求写成可复用提示词 | `foundations` | `motion-prompts` |
 
 ## 六类怎么分
 

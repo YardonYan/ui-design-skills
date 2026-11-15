@@ -19,13 +19,13 @@ tags: ["router", "intent", "auto-match", "skills", "vibe-coding", "fallback"]
 
 不要要求对方报出某个技能名，不要让用户在一堆技能里做选择，不要因为对方没说清楚用哪个技能就停下来。使用者只负责说清楚想做什么产品、给谁用、大概什么样子；选哪个技能是本文件要解决的问题。
 
-同样，默认不加载 `references/resources/` 与 `references/wisdom/` 里的任何文件。只有使用者明确要找外部资源、找灵感，或想借外部设计经验时，才按 `docs/resource-routing.md` 读其中命中的一份。这两层合计三百多份文件，全读会拖慢上下文。
+同样，默认不加载 `references/resources/` 下的资源索引。只有使用者明确要找外部资源或找灵感时，才按 `docs/resource-routing.md` 读命中的一份分类文件。整合技能属于 `skills/` 下的正式技能，按常规流程匹配即可。
 
 ## 四步流程
 
 1. 从描述里抽取意图信号，最多四个维度：产物是什么、载体是什么、处在哪个阶段、有什么约束。字段说明见 `docs/intent-routing.md`。
 2. 按 `docs/intent-routing.md` 的映射表落到六类之一，选 1 个主技能，必要时加 1 到 2 个辅助技能。跨类需求按最终产物定主技能，另一类只作参考。
-3. 读这些技能的 `SKILL.md`，需要模板与规则时再读同目录的 `references/`、`templates/`。不要一次把 67 个技能全灌进上下文。
+3. 读这些技能的 `SKILL.md`，需要模板与规则时再读同目录的 `references/`、`templates/`。不要一次把 72 个技能全灌进上下文。
 4. 交付产物，并用一句话说明匹配了哪几个技能、为什么。不要长篇解释路由过程。
 
 ## 常见意图的快捷映射
@@ -53,18 +53,18 @@ tags: ["router", "intent", "auto-match", "skills", "vibe-coding", "fallback"]
 
 完整映射、冲突裁决与兜底路径在 `docs/intent-routing.md`；按人类口语排的索引在 `ROUTER.md`；按做界面六段主线排的地图在 `docs/skill-map.md`。
 
-## 资源层与智慧层
+## 外部资源与整合技能
 
-除了 67 个技能，仓库还收了两层参考资料，用来统合外部经验，避免使用者再到处翻别的技能库。两者都按需加载，默认不读。
+仓库共 72 个技能，其中 5 个是把外部技能内容改编后正式纳入的，另有一份按需查的资源索引。
 
-| 层 | 路径 | 是什么 | 什么时候读 |
+| 部分 | 路径 | 是什么 | 什么时候用 |
 |---|---|---|---|
-| 资源层 | `references/resources/` | 9 类外部链接索引，37 条 GitHub + 103 条站点 | 找组件库、灵感站、配色工具、UI 提示词库、模板时 |
-| 智慧层 | `references/wisdom/` | 5 个上游技能仓库的文本快照，169 份 Markdown | 要提升设计质感、艺术方向、可访问性、动效或提示词写法时 |
+| 整合技能 | `skills/foundations/` | `design-vocabulary`、`art-direction`、`a11y-rules`、`motion-craft`、`motion-prompts` | 提升质感、艺术方向、可访问性、动效、提示词写法 |
+| 资源索引 | `references/resources/` | 共具 9 类资源索引，37 条仓库链接 + 103 条站点 | 找组件库、灵感站、配色工具、UI 提示词库、模板 |
 
-判断顺序：使用者要的是产物，就直接走 `skills/` 下的技能，不读这两层；只有出现找、有没有、参考、灵感、别人怎么做、提升质感这类信号才进入。进入后先读该层的 `INDEX.md`，再只读命中的那一份分类文件或一个来源目录，规则见 `docs/resource-routing.md`。
+整合技能是正式技能，按 `docs/intent-routing.md` 的常规流程匹配，有统一命名的 `SKILL.md`，可安装、可路由、可校验。资源索引只是网址清单，默认不读；只有出现找、有没有、参考、灵感这类信号才打开，一次最多读一份分类文件，规则见 `docs/resource-routing.md`。
 
-智慧层收的是 `impeccable`、`taste-skill`、`jakubkrehel/skills`、`emilkowalski/skills`、`motion-prompt` 五家的实际技能文本，各带一份统一说明文件，归属集中登记在 `THIRD-PARTY.md`；本库已有的 hallmark、ui-ux-pro-max、frontend-design、emil-design-eng 与 84 家 DESIGN.md 语料不重复收。资源层只是网址索引，不是收录的源码。
+归属与许可统一登记在 `THIRD-PARTY.md`。本库已有的 `hallmark`、`ui-ux-pro-max`、`frontend-design`、`emil-design-eng` 与 84 家 DESIGN.md 语料不重复收。
 
 ## 兜底
 

@@ -68,19 +68,15 @@ def main() -> int:
     # On-demand reference layers must be complete, otherwise the router may
     # point at a file that does not exist.
     res = ROOT / "references" / "resources"
-    wis = ROOT / "references" / "wisdom"
-    for f in [res / "SOURCE.md", res / "INDEX.md", wis / "INDEX.md",
-              ROOT / "docs" / "resource-routing.md"]:
+    lic = ROOT / "references" / "licenses"
+    for f in [res / "SOURCE.md", res / "INDEX.md", ROOT / "docs" / "resource-routing.md"]:
         if not f.exists():
             errors.append(f"缺按需加载文件：{f.relative_to(ROOT).as_posix()}")
     for n in range(1, 10):
         if not list(res.glob(f"{n:02d}-*.md")):
-            errors.append(f"资源层缺 {n:02d} 类分类文件")
-    for d in sorted(p for p in wis.iterdir() if p.is_dir()) if wis.is_dir() else []:
-        if not (d / "SOURCE.md").exists():
-            errors.append(f"智慧层 {d.name} 缺 SOURCE.md")
-        if not list(d.glob("LICENSE*")):
-            errors.append(f"智慧层 {d.name} 缺 LICENSE")
+            errors.append(f"资源索引缺 {n:02d} 类分类文件")
+    if not lic.is_dir() or len(list(lic.glob("*"))) < 5:
+        errors.append("references/licenses/ 下的整合技能许可文件不完整")
 
     for cat in sorted(p for p in SKILLS.iterdir() if p.is_dir()):
         for d in sorted(p for p in cat.iterdir() if p.is_dir()):

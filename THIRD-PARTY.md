@@ -2,30 +2,30 @@
 
 本库自有内容（README、NOTICE、docs/、tools/、四个新编技能及各技能的 SKILL.md 改编部分）采用 Apache-2.0，见根目录 `LICENSE`。其余内容保留各自上游许可，逐条列在下面。
 
-共 67 个技能。许可分布：Apache-2.0 9 个, CC BY 4.0 1 个, MIT 15 个, 其他 / 见上游 42 个。
+共 72 个技能。许可分布：Apache-2.0 9 个, CC BY 4.0 1 个, MIT 15 个, 其他 / 见上游 42 个。
 
-## 两层参考资料的口径
+## 外部资源与整合技能的口径
 
-除技能目录外，仓库还收了两层参考资料，都不计入上面的 67 个技能。
+整合技能已计入上面的 72 个技能；资源索引只是网址清单，不计入。
 
-| 层 | 内容 | 口径 |
+| 部分 | 内容 | 口径 |
 |---|---|---|
-| `references/resources/` | 9 类网址索引，37 条仓库链接 + 103 条站点 | 只是链接索引，不是收录的源码。真相源是 `SOURCE.md`，分类文件由脚本生成 |
-| `references/wisdom/` | 5 个来源的设计技能文本，169 份 Markdown | 只收文本，不含图片、视频、字体与构建产物。每个来源一份统一格式的说明文件 |
+| `skills/foundations/` 下 5 个整合技能 | 由外部技能内容改编，统一命名与 `SKILL.md` 格式 | 已纳入技能体系，可安装、可路由、可校验 |
+| `references/resources/` | 共具 9 类资源索引，37 条仓库链接 + 103 条站点 | 只是链接索引，不是收录的源码。真相源是 `SOURCE.md`，分类文件由脚本生成 |
 
-归属与许可集中登记在本节，其他文档不再散落署名。下面是许可要求的完整版权声明，许可全文见各来源目录的 LICENSE 文件。
+归属与许可集中登记在本节，其他文档不再散落署名。下面是许可要求的完整版权声明，许可全文集中在 `references/licenses/` 下五份文件。
 
-| 来源 | 许可 | 版权声明 |
+| 整合技能 | 许可 | 版权声明 |
 |---|---|---|
-| `impeccable` | Apache-2.0 | Copyright 2025 Paul Bakaus |
-| `taste-skill` | MIT | Copyright (c) 2026 Leonxlnx |
-| `jakubkrehel` | MIT | Copyright (c) 2026 Jakub Krehel |
-| `emilkowalski` | MIT | Copyright (c) 2026 Emil Kowalski |
-| `motion-prompt` | MIT | Copyright (c) 2026 Shohei Ohtaki |
+| `design-vocabulary` | Apache-2.0 | Copyright 2025 Paul Bakaus |
+| `art-direction` | MIT | Copyright (c) 2026 Leonxlnx |
+| `a11y-rules` | MIT | Copyright (c) 2026 Jakub Krehel |
+| `motion-craft` | MIT | Copyright (c) 2026 Emil Kowalski |
+| `motion-prompts` | MIT | Copyright (c) 2026 Shohei Ohtaki |
 
-MIT 要求随副本保留版权声明与许可声明，Apache-2.0 另要求标注修改过的文件，因此这五行与五份 LICENSE 不可删除。本库只统一了说明文档的格式，收录的技能正文未改写。
+MIT 要求随副本保留版权声明与许可声明，Apache-2.0 另要求标注修改过的文件，因此这五行与五份许可文件不可删除。整合技能已按本库格式改编，改编情况记录在此。
 
-本库已收 `hallmark`、`ui-ux-pro-max`、`frontend-design`、`emil-design-eng` 与 84 家 DESIGN.md 语料，智慧层不重复收。
+本库已收 `hallmark`、`ui-ux-pro-max`、`frontend-design`、`emil-design-eng` 与 84 家 DESIGN.md 语料，不重复收这些上游。
 
 | 技能 | 分类 | 上游 | 许可 | 收录方式 |
 |---|---|---|---|---|
