@@ -17,11 +17,11 @@ tags: ['motion', 'animation', 'performance', 'recipes']
 
 | 路径 | 内容 |
 |---|---|
-| `SKILL.md` | 本文件，入口与边界 |
-| `references/guide.md` | 总规则与使用说明 |
-| `references/` 其余文件 | 按主题拆分的细则、配方与检查清单 |
+| `references/animate/guide.md` | 动效总则与配方，先读这一份 |
+| 其余 19 个主题目录 | 每个目录一份 `guide.md`，部分带 `RECIPES.md` 或 `AUDIT.md` |
+| 常用主题 | `animation-performance`、`animation-vocabulary`、`apple-design`、`gestures`、`choreograph` |
 
-共 31 份参考文件。先读 `references/guide.md`，再按需取 1 到 3 份，不要把整个 `references/` 灌进上下文。
+共 31 份参考文件。一次只进一个主题目录，取 1 到 2 份。
 
 ## 什么时候别用
 

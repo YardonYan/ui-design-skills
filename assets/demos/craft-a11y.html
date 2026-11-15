@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#1c1b1a;
+font:14px/1.6 -apple-system,"Microsoft YaHei",system-ui,sans-serif;padding:34px 40px}
+h2{margin:0 0 4px;font-size:19px}p.lead{margin:0 0 20px;color:#6f6e69;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;background:#f6f8fa;border-bottom:1px solid #d8dee4;padding:9px 10px;font-weight:600}
+td{border-bottom:1px solid #eaeef2;padding:10px;vertical-align:top}
+.lv{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;font-weight:600;white-space:nowrap}
+.hi{background:#fdecea;color:#a4271c}.mid{background:#fff4e0;color:#8a5a12}
+code{background:#f6f8fa;border-radius:5px;padding:1px 5px;font-size:12px}
+.foot{margin-top:16px;font-size:12px;color:#6f6e69}
+</style></head><body>
+<h2>a11y-rules 审查输出（节选五条）</h2>
+<p class="lead">对象是左边那个改前版本。只出问题清单与位置，不动手改。</p>
+<table>
+<tr><th style="width:76px">级别</th><th style="width:210px">问题</th><th style="width:290px">证据</th><th>建议</th></tr>
+<tr><td><span class="lv hi">阻断</span></td><td>正文对比度不足</td>
+<td>灰字 <code>#7a7a7a</code> 落在白底，实测约 4.2:1，小字号下不达 4.5:1</td>
+<td>正文改用 <code>#575653</code>，或把字号提到 16px 以上</td></tr>
+<tr><td><span class="lv hi">阻断</span></td><td>可点区域过小</td>
+<td>卡片右侧「编辑」可点高度约 18px，低于 24×24 下限</td>
+<td>可点区域扩到 44×44，视觉尺寸可以不变</td></tr>
+<tr><td><span class="lv mid">重要</span></td><td>焦点不可见</td>
+<td>键盘 Tab 到按钮时无可见焦点环，<code>outline</code> 被重置</td>
+<td>补 <code>:focus-visible</code> 两像素描边，颜色与底色对比不低于 3:1</td></tr>
+<tr><td><span class="lv mid">重要</span></td><td>表单缺少标签</td>
+<td>搜索框只有占位符，没有 <code>label</code> 或 <code>aria-label</code></td>
+<td>加可读标签；占位符不能当标签用</td></tr>
+<tr><td><span class="lv mid">重要</span></td><td>动效未降级</td>
+<td>入场动画没有 <code>prefers-reduced-motion</code> 分支</td>
+<td>在该媒体查询下取消位移与缩放，只保留透明度变化</td></tr>
+</table>
+<div class="foot">判定依据：WCAG 2.5.8 目标尺寸、1.4.3 对比度、2.4.7 焦点可见、3.3.2 标签、2.3.3 动效。</div>
+</body></html>

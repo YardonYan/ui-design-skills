@@ -18,7 +18,7 @@ Current release v2.3 · 72 skills · Apache-2.0
 
 [中文](./README.md) · English · [Contribute a translation](https://github.com/YardonYan/ui-design-skills/issues)
 
-[See it working](#see-it-working) · [30-second start](#30-second-start) · [Install](#install-and-supported-assistants) · [Describe the product](#just-describe-the-product) · [Copy-paste prompts](#copy-paste-prompts) · [Intent & fallback](#intent-routing-and-fallback) · [Resources & skills](#external-resources-and-integrated-skills) · [Six categories](#whats-in-the-six-categories) · [FAQ](#faq)
+[See it working](#see-it-working) · [30-second start](#30-second-start) · [Install](#install-and-supported-assistants) · [Describe the product](#just-describe-the-product) · [Copy-paste prompts](#copy-paste-prompts) · [Intent & fallback](#intent-routing-and-fallback) · [Integrated skills](#what-the-integrated-skills-can-do) · [Six categories](#whats-in-the-six-categories) · [FAQ](#faq)
 
 </div>
 
@@ -312,6 +312,54 @@ The fallback has six fixed steps; stop at the first one that resolves:
 Conflicts have explicit rules: create/read/update/delete and fields go to enterprise, display and conversion go to web; a whole page goes to page skills, a reusable block goes to component skills; icons plus colour means the main output picks the primary skill and colour becomes the assistant. Multi-skill work follows direction, structure, output, assets, review, with at most two supporting skills.
 
 If the user says the match was wrong, switch skills and redo. They should not have to explain the request again.
+
+## What the integrated skills can do
+
+These five were adapted from other people's UI skill content and are now part of the 72 skills, installable and routable like the rest. The first four images are real output; the fifth skill produces text, so the prompt is printed instead.
+
+### Before and after: putting design vocabulary to work
+
+<img src="./assets/screenshots/craft-before-after.png" alt="Before, and after a design-vocabulary pass" width="100%">
+
+> This page feels flat. Rework it with design-vocabulary, dimension by dimension. Do not change the structure.
+
+Left is the original; right is the same structure after fixing hierarchy, spacing, a single accent colour and icon alignment. Four kinds of change, not one word of copy rewritten.
+
+### Three art directions: settle the tone first
+
+<img src="./assets/screenshots/craft-directions.png" alt="Three visual directions from art-direction" width="100%">
+
+> I'm building an AI notes tool. Use art-direction to give me three visual directions side by side.
+
+One product description, three tones: restrained editorial, warm paper, technical. Pick one and build from it; cheaper than rewriting a page.
+
+### Accessibility review: a list, not a rewrite
+
+<img src="./assets/screenshots/craft-a11y.png" alt="An accessibility review output" width="100%">
+
+> Review this interface with a11y-rules. List issues and locations only, do not edit yet.
+
+The output is graded findings with evidence and a fix, citing WCAG clauses. This kind of review will not quietly rewrite your code.
+
+### Motion recipe: one interaction in three frames
+
+<img src="./assets/screenshots/craft-motion.png" alt="A three-frame motion recipe from motion-craft" width="100%">
+
+> This card hover feels stiff. Give me a recipe from motion-craft.
+
+Offset, shadow, easing and duration are all stated, including what to keep under reduced motion.
+
+### Motion prompt: turning an effect into reusable text
+
+`motion-prompts` returns text. To reproduce the card lift above, this is what you hand the AI:
+
+```
+Write a reusable prompt for a card hover lift in the motion-prompts format.
+Name: hover lift
+Timing: 0 -> -10px -> -3px, 240ms, ease-out
+Shadow: 2px -> 14px -> 6px, in step with the offset
+Fallback: under prefers-reduced-motion keep only the shadow change
+```
 
 ## External resources and integrated skills
 

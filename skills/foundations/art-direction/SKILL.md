@@ -17,11 +17,11 @@ tags: ['art-direction', 'reference', 'visual-language', 'backgrounds']
 
 | 路径 | 内容 |
 |---|---|
-| `SKILL.md` | 本文件，入口与边界 |
-| `references/guide.md` | 总规则与使用说明 |
-| `references/` 其余文件 | 按主题拆分的细则、配方与检查清单 |
+| `references/guide.md` | 总规则与使用说明，先读这一份 |
+| `references/references/` | 背景、卡片、文案语气等专题 |
+| `references/assets/` | 素材用法说明，不含素材文件本身 |
 
-共 28 份参考文件。先读 `references/guide.md`，再按需取 1 到 3 份，不要把整个 `references/` 灌进上下文。
+共 28 份参考文件。先读 `references/guide.md`，再按需取 1 到 3 份。
 
 ## 什么时候别用
 

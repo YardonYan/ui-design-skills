@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#1c1b1a;
+font:14px/1.55 -apple-system,"Microsoft YaHei",system-ui,sans-serif}
+.wrap{display:grid;grid-template-columns:1fr 1fr;height:720px}
+.pane{padding:40px 44px;position:relative}
+.pane.before{background:#fff;border-right:1px solid #e2e2e2}
+.pane.after{background:#FFFCF0}
+.tag{position:absolute;top:22px;right:26px;font-size:12px;padding:4px 11px;border-radius:999px}
+.before .tag{background:#ececec;color:#666}
+.after .tag{background:#c96442;color:#fff;font-weight:600}
+/* before: flat, cramped, no hierarchy */
+.pane.before h3{font-size:16px;margin:28px 0 8px;font-weight:400}
+.pane.before p{font-size:13px;color:#7a7a7a;margin:0 0 8px}
+.pane.before .card{border:1px solid #ddd;padding:12px;margin:10px 0}
+.pane.before .ic{width:18px;height:18px;background:#dcdcdc;display:inline-block;margin-right:8px;vertical-align:-3px}
+.pane.before .btn{background:#d9d9d9;color:#555;border:0;padding:7px 12px;font:inherit;font-size:13px;margin-top:6px}
+/* after: clear scale, room, one accent, aligned icons */
+.pane.after h1{font-size:26px;letter-spacing:-.01em;margin:26px 0 6px}
+.pane.after .sub{font-size:14px;color:#6f6e69;margin:0 0 22px}
+.pane.after .card{background:#fff;border:1px solid #e8e3d6;border-radius:12px;padding:18px 20px;margin:0 0 14px}
+.pane.after .row{display:flex;align-items:center;gap:12px}
+.pane.after .ic{width:30px;height:30px;border-radius:8px;background:#f3ece2;display:flex;
+align-items:center;justify-content:center;font-size:13px;color:#c96442;font-weight:700;flex:none}
+.pane.after .card b{font-size:15px;display:block;margin-bottom:2px}
+.pane.after .card span{font-size:13px;color:#6f6e69}
+.pane.after .btn{background:#c96442;color:#fff;border:0;border-radius:9px;padding:11px 20px;
+font:inherit;font-weight:600;margin-top:10px}
+.pane.after .txt{font-size:13px;color:#575653;padding:2px 0}
+.note{position:absolute;left:44px;bottom:26px;font-size:12px;color:#8a8781}
+</style></head><body><div class="wrap">
+<div class="pane before"><span class="tag">改前</span>
+<h3>工作台</h3><p>今天的任务和最近的文件都在这里。</p>
+<div class="card"><span class="ic"></span>项目周报<span style="float:right">编辑</span></div>
+<div class="card"><span class="ic"></span>客户资料<span style="float:right">编辑</span></div>
+<div class="card"><span class="ic"></span>会议记录<span style="float:right">编辑</span></div>
+<button class="btn">新建文档</button><button class="btn">导入</button>
+<div class="note">字阶只有一档，间距 8px，图标与文字无对齐关系，两个按钮权重相同</div>
+</div>
+<div class="pane after"><span class="tag">用 design-vocabulary 整改后</span>
+<h1>工作台</h1><p class="sub">今天的任务和最近的文件，按最近使用排序。</p>
+<div class="card"><div class="row"><span class="ic">周</span><div><b>项目周报</b><span>14 分钟前编辑 · 3 位协作者</span></div></div></div>
+<div class="card"><div class="row"><span class="ic">客</span><div><b>客户资料</b><span>昨天编辑 · 已归档到销售</span></div></div></div>
+<div class="card"><div class="row"><span class="ic">会</span><div><b>会议记录</b><span>3 天前 · 待补充结论</span></div></div></div>
+<button class="btn">新建文档</button>
+<div class="txt" style="margin-top:14px">字阶 26 / 15 / 13 三档，间距 12 / 14 / 22 三档，只有一个主行动，图标统一 30px 圆角 8</div>
+<div class="note">改动集中在层级、间距、单一强调色与图标对齐，结构与文案没动</div>
+</div></div></body></html>

@@ -17,9 +17,8 @@ tags: ['vocabulary', 'polish', 'critique', 'typography', 'motion']
 
 | 路径 | 内容 |
 |---|---|
-| `SKILL.md` | 本文件，入口与边界 |
-| `references/guide.md` | 总规则与使用说明 |
-| `references/` 其余文件 | 按主题拆分的细则、配方与检查清单 |
+| `references/guide.md` | 总规则与使用说明，先读这一份 |
+| `references/reference/` | 按动作拆的单份细则：加bold、降噪、适配、动画、审查、配色、澄清等 |
 
 共 51 份参考文件。先读 `references/guide.md`，再按需取 1 到 3 份，不要把整个 `references/` 灌进上下文。
 

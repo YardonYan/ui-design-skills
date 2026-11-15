@@ -17,11 +17,10 @@ tags: ['motion', 'prompts', 'format', 'template']
 
 | 路径 | 内容 |
 |---|---|
-| `SKILL.md` | 本文件，入口与边界 |
-| `references/guide.md` | 总规则与使用说明 |
-| `references/` 其余文件 | 按主题拆分的细则、配方与检查清单 |
+| `references/FORMAT.md` | 格式约定，先读这一份 |
+| `references/make-your-own/prompts/en/` | 三份写法示例：转写、自定义字段、速查图 |
 
-共 7 份参考文件。先读 `references/guide.md`，再按需取 1 到 3 份，不要把整个 `references/` 灌进上下文。
+共 7 份参考文件。先读 `FORMAT.md`，再按需取一份示例。
 
 ## 什么时候别用
 

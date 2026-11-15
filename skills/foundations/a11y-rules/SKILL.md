@@ -17,11 +17,11 @@ tags: ['accessibility', 'a11y', 'aria', 'keyboard', 'forms']
 
 | 路径 | 内容 |
 |---|---|
-| `SKILL.md` | 本文件，入口与边界 |
-| `references/guide.md` | 总规则与使用说明 |
-| `references/` 其余文件 | 按主题拆分的细则、配方与检查清单 |
+| `references/better-accessibility/guide.md` | 可访问性总则，先读这一份 |
+| 其余 13 个主题目录 | 每个目录一份 `guide.md` 加若干细则，按主题进入 |
+| 常用细则 | `hit-areas`、`focus-and-keyboard`、`forms`、`semantics-and-aria`、`contrast` |
 
-共 52 份参考文件。先读 `references/guide.md`，再按需取 1 到 3 份，不要把整个 `references/` 灌进上下文。
+共 52 份参考文件。按主题进一个目录，先读该目录的 `guide.md`，再取 1 到 2 份细则。
 
 ## 什么时候别用
 

@@ -332,6 +332,188 @@ CHAT_HTML = """<!doctype html>
 """
 
 
+# ---------------------------------------------------------------- craft demos
+# Four artefacts produced by actually running the integrated skills: a before /
+# after pass (design-vocabulary), three art directions (art-direction), an
+# accessibility report (a11y-rules) and a motion keyframe strip (motion-craft).
+
+CRAFT_BEFORE_AFTER = """<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#1c1b1a;
+font:14px/1.55 -apple-system,"Microsoft YaHei",system-ui,sans-serif}
+.wrap{display:grid;grid-template-columns:1fr 1fr;height:720px}
+.pane{padding:40px 44px;position:relative}
+.pane.before{background:#fff;border-right:1px solid #e2e2e2}
+.pane.after{background:#FFFCF0}
+.tag{position:absolute;top:22px;right:26px;font-size:12px;padding:4px 11px;border-radius:999px}
+.before .tag{background:#ececec;color:#666}
+.after .tag{background:#c96442;color:#fff;font-weight:600}
+/* before: flat, cramped, no hierarchy */
+.pane.before h3{font-size:16px;margin:28px 0 8px;font-weight:400}
+.pane.before p{font-size:13px;color:#7a7a7a;margin:0 0 8px}
+.pane.before .card{border:1px solid #ddd;padding:12px;margin:10px 0}
+.pane.before .ic{width:18px;height:18px;background:#dcdcdc;display:inline-block;margin-right:8px;vertical-align:-3px}
+.pane.before .btn{background:#d9d9d9;color:#555;border:0;padding:7px 12px;font:inherit;font-size:13px;margin-top:6px}
+/* after: clear scale, room, one accent, aligned icons */
+.pane.after h1{font-size:26px;letter-spacing:-.01em;margin:26px 0 6px}
+.pane.after .sub{font-size:14px;color:#6f6e69;margin:0 0 22px}
+.pane.after .card{background:#fff;border:1px solid #e8e3d6;border-radius:12px;padding:18px 20px;margin:0 0 14px}
+.pane.after .row{display:flex;align-items:center;gap:12px}
+.pane.after .ic{width:30px;height:30px;border-radius:8px;background:#f3ece2;display:flex;
+align-items:center;justify-content:center;font-size:13px;color:#c96442;font-weight:700;flex:none}
+.pane.after .card b{font-size:15px;display:block;margin-bottom:2px}
+.pane.after .card span{font-size:13px;color:#6f6e69}
+.pane.after .btn{background:#c96442;color:#fff;border:0;border-radius:9px;padding:11px 20px;
+font:inherit;font-weight:600;margin-top:10px}
+.pane.after .txt{font-size:13px;color:#575653;padding:2px 0}
+.note{position:absolute;left:44px;bottom:26px;font-size:12px;color:#8a8781}
+</style></head><body><div class="wrap">
+<div class="pane before"><span class="tag">改前</span>
+<h3>工作台</h3><p>今天的任务和最近的文件都在这里。</p>
+<div class="card"><span class="ic"></span>项目周报<span style="float:right">编辑</span></div>
+<div class="card"><span class="ic"></span>客户资料<span style="float:right">编辑</span></div>
+<div class="card"><span class="ic"></span>会议记录<span style="float:right">编辑</span></div>
+<button class="btn">新建文档</button><button class="btn">导入</button>
+<div class="note">字阶只有一档，间距 8px，图标与文字无对齐关系，两个按钮权重相同</div>
+</div>
+<div class="pane after"><span class="tag">用 design-vocabulary 整改后</span>
+<h1>工作台</h1><p class="sub">今天的任务和最近的文件，按最近使用排序。</p>
+<div class="card"><div class="row"><span class="ic">周</span><div><b>项目周报</b><span>14 分钟前编辑 · 3 位协作者</span></div></div></div>
+<div class="card"><div class="row"><span class="ic">客</span><div><b>客户资料</b><span>昨天编辑 · 已归档到销售</span></div></div></div>
+<div class="card"><div class="row"><span class="ic">会</span><div><b>会议记录</b><span>3 天前 · 待补充结论</span></div></div></div>
+<button class="btn">新建文档</button>
+<div class="txt" style="margin-top:14px">字阶 26 / 15 / 13 三档，间距 12 / 14 / 22 三档，只有一个主行动，图标统一 30px 圆角 8</div>
+<div class="note">改动集中在层级、间距、单一强调色与图标对齐，结构与文案没动</div>
+</div></div></body></html>"""
+
+CRAFT_DIRECTIONS = """<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#1c1b1a;
+font:14px/1.55 -apple-system,"Microsoft YaHei",system-ui,sans-serif}
+.head{padding:26px 32px 0}
+.head h2{margin:0 0 4px;font-size:19px}
+.head p{margin:0;color:#6f6e69;font-size:13px}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;height:452px;margin-top:18px}
+.col{padding:30px 28px;position:relative}
+.col .name{font-size:12px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:18px}
+/* editorial */
+.e{background:#fff;border-right:1px solid #e6e4e0;border-top:1px solid #e6e4e0}
+.e .name{color:#8a8781}
+.e h3{font-family:Georgia,"Songti SC",serif;font-size:30px;line-height:1.2;margin:0 0 12px}
+.e p{font-size:13px;color:#4a4844;max-width:26ch;margin:0 0 20px}
+.e .btn{background:#1c1b1a;color:#fff;border:0;padding:10px 18px;font:inherit;font-size:13px}
+.e .rule{height:1px;background:#1c1b1a;margin:22px 0 12px}
+.e .meta{font-size:11px;color:#8a8781;letter-spacing:.06em}
+/* warm paper */
+.w{background:#F7F1E6;border-top:1px solid #e6dcc8}
+.w .name{color:#9a7b52}
+.w h3{font-size:26px;margin:0 0 10px;color:#3d3226}
+.w p{font-size:13px;color:#6b5f4e;max-width:26ch;margin:0 0 20px}
+.w .btn{background:#bc5215;color:#fff;border:0;border-radius:14px;padding:11px 20px;font:inherit;font-size:13px;font-weight:600}
+.w .stamp{display:inline-block;margin-top:22px;font-size:11px;color:#9a7b52;border:1px dashed #cdb894;border-radius:8px;padding:6px 10px;transform:rotate(-1.5deg)}
+/* technical */
+.t{background:#12141a;color:#e8ebf0;border-top:1px solid #12141a}
+.t .name{color:#7bf29b}
+.t h3{font-family:"Consolas","Courier New",monospace;font-size:24px;margin:0 0 10px;letter-spacing:-.01em}
+.t p{font-size:13px;color:#9aa3b2;max-width:26ch;margin:0 0 20px}
+.t .btn{background:#7bf29b;color:#0d1015;border:0;padding:10px 18px;font:inherit;font-size:13px;font-weight:700}
+.t .grid{position:absolute;inset:0;background-image:linear-gradient(#1d2028 1px,transparent 1px),linear-gradient(90deg,#1d2028 1px,transparent 1px);background-size:28px 28px;opacity:.5;pointer-events:none}
+.t > *{position:relative}
+</style></head><body>
+<div class="head"><h2>同一个产品，三种艺术方向</h2>
+<p>用 art-direction 先定视觉语气，再落页面，比直接改稿少一轮返工</p></div>
+<div class="cols">
+<div class="col e"><div class="name">Editorial · 克制编辑感</div>
+<h3>A quieter place to keep what you read.</h3>
+<p>长文、脚注、克制的层级。适合内容型产品与文档站。</p>
+<button class="btn">开始写</button><div class="rule"></div><div class="meta">SERIF · 单栏 · 无圆角</div></div>
+<div class="col w"><div class="name">Warm paper · 温暖纸感</div>
+<h3>把今天想到的，先记下来。</h3>
+<p>暖纸底、宽松间距、手写批注。适合个人工具与笔记类产品。</p>
+<button class="btn">新建一页</button><div class="stamp">今天写了 3 条</div></div>
+<div class="col t"><div class="grid"></div><div class="name">Technical · 冷峻科技</div>
+<h3>notes --sync --offline</h3>
+<p>等宽字、深底、荧光强调。适合开发者工具与 API 产品。</p>
+<button class="btn">接入 API</button></div>
+</div></body></html>"""
+
+CRAFT_A11Y = """<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#1c1b1a;
+font:14px/1.6 -apple-system,"Microsoft YaHei",system-ui,sans-serif;padding:34px 40px}
+h2{margin:0 0 4px;font-size:19px}p.lead{margin:0 0 20px;color:#6f6e69;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;background:#f6f8fa;border-bottom:1px solid #d8dee4;padding:9px 10px;font-weight:600}
+td{border-bottom:1px solid #eaeef2;padding:10px;vertical-align:top}
+.lv{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;font-weight:600;white-space:nowrap}
+.hi{background:#fdecea;color:#a4271c}.mid{background:#fff4e0;color:#8a5a12}
+code{background:#f6f8fa;border-radius:5px;padding:1px 5px;font-size:12px}
+.foot{margin-top:16px;font-size:12px;color:#6f6e69}
+</style></head><body>
+<h2>a11y-rules 审查输出（节选五条）</h2>
+<p class="lead">对象是左边那个改前版本。只出问题清单与位置，不动手改。</p>
+<table>
+<tr><th style="width:76px">级别</th><th style="width:210px">问题</th><th style="width:290px">证据</th><th>建议</th></tr>
+<tr><td><span class="lv hi">阻断</span></td><td>正文对比度不足</td>
+<td>灰字 <code>#7a7a7a</code> 落在白底，实测约 4.2:1，小字号下不达 4.5:1</td>
+<td>正文改用 <code>#575653</code>，或把字号提到 16px 以上</td></tr>
+<tr><td><span class="lv hi">阻断</span></td><td>可点区域过小</td>
+<td>卡片右侧「编辑」可点高度约 18px，低于 24×24 下限</td>
+<td>可点区域扩到 44×44，视觉尺寸可以不变</td></tr>
+<tr><td><span class="lv mid">重要</span></td><td>焦点不可见</td>
+<td>键盘 Tab 到按钮时无可见焦点环，<code>outline</code> 被重置</td>
+<td>补 <code>:focus-visible</code> 两像素描边，颜色与底色对比不低于 3:1</td></tr>
+<tr><td><span class="lv mid">重要</span></td><td>表单缺少标签</td>
+<td>搜索框只有占位符，没有 <code>label</code> 或 <code>aria-label</code></td>
+<td>加可读标签；占位符不能当标签用</td></tr>
+<tr><td><span class="lv mid">重要</span></td><td>动效未降级</td>
+<td>入场动画没有 <code>prefers-reduced-motion</code> 分支</td>
+<td>在该媒体查询下取消位移与缩放，只保留透明度变化</td></tr>
+</table>
+<div class="foot">判定依据：WCAG 2.5.8 目标尺寸、1.4.3 对比度、2.4.7 焦点可见、3.3.2 标签、2.3.3 动效。</div>
+</body></html>"""
+
+CRAFT_MOTION = """<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#1c1b1a;
+font:14px/1.55 -apple-system,"Microsoft YaHei",system-ui,sans-serif;padding:30px 36px}
+h2{margin:0 0 4px;font-size:19px}p.lead{margin:0 0 22px;color:#6f6e69;font-size:13px}
+.frames{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.frame{background:#fafaf9;border:1px solid #e6e4e0;border-radius:12px;height:250px;
+display:flex;align-items:center;justify-content:center;position:relative}
+.stage{width:170px;height:88px;background:#fff;border:1px solid #e8e3d6;border-radius:12px;
+display:flex;align-items:center;gap:10px;padding:14px 16px}
+.stage .ic{width:30px;height:30px;border-radius:8px;background:#f3ece2;color:#c96442;
+font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px;flex:none}
+.stage b{font-size:14px;display:block}.stage span{font-size:12px;color:#6f6e69}
+.f1 .stage{box-shadow:0 2px 6px rgba(28,27,26,.08);transform:translateY(0)}
+.f2 .stage{box-shadow:0 14px 30px rgba(28,27,26,.16);transform:translateY(-10px) scale(1.02)}
+.f3 .stage{box-shadow:0 6px 14px rgba(28,27,26,.10);transform:translateY(-3px)}
+.ms{position:absolute;top:12px;left:14px;font-size:11px;color:#8a8781;letter-spacing:.04em}
+.curve{margin-top:20px;font-size:12px;color:#575653}
+.curve code{background:#f6f8fa;border-radius:5px;padding:2px 6px}
+</style></head><body>
+<h2>motion-craft 的动效配方：卡片抬起</h2>
+<p class="lead">同一个交互的三帧。位移与阴影同时变化，结束前回落到静止位附近，避免悬停时抖动。</p>
+<div class="frames">
+<div class="frame f1"><span class="ms">0 ms · 静止</span>
+<div class="stage"><span class="ic">周</span><div><b>项目周报</b><span>14 分钟前编辑</span></div></div></div>
+<div class="frame f2"><span class="ms">120 ms · 抬起</span>
+<div class="stage"><span class="ic">周</span><div><b>项目周报</b><span>14 分钟前编辑</span></div></div></div>
+<div class="frame f3"><span class="ms">240 ms · 定格</span>
+<div class="stage"><span class="ic">周</span><div><b>项目周报</b><span>14 分钟前编辑</span></div></div></div>
+</div>
+<div class="curve">位移 0 → -10px → -3px，阴影 2px → 14px → 6px，缓动 <code>cubic-bezier(0.22, 1, 0.36, 1)</code>，总时长 240ms。减少动效时只保留阴影变化。</div>
+</body></html>"""
+
+
+def craft_demos() -> None:
+    write("assets/demos/craft-before-after.html", CRAFT_BEFORE_AFTER)
+    write("assets/demos/craft-directions.html", CRAFT_DIRECTIONS)
+    write("assets/demos/craft-a11y.html", CRAFT_A11Y)
+    write("assets/demos/craft-motion.html", CRAFT_MOTION)
+
+
 # ---------------------------------------------------------------- browser
 def browser() -> str:
     env = os.environ.get("README_BROWSER")
@@ -385,6 +567,7 @@ def main() -> int:
     for src, dst in sources:
         shutil.copy2(ROOT / src, DEMOS / Path(dst).name)
     write("assets/demos/ai-chat.html", CHAT_HTML)
+    craft_demos()
     print("demo html written")
 
     # temporary wrapper, removed after the shot so the repo stays clean
@@ -406,6 +589,10 @@ img{{display:block;width:1280px;height:640px}}</style></head>
     shot(exe, DEMOS / "dashboard.html", SHOTS / "enterprise-dashboard.png", 1280, 820)
     shot(exe, DEMOS / "mobile-app.html", SHOTS / "mobile-app.png", 820, 940)
     shot(exe, DEMOS / "ai-chat.html", SHOTS / "ai-chat-approval.png", 900, 780)
+    shot(exe, DEMOS / "craft-before-after.html", SHOTS / "craft-before-after.png", 1280, 720)
+    shot(exe, DEMOS / "craft-directions.html", SHOTS / "craft-directions.png", 1280, 560)
+    shot(exe, DEMOS / "craft-a11y.html", SHOTS / "craft-a11y.png", 1280, 520)
+    shot(exe, DEMOS / "craft-motion.html", SHOTS / "craft-motion.png", 1280, 430)
     return 0
 
 
