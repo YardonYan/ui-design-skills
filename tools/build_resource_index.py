@@ -66,37 +66,31 @@ def write(p: Path, text: str) -> None:
 
 
 def parse_source() -> tuple[dict[str, list[str]], dict[str, list[tuple[str, str]]]]:
-    """Return {cat: [github urls]} and {cat: [(name, urls)]}."""
-    text = SRC.read_text(encoding="utf-8")
-    blocks = re.findall(r"```\n(.*?)```", text, re.S)
-    if len(blocks) < 2:
-        raise SystemExit("SOURCE.md: expected two fenced code blocks")
+    """Parse the structured tables in SOURCE.md.
 
+    {cat: [repo urls]} and {cat: [(name, urls)]}. The truth source uses the
+    same table style as the rest of the repository, not fenced code blocks.
+    """
+    text = SRC.read_text(encoding="utf-8")
     gh: dict[str, list[str]] = {}
     sites: dict[str, list[tuple[str, str]]] = {}
-
     cur = ""
-    for line in blocks[0].splitlines():
+    for line in text.splitlines():
         s = line.strip()
-        if not s:
+        if s.startswith("## "):
+            m = re.match(r"## (\d{2})\s", s)
+            cur = m.group(1) if m else ""
             continue
-        if s.startswith("# "):
-            cur = s[2:].split("-")[0].strip()
+        if not cur or not s.startswith("|"):
             continue
-        if s.startswith("http") and cur:
-            gh.setdefault(cur, []).append(s)
-
-    cur = ""
-    for line in blocks[1].splitlines():
-        s = line.strip()
-        if not s:
+        cells = [c.strip() for c in s.strip("|").split("|")]
+        if len(cells) != 3:
             continue
-        if s.startswith("# "):
-            cur = s[2:].split("-")[0].strip()
-            continue
-        if " :: " in s and cur:
-            name, urls = s.split(" :: ", 1)
-            sites.setdefault(cur, []).append((name.strip(), urls.strip()))
+        kind, name, links = cells
+        if kind == "仓库" and links.startswith("http"):
+            gh.setdefault(cur, []).append(links)
+        elif kind == "站点" and links.startswith("http"):
+            sites.setdefault(cur, []).append((name, links))
     return gh, sites
 
 
@@ -106,36 +100,31 @@ def resource_files(gh, sites) -> list[tuple[str, str, str, int, int]]:
         g = gh.get(num, [])
         s = sites.get(num, [])
         body = [f"# {num} {zh}", "",
-                "按需加载文件。只有意图命中本类时才读，默认不加载。", "",
+                "按需加载，默认不读。命中本类时只读这一份。", "",
                 "| 项 | 值 |", "|---|---|",
-                f"| GitHub 链接 | {len(g)} 条 |",
-                f"| 其余站点 | {len(s)} 条 |",
-                "| 真相源 | [SOURCE.md](SOURCE.md) |",
-                "| 生成脚本 | `tools/build_resource_index.py` |", "",
-                "## 什么时候读", "", when + "。读完只取用得上的条目，不要把整份清单塞进回答。", ""]
+                f"| 仓库 | {len(g)} 条 |",
+                f"| 站点 | {len(s)} 条 |",
+                f"| 什么时候读 | {when} |", ""]
 
         if g:
-            body += ["## GitHub 仓库", "", "```text"]
+            body += ["## 仓库", "", "```text"]
             body += g
             body += ["```", ""]
         else:
-            body += ["## GitHub 仓库", "", "本类没有 GitHub 链接。", ""]
+            body += ["## 仓库", "", "本类没有仓库条目。", ""]
 
         if s:
-            body += ["## 其余站点", "", "| 名称 | 原始链接 |", "|---|---|"]
+            body += ["## 站点", "", "| 名称 | 链接 |", "|---|---|"]
             for name, urls in s:
                 links = " ; ".join(f"`{u.strip()}`" for u in urls.split(";"))
                 body.append(f"| {name} | {links} |")
             body.append("")
         else:
-            body += ["## 其余站点", "", "本类没有其余网址条目。", ""]
+            body += ["## 站点", "", "本类没有站点条目。", ""]
 
-        body += ["## 口径", "",
-                 "链接按收集时的原文保留，未核验时效，也未统一改写成 HTTPS。带两个地址的是同一资源的主链接与第二地址，两者都保留。",
-                 "",
-                 "这些是外部资源索引，不是本库收录的源码或技能。内容、可用性与许可均以原站点为准，本库不替上游作授权解释。",
-                 "",
-                 "本文件由脚本生成，改链接请改 [SOURCE.md](SOURCE.md) 后重跑脚本。", ""]
+        body += ["## 约定", "",
+                 "按需取用，不要整份复述。带两个地址的是同一资源的主链接与第二地址。",
+                 "改链接请改真相源 [SOURCE.md](SOURCE.md) 后重跑脚本。", ""]
         write(RES / f"{num}-{slug}.md", "\n".join(body))
         out.append((num, slug, zh, len(g), len(s)))
     return out
@@ -149,41 +138,40 @@ def resource_index(rows) -> None:
         lines.append(f"| {num} {zh} | [`{num}-{slug}.md`]({num}-{slug}.md) | {ng} | {ns} | {when} |")
     total_g = sum(r[3] for r in rows)
     total_s = sum(r[4] for r in rows)
-    lines += ["", f"合计 {total_g} 条 GitHub 链接、{total_s} 条其余网址，分在 {len(rows)} 个文件里。",
+    lines += ["", f"合计 {total_g} 条仓库链接、{total_s} 条站点，分在 {len(rows)} 个文件里。",
               "", "## 加载规则", "",
               "1. 判断意图属于哪一类，一次最多读两份 `0X-*.md`，不要全读。",
               "2. 只在需要具体网址时读；要的是产物（页面、图标、配色）就走 `skills/` 下的技能，不读这里。",
               "3. 回答里只列与需求直接相关的条目，不要复述整份清单。",
               "4. 使用者没问资源时，不加载本目录任何文件。", "",
-              "## 口径", "",
-              "真相源是 [SOURCE.md](SOURCE.md)，所有 `0X-*.md` 与本文件由 `tools/build_resource_index.py` 生成，不要手工编辑生成物。",
-              "链接按原文保留，未核验时效。外链资源不属于本库收录内容，许可以原站点为准。", ""]
+              "## 维护", "",
+              "真相源是 [SOURCE.md](SOURCE.md)，分类文件与本文件由 `tools/build_resource_index.py` 生成，不要手改。",
+              "要产物走技能，要网址才读这里，两者不要混在一次加载里。", ""]
     write(RES / "INDEX.md", "\n".join(lines))
     print(f"resources: {len(rows)} files, {total_g} github + {total_s} sites")
 
 
 def wisdom_index() -> None:
     lines = ["# 外部智慧 · 总览", "",
-             "默认不加载。这里收的是五个上游技能仓库的文本内容，由仓库根 `SKILL.md` 按意图判断是否读取；命中后只读其中一个来源目录里用得到的那几份文件。", "",
-             "| 来源 | 上游 | 许可 | 文本数 | 入口 | 什么时候读 |", "|---|---|---|---:|---|---|"]
+             "默认不加载。这里收的是五个来源的设计技能文本，由仓库根 `SKILL.md` 按意图判断是否读取；命中后只读其中一个来源目录里用得到的那几份文件。", "",
+             "| 来源 | 许可 | 文本数 | 入口 | 什么时候读 |", "|---|---|---:|---|---|"]
     total = 0
     for name, repo, lic, entry, when in WISDOM:
         d = WIS / name
         n = len([p for p in d.rglob("*.md") if p.name != "SOURCE.md"]) if d.is_dir() else 0
         total += n
-        lines.append(f"| `{name}` | [{repo}](https://github.com/{repo}) | {lic} | {n} | [`{entry}`]({name}/{entry}) | {when} |")
-    lines += ["", f"合计 {len(WISDOM)} 个来源、{total} 份 Markdown，每个目录都带 LICENSE 与 SOURCE.md。", "",
+        lines.append(f"| `{name}` | {lic} | {n} | [`{entry}`]({name}/{entry}) | {when} |")
+    lines += ["", f"合计 {len(WISDOM)} 个来源、{total} 份 Markdown。归属与许可统一登记在根目录 `THIRD-PARTY.md`。", "",
               "## 加载规则", "",
               "1. 先判断意图属于哪一列，只进入对应的一个来源目录。",
-              "2. 先读该目录的 `SOURCE.md` 确认范围与许可，再读用得到的 `SKILL.md` 或规则文件。",
+              "2. 先读该目录的说明文件确认范围，再读用得到的 `SKILL.md` 或规则文件。",
               "3. 一次最多读三份文件；不要把整个目录或五个来源全灌进上下文。",
               "4. 这些是参考语料，不是可安装技能。要产出界面时仍由 `skills/` 下的技能负责。",
               "5. 使用者没提质感、动效、可访问性、艺术方向这类诉求时，不加载本目录。", "",
               "## 与本地 67 个技能的关系", "",
-              "本库已收 `hallmark`、`ui-ux-pro-max`、`frontend-design`、`emil-design-eng` 与 84 家 DESIGN.md 语料，本目录不重复收这些上游。这里补的是尚未收录的设计词汇、艺术方向、可访问性细则、动效技能与提示词写法，作为按需查阅的第二层。", "",
-              "## 口径", "",
-              "内容按上游原文收录，未改写，是 2026-11-15 的快照。上游更新时按各目录 `SOURCE.md` 里的地址自行核对。",
-              "本文件由 `tools/build_resource_index.py` 生成，不要手工编辑。", ""]
+              "本库已有的整改、设计智能、前端设计、设计工程与品牌语料不重复收。这里补的是设计词汇、艺术方向、可访问性细则、动效技能与提示词写法，作为按需查阅的第二层。", "",
+              "## 维护", "",
+              "各来源目录的说明文件与本文件保持同一套格式。索引由 `tools/build_resource_index.py` 生成，不要手改。", ""]
     write(WIS / "INDEX.md", "\n".join(lines))
     print(f"wisdom: {len(WISDOM)} sources, {total} md")
 

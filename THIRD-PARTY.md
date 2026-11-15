@@ -6,16 +6,26 @@
 
 ## 两层参考资料的口径
 
-除技能目录外，仓库还收了两层参考资料，都不计入上面的 67 个技能：
+除技能目录外，仓库还收了两层参考资料，都不计入上面的 67 个技能。
 
-| 层 | 内容 | 许可口径 |
+| 层 | 内容 | 口径 |
 |---|---|---|
-| `references/resources/` | 9 类外部网址索引，37 条 GitHub 链接 + 103 条站点 | 只是链接索引，不是收录的源码或内容。各站点的内容、可用性与许可以原站点为准，本库不替上游作授权解释。真相源 `SOURCE.md` 由使用者整理 |
-| `references/wisdom/` | 5 个上游技能仓库的文本快照，169 份 Markdown | `impeccable` Apache-2.0，其余 4 家 MIT。每个来源目录都带原仓 LICENSE 与 `SOURCE.md`，写明上游、许可、收录范围与收录日期。原文收录，未改写 |
+| `references/resources/` | 9 类网址索引，37 条仓库链接 + 103 条站点 | 只是链接索引，不是收录的源码。真相源是 `SOURCE.md`，分类文件由脚本生成 |
+| `references/wisdom/` | 5 个来源的设计技能文本，169 份 Markdown | 只收文本，不含图片、视频、字体与构建产物。每个来源一份统一格式的说明文件 |
 
-智慧层各来源：`pbakaus/impeccable`（Apache-2.0）、`Leonxlnx/taste-skill`、`jakubkrehel/skills`、`emilkowalski/skills`、`showheyohtaki/motion-prompt`（以上 MIT）。均为 2026-11-15 的文本快照，只收 Markdown，不含图片、视频、字体与构建产物。上游更新时按各目录 `SOURCE.md` 的地址自行核对。
+归属与许可集中登记在本节，其他文档不再散落署名。下面是许可要求的完整版权声明，许可全文见各来源目录的 LICENSE 文件。
 
-本库已收 `hallmark`、`ui-ux-pro-max`、`frontend-design`、`emil-design-eng` 与 84 家 DESIGN.md 语料，智慧层不重复收这些上游。
+| 来源 | 许可 | 版权声明 |
+|---|---|---|
+| `impeccable` | Apache-2.0 | Copyright 2025 Paul Bakaus |
+| `taste-skill` | MIT | Copyright (c) 2026 Leonxlnx |
+| `jakubkrehel` | MIT | Copyright (c) 2026 Jakub Krehel |
+| `emilkowalski` | MIT | Copyright (c) 2026 Emil Kowalski |
+| `motion-prompt` | MIT | Copyright (c) 2026 Shohei Ohtaki |
+
+MIT 要求随副本保留版权声明与许可声明，Apache-2.0 另要求标注修改过的文件，因此这五行与五份 LICENSE 不可删除。本库只统一了说明文档的格式，收录的技能正文未改写。
+
+本库已收 `hallmark`、`ui-ux-pro-max`、`frontend-design`、`emil-design-eng` 与 84 家 DESIGN.md 语料，智慧层不重复收。
 
 | 技能 | 分类 | 上游 | 许可 | 收录方式 |
 |---|---|---|---|---|

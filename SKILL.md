@@ -64,7 +64,7 @@ tags: ["router", "intent", "auto-match", "skills", "vibe-coding", "fallback"]
 
 判断顺序：使用者要的是产物，就直接走 `skills/` 下的技能，不读这两层；只有出现找、有没有、参考、灵感、别人怎么做、提升质感这类信号才进入。进入后先读该层的 `INDEX.md`，再只读命中的那一份分类文件或一个来源目录，规则见 `docs/resource-routing.md`。
 
-智慧层收的是 `impeccable`、`taste-skill`、`jakubkrehel/skills`、`emilkowalski/skills`、`motion-prompt` 五家的实际技能文本，各带 LICENSE 与 `SOURCE.md`；本库已有的 hallmark、ui-ux-pro-max、frontend-design、emil-design-eng 与 84 家 DESIGN.md 语料不重复收。资源层只是网址索引，不是收录的源码。
+智慧层收的是 `impeccable`、`taste-skill`、`jakubkrehel/skills`、`emilkowalski/skills`、`motion-prompt` 五家的实际技能文本，各带一份统一说明文件，归属集中登记在 `THIRD-PARTY.md`；本库已有的 hallmark、ui-ux-pro-max、frontend-design、emil-design-eng 与 84 家 DESIGN.md 语料不重复收。资源层只是网址索引，不是收录的源码。
 
 ## 兜底
 

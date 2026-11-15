@@ -314,7 +314,7 @@ AI 对话界面
 | 资源层 | `references/resources/` | 9 类网址索引，37 条 GitHub 链接 + 103 条站点 | 找组件库、灵感站、配色工具、UI 提示词库、模板 |
 | 智慧层 | `references/wisdom/` | 5 个上游技能仓库的文本快照，169 份 Markdown | 提升质感、艺术方向、可访问性、动效、提示词写法 |
 
-智慧层收的是别人的实际技能内容，不是链接：`impeccable` 的设计词汇与整改命令、`taste-skill` 的艺术方向、`jakubkrehel` 的可访问性与配色细则、`emilkowalski` 的动效技能、`motion-prompt` 的动效提示词写法。每个来源都带原仓 LICENSE 与 `SOURCE.md`。本库已有的 `hallmark`、`ui-ux-pro-max`、`frontend-design`、`emil-design-eng` 与 84 家 DESIGN.md 语料不重复收。
+智慧层收的是别人的实际技能内容，不是链接：`impeccable` 的设计词汇与整改命令、`taste-skill` 的艺术方向、`jakubkrehel` 的可访问性与配色细则、`emilkowalski` 的动效技能、`motion-prompt` 的动效提示词写法。每个来源一份统一格式的说明文件，归属与许可集中登记在 `THIRD-PARTY.md`。本库已有的 `hallmark`、`ui-ux-pro-max`、`frontend-design`、`emil-design-eng` 与 84 家 DESIGN.md 语料不重复收。
 
 加载规则很简单：使用者要的是产物，就直接走技能，不读这两层；只有出现找、有没有、参考、灵感、提升质感这类信号才进入。进入后先读该层的 `INDEX.md`，再只读命中的一份分类文件或一个来源目录，一次最多三份。完整规则见 `docs/resource-routing.md`。
 
