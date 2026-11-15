@@ -1,12 +1,19 @@
 <div align="center">
 
-中文 · [English](./README.en.md)
-
-<img src="./assets/cover.svg" alt="UI Design Skills 封面：67 个技能分六类" width="100%">
-
 # UI Design Skills
 
 #### 把一句需求，变成 AI 一次就能做对的界面
+
+标准 · `Agent Skills` `SKILL.md`<br>
+框架 · `React` `TypeScript` `Tailwind CSS` `HTML / CSS`<br>
+组件 · `shadcn/ui` `Bootstrap` `React Native`<br>
+工具与产物 · `Node.js` `Python` `SVG` `JSON Canvas`
+
+v1.0 · 4 次内容迭代 · 67 个技能 · Apache-2.0
+
+中文 · [English](./README.en.md) · [贡献其他语言](https://github.com/YardonYan/ui-design-skills/issues)
+
+<img src="./assets/cover.svg" alt="UI Design Skills 封面：67 个技能分六类" width="100%">
 
 <img src="./assets/badges.svg" alt="67 skills · Agent Skills · Apache-2.0 · 国内工具优先 · 无外部 CDN">
 
@@ -320,7 +327,3 @@ claude plugin marketplace add YardonYan/ui-design-skills
 ## 许可
 
 自有内容 Apache-2.0，见 `LICENSE`。第三方内容保留各自许可，逐条列在 `THIRD-PARTY.md`，例外见 `NOTICE`。插画、示意图与截图都在 `assets/`，由 `tools/gen_readme_images.py` 生成，可复现。
-
----
-
-仓库原名 daily-log，旧地址会自动跳转到本页；本地工作副本沿用旧目录名，仓库里偶尔出现的日志类提交不是技能内容。

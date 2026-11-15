@@ -1,12 +1,19 @@
 <div align="center">
 
-[中文](./README.md) · English
-
-<img src="./assets/cover.svg" alt="UI Design Skills cover: 67 skills in six categories" width="100%">
-
 # UI Design Skills
 
 #### Turn one sentence into an interface your AI gets right the first time
+
+Standard · `Agent Skills` `SKILL.md`<br>
+Framework · `React` `TypeScript` `Tailwind CSS` `HTML / CSS`<br>
+Components · `shadcn/ui` `Bootstrap` `React Native`<br>
+Tooling & output · `Node.js` `Python` `SVG` `JSON Canvas`
+
+v1.0 · 4 content iterations · 67 skills · Apache-2.0
+
+[中文](./README.md) · English · [Contribute a translation](https://github.com/YardonYan/ui-design-skills/issues)
+
+<img src="./assets/cover.svg" alt="UI Design Skills cover: 67 skills in six categories" width="100%">
 
 <img src="./assets/badges.svg" alt="67 skills · Agent Skills · Apache-2.0 · CN tools first · no external CDN">
 
@@ -327,7 +334,3 @@ Troubleshooting notes from real runs are in `docs/troubleshooting.md`.
 ## License
 
 Original content is Apache-2.0, see `LICENSE`. Third-party material keeps its own license, listed per skill in `THIRD-PARTY.md`, with exceptions in `NOTICE`. Illustrations, diagrams and screenshots live in `assets/` and are reproducible via `tools/gen_readme_images.py`.
-
----
-
-This repository was formerly named daily-log; the old URL redirects here. The local working copy keeps the old directory name, and occasional log-style commits are legacy rather than skill content.
