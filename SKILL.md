@@ -3,7 +3,7 @@ name: ui-design-skills
 version: 2.3.0
 zh_name: "界面设计技能总入口"
 en_name: "UI Design Skills Router"
-description: "当用户说要做某个产品、页面、界面、图标、配色或前端效果，却没有指明该用哪个技能时，用这个入口按意图自动匹配本仓库里的技能。用户只需要描述想做什么，由你判断该读哪一份 SKILL.md。适用于 Vibe Coding 场景下的一句话需求、产品原型、页面整改与界面验收。产出是 Word / PDF / PPT 文件、后端接口、数据分析或纯运维任务时不走这份。关键词：做个产品、做个网页、做个 App、设计图标、前端 UI、界面、vibe coding、自动匹配、不知道用哪个技能。"
+description: "当用户说要做某个产品、页面、界面、图标、配色或前端效果，却没有指明该用哪个技能时，用这个入口按意图自动匹配本仓库里的技能。用户只需要描述想做什么，由你判断该读哪一份 SKILL.md。适用于 Vibe Coding 场景下的一句话需求、产品原型、页面整改与界面验收。也负责在使用者找外部组件库、灵感站、UI 提示词库，或想借外部设计经验提升质感、动效、可访问性时，按 docs/resource-routing.md 按需加载 references 下的索引与快照，默认一律不加载。产出是 Word / PDF / PPT 文件、后端接口、数据分析或纯运维任务时不走这份。关键词：做个产品、做个网页、做个 App、设计图标、前端 UI、界面、找灵感、找组件库、UI 技能、设计质感、vibe coding、自动匹配、不知道用哪个技能。"
 category: router
 scenario: intent
 tags: ["router", "intent", "auto-match", "skills", "vibe-coding", "fallback"]
@@ -18,6 +18,8 @@ tags: ["router", "intent", "auto-match", "skills", "vibe-coding", "fallback"]
 使用者不需要知道技能名，也不需要先查目录。
 
 不要要求对方报出某个技能名，不要让用户在一堆技能里做选择，不要因为对方没说清楚用哪个技能就停下来。使用者只负责说清楚想做什么产品、给谁用、大概什么样子；选哪个技能是本文件要解决的问题。
+
+同样，默认不加载 `references/resources/` 与 `references/wisdom/` 里的任何文件。只有使用者明确要找外部资源、找灵感，或想借外部设计经验时，才按 `docs/resource-routing.md` 读其中命中的一份。这两层合计三百多份文件，全读会拖慢上下文。
 
 ## 四步流程
 
@@ -51,6 +53,19 @@ tags: ["router", "intent", "auto-match", "skills", "vibe-coding", "fallback"]
 
 完整映射、冲突裁决与兜底路径在 `docs/intent-routing.md`；按人类口语排的索引在 `ROUTER.md`；按做界面六段主线排的地图在 `docs/skill-map.md`。
 
+## 资源层与智慧层
+
+除了 67 个技能，仓库还收了两层参考资料，用来统合外部经验，避免使用者再到处翻别的技能库。两者都按需加载，默认不读。
+
+| 层 | 路径 | 是什么 | 什么时候读 |
+|---|---|---|---|
+| 资源层 | `references/resources/` | 9 类外部链接索引，37 条 GitHub + 103 条站点 | 找组件库、灵感站、配色工具、UI 提示词库、模板时 |
+| 智慧层 | `references/wisdom/` | 5 个上游技能仓库的文本快照，169 份 Markdown | 要提升设计质感、艺术方向、可访问性、动效或提示词写法时 |
+
+判断顺序：使用者要的是产物，就直接走 `skills/` 下的技能，不读这两层；只有出现找、有没有、参考、灵感、别人怎么做、提升质感这类信号才进入。进入后先读该层的 `INDEX.md`，再只读命中的那一份分类文件或一个来源目录，规则见 `docs/resource-routing.md`。
+
+智慧层收的是 `impeccable`、`taste-skill`、`jakubkrehel/skills`、`emilkowalski/skills`、`motion-prompt` 五家的实际技能文本，各带 LICENSE 与 `SOURCE.md`；本库已有的 hallmark、ui-ux-pro-max、frontend-design、emil-design-eng 与 84 家 DESIGN.md 语料不重复收。资源层只是网址索引，不是收录的源码。
+
 ## 兜底
 
 | 情况 | 怎么做 |
@@ -62,6 +77,8 @@ tags: ["router", "intent", "auto-match", "skills", "vibe-coding", "fallback"]
 | 使用者给了字段清单 | 只用给出的字段，不臆造资料里没有的字段 |
 | 涉及外部服务或联网检索 | 查询词里不带内部系统名与内部实体信息，用抽象描述 |
 | 使用者主动点名了某个技能 | 尊重指定，但仍先读该技能的 `SKILL.md` 确认边界 |
+| 使用者要找资源或参考 | 按 `docs/resource-routing.md` 只读命中的一份；分不清要网址还是要做法时，问自己这一句即可 |
+| 使用者只是问有哪些资源 | 只读 `references/resources/INDEX.md` 给分类概览，不要展开全部链接 |
 
 ## 边界
 

@@ -4,6 +4,19 @@
 
 共 67 个技能。许可分布：Apache-2.0 9 个, CC BY 4.0 1 个, MIT 15 个, 其他 / 见上游 42 个。
 
+## 两层参考资料的口径
+
+除技能目录外，仓库还收了两层参考资料，都不计入上面的 67 个技能：
+
+| 层 | 内容 | 许可口径 |
+|---|---|---|
+| `references/resources/` | 9 类外部网址索引，37 条 GitHub 链接 + 103 条站点 | 只是链接索引，不是收录的源码或内容。各站点的内容、可用性与许可以原站点为准，本库不替上游作授权解释。真相源 `SOURCE.md` 由使用者整理 |
+| `references/wisdom/` | 5 个上游技能仓库的文本快照，169 份 Markdown | `impeccable` Apache-2.0，其余 4 家 MIT。每个来源目录都带原仓 LICENSE 与 `SOURCE.md`，写明上游、许可、收录范围与收录日期。原文收录，未改写 |
+
+智慧层各来源：`pbakaus/impeccable`（Apache-2.0）、`Leonxlnx/taste-skill`、`jakubkrehel/skills`、`emilkowalski/skills`、`showheyohtaki/motion-prompt`（以上 MIT）。均为 2026-11-15 的文本快照，只收 Markdown，不含图片、视频、字体与构建产物。上游更新时按各目录 `SOURCE.md` 的地址自行核对。
+
+本库已收 `hallmark`、`ui-ux-pro-max`、`frontend-design`、`emil-design-eng` 与 84 家 DESIGN.md 语料，智慧层不重复收这些上游。
+
 | 技能 | 分类 | 上游 | 许可 | 收录方式 |
 |---|---|---|---|---|
 | `ai-chat-patterns` | `foundations` | 本库编写，事实参照 https://github.com/assistant-ui/assistant-ui | Apache-2.0（见根目录 LICENSE） | 自撰规范，正文经敏感词扫描 |
@@ -97,7 +110,7 @@
 
 - MIT / 0BSD / Apache-2.0 内容：保留目录内 LICENSE 与版权声明，即可修改、商用与再分发。Apache-2.0 另需标注修改过的文件。
 - CC BY 4.0 内容：署名作者并回链原仓。
-- 标注「许可见上游」或「Complete terms in LICENSE.txt」的技能：以原仓当前条款为准，本库不替上游作授权解释。
+- 标注`许可见上游`或`Complete terms in LICENSE.txt`的技能：以原仓当前条款为准，本库不替上游作授权解释。
 
 ## 许可待核实清单
 
@@ -107,6 +120,6 @@
 
 另有 2 个技能在 frontmatter 写的是 `Complete terms in LICENSE.txt`，但收录目录里没有该文件：`frontend-design`、`canvas-design`。条款以原仓当前版本为准，本库未替上游补文件，使用前请到原仓核对。
 
-其余技能要么目录内自带 LICENSE，要么在 frontmatter 或 CONTRIBUTORS 里记录了上游与许可，逐条列在上表。能核实的和核不出来的分开列，不混成一句「见上游」。
+其余技能要么目录内自带 LICENSE，要么在 frontmatter 或 CONTRIBUTORS 里记录了上游与许可，逐条列在上表。能核实的和核不出来的分开列，不混成一句`见上游`。
 
 2026-11-15 补入的 `assistant-ui` 自带 MIT LICENSE 与显式 license 声明，`ai-chat-patterns` 为本库自撰，两者都不进本清单。

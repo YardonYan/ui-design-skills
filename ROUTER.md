@@ -2,7 +2,7 @@
 
 这份表是给 AI 的意图路由速查，不是给使用者的选择题。使用者只说想做什么产品，不需要查这张表，也不需要报技能名；判断由仓库根 [`SKILL.md`](SKILL.md) 按 [`docs/intent-routing.md`](docs/intent-routing.md) 的规则完成。匹配不到时的兜底路径也在那份文档里。
 
-按「你会怎么说」排，只负责第一步命中。命中之后到 [`docs/skill-map.md`](docs/skill-map.md) 看同段里还有谁、什么时候该换一个。
+按`你会怎么说`排，只负责第一步命中。命中之后到 [`docs/skill-map.md`](docs/skill-map.md) 看同段里还有谁、什么时候该换一个。
 
 | 你会这么说 | 去哪一类 | 先用 |
 |---|---|---|
@@ -32,6 +32,8 @@
 | 出单文件 HTML 工件 | `tooling` | `html-skill-effectiveness` |
 | HTML 转 PDF / Markdown 渲染修复 | `tooling` | `html-to-pdf` |
 | 读写无限画布数据 | `tooling` | `json-canvas` |
+| 找组件库、灵感站、UI 提示词库 | 资源层 | `references/resources/INDEX.md` |
+| 借外部经验提升质感、动效、可访问性 | 智慧层 | `references/wisdom/INDEX.md` |
 
 ## 六类怎么分
 
@@ -47,3 +49,5 @@
 ## 判断口径
 
 产出是网页或界面，进这六类；产出是 Word、PDF、PPT 这类文件，不在本库范围内。同一个需求跨两类时，先按最终产物归类，另一类只作为参考。
+
+上面最后两行不是技能，是按需加载的参考层。只有使用者明确要找资源、找灵感或借外部设计经验时才读，默认一律不加载；具体分流、加载上限与兜底见 `docs/resource-routing.md`。
