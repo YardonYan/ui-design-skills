@@ -2,25 +2,27 @@
 
 # UI Design Skills
 
-#### 把一句需求，变成 AI 一次就能做对的界面
+把一句需求，变成 AI 一次就能做对的界面。67 个技能，每个解决一类界面问题。
 
-<img src="./assets/tech-stack.svg" alt="技术栈：标准 Agent Skills 与 SKILL.md，框架 React、TypeScript、Tailwind CSS、HTML/CSS，组件 shadcn/ui、Bootstrap、React Native，工具与产物 Node.js、Python、SVG、JSON Canvas" width="100%">
+</div>
+
+<img src="./assets/cover.svg" alt="UI Design Skills 封面：67 个技能分六类" width="100%">
+
+<div align="center">
 
 <img src="./assets/badges.svg" alt="v2.3 · 67 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
+
+<img src="./assets/tech-stack.svg" alt="技术栈：标准 Agent Skills 与 SKILL.md，框架 React、TypeScript、Tailwind CSS、HTML/CSS，组件 shadcn/ui、Bootstrap、React Native，工具与产物 Node.js、Python、SVG、JSON Canvas" width="100%">
 
 当前版本 v2.3 · 67 个技能 · Apache-2.0
 
 中文 · [English](./README.en.md) · [贡献其他语言](https://github.com/YardonYan/ui-design-skills/issues)
 
-<img src="./assets/cover.svg" alt="UI Design Skills 封面：67 个技能分六类" width="100%">
-
 [看效果](#先看效果) · [30 秒上手](#30-秒上手) · [安装](#安装与支持的助手) · [你想要哪种 UI](#你想要哪种-ui) · [直接抄话术](#话术模板) · [六类](#六类里有什么) · [v2.3 更新](#v23-更新内容) · [常见问题](#常见问题)
 
 </div>
 
-这是一个给 AI 助手用的界面设计技能库。67 个技能，每个解决一类界面问题，规则、模板、素材都在目录里。你要做的只有三件事：说清想要什么界面、挑一个技能、把话术连同技能路径交给助手。
-
-不需要背命令，不需要记技能名。下面每一段话术都可以直接整段复制。先往下看四张真实产出，再决定从哪一步开始。
+不需要背命令，也不需要记技能名。下面按看到效果、马上上手、挑场景、抄话术、了解全貌的顺序展开，每一段话术都可以整段复制。
 
 ## 先看效果
 

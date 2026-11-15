@@ -2,25 +2,27 @@
 
 # UI Design Skills
 
-#### Turn one sentence into an interface your AI gets right the first time
+Turn one sentence into an interface your AI gets right the first time. 67 skills, each solving one class of interface problem.
 
-<img src="./assets/tech-stack.svg" alt="Stack: standard Agent Skills and SKILL.md, frameworks React TypeScript Tailwind CSS HTML/CSS, components shadcn/ui Bootstrap React Native, tooling and output Node.js Python SVG JSON Canvas" width="100%">
+</div>
+
+<img src="./assets/cover.svg" alt="UI Design Skills cover: 67 skills in six categories" width="100%">
+
+<div align="center">
 
 <img src="./assets/badges.svg" alt="v2.3 · 67 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
+
+<img src="./assets/tech-stack.svg" alt="Stack: standard Agent Skills and SKILL.md, frameworks React TypeScript Tailwind CSS HTML/CSS, components shadcn/ui Bootstrap React Native, tooling and output Node.js Python SVG JSON Canvas" width="100%">
 
 Current release v2.3 · 67 skills · Apache-2.0
 
 [中文](./README.md) · English · [Contribute a translation](https://github.com/YardonYan/ui-design-skills/issues)
 
-<img src="./assets/cover.svg" alt="UI Design Skills cover: 67 skills in six categories" width="100%">
-
 [See it working](#see-it-working) · [30-second start](#30-second-start) · [Install](#install-and-supported-assistants) · [What UI do you want](#what-ui-do-you-want) · [Copy-paste prompts](#copy-paste-prompts) · [Six categories](#whats-in-the-six-categories) · [What's new in v2.3](#whats-new-in-v23) · [FAQ](#faq)
 
 </div>
 
-A skill library for AI agents working on interface design. 67 skills, each solving one class of interface problem, with its rules, templates and assets in one directory. You only do three things: say what interface you want, pick a skill, and hand the prompt plus the skill path to your agent.
-
-No commands to memorise, no skill names to remember. Every prompt below can be copied as a whole block. Look at the four real outputs first, then decide where to start.
+No commands to memorise, no skill names to remember. The sections below move from seeing the output, to getting started, to choosing a scenario, to copying prompts, to understanding the whole library. Every prompt can be copied as a whole block.
 
 ## See it working
 
