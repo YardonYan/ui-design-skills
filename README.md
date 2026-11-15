@@ -311,11 +311,15 @@ AI 对话界面
 
 ### 改前改后：设计词汇怎么用
 
-<img src="./assets/screenshots/craft-before-after.png" alt="改前与用 design-vocabulary 整改后的对比" width="100%">
+<img src="./assets/screenshots/craft-rework.gif" alt="用 design-vocabulary 逐维整改的过程动图" width="100%">
+
+同一份文案，从白底、一档字号、8px 间距，一步步走到暖纸底、三档字阶、14px 间距与单一强调色。下面这张是首尾并排，方便一眼对照。
+
+<img src="./assets/screenshots/craft-before-after.png" alt="改前与用 design-vocabulary 整改后的并排对比" width="100%">
 
 > 这份界面看着平，按 design-vocabulary 逐维整改，结构别动。
 
-左边原样，右边是同一份结构按层级、间距、单一强调色与图标对齐改过的结果。改动只有四类，文案一个字没改。
+改动只有四类：层级、间距、单一强调色、图标对齐。文案一个字没改。
 
 ### 三种艺术方向：先定语气再落页面
 

@@ -319,11 +319,15 @@ These five were adapted from other people's UI skill content and are now part of
 
 ### Before and after: putting design vocabulary to work
 
-<img src="./assets/screenshots/craft-before-after.png" alt="Before, and after a design-vocabulary pass" width="100%">
+<img src="./assets/screenshots/craft-rework.gif" alt="A design-vocabulary pass, step by step" width="100%">
+
+One set of copy, going from a white background, a single type size and 8px spacing to warm paper, a three-step scale, 14px spacing and one accent colour. The still below puts the first and last frame side by side.
+
+<img src="./assets/screenshots/craft-before-after.png" alt="Before and after, side by side" width="100%">
 
 > This page feels flat. Rework it with design-vocabulary, dimension by dimension. Do not change the structure.
 
-Left is the original; right is the same structure after fixing hierarchy, spacing, a single accent colour and icon alignment. Four kinds of change, not one word of copy rewritten.
+Four kinds of change only: hierarchy, spacing, a single accent colour, icon alignment. Not one word of copy rewritten.
 
 ### Three art directions: settle the tone first
 

@@ -514,6 +514,119 @@ def craft_demos() -> None:
     write("assets/demos/craft-motion.html", CRAFT_MOTION)
 
 
+
+CRAFT_GIF_HTML = """<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{display:flex;align-items:center;justify-content:center;
+font-family:-apple-system,"Microsoft YaHei",system-ui,sans-serif;color:#1c1b1a}
+.stage{width:880px;padding:40px 46px}
+h1{margin:0 0 8px;font-weight:700;letter-spacing:-.01em}
+p.sub{margin:0}
+.card{border-style:solid;display:flex;align-items:center}
+.ic{display:flex;align-items:center;justify-content:center;font-weight:700;flex:none}
+.card b{display:block}
+.card span.d{display:block}
+#btn{font:inherit;border:0;cursor:default}
+.bar{margin-top:28px;background:#e9e4d8;border-radius:999px;height:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:#c96442;border-radius:999px}
+.meta{margin-top:10px;font-size:12px;color:#8a8781;display:flex;justify-content:space-between}
+</style></head><body>
+<div class="stage" id="stage">
+  <h1 id="title">工作台</h1>
+  <p class="sub" id="sub">今天的任务和最近的文件，按最近使用排序。</p>
+  <div class="card" id="c1"><span class="ic" id="i1">周</span><div><b>项目周报</b><span class="d">14 分钟前编辑 · 3 位协作者</span></div></div>
+  <div class="card" id="c2"><span class="ic" id="i2">客</span><div><b>客户资料</b><span class="d">昨天编辑 · 已归档到销售</span></div></div>
+  <div class="card" id="c3"><span class="ic" id="i3">会</span><div><b>会议记录</b><span class="d">3 天前 · 待补充结论</span></div></div>
+  <button id="btn">新建文档</button>
+  <div class="bar"><i id="fill"></i></div>
+  <div class="meta"><span>按 design-vocabulary 逐维整改</span><span id="pct">0%</span></div>
+</div>
+<script>
+const t = Math.max(0, Math.min(1, parseFloat(new URLSearchParams(location.search).get('t') || '0')));
+const L = (a, b) => a + (b - a) * t;
+const hex = h => [parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16)];
+const mix = (a, b) => {
+  const A = hex(a), B = hex(b);
+  const c = A.map((v,i)=>Math.round(v + (B[i]-v)*t));
+  return `rgb(${c[0]},${c[1]},${c[2]})`;
+};
+const el = id => document.getElementById(id);
+document.body.style.background = mix('#ffffff', '#FFFCF0');
+el('title').style.fontSize = L(15, 26) + 'px';
+el('sub').style.fontSize = L(13, 14) + 'px';
+el('sub').style.color = mix('#7a7a7a', '#6f6e69');
+el('sub').style.marginBottom = L(8, 22) + 'px';
+['c1','c2','c3'].forEach((id, i) => {
+  const c = el(id);
+  c.style.margin = L(6, 14) + 'px 0';
+  c.style.padding = `${L(10, 18)}px ${L(12, 20)}px`;
+  c.style.borderRadius = L(0, 12) + 'px';
+  c.style.borderWidth = '1px';
+  c.style.borderColor = mix('#dddddd', '#e8e3d6');
+  c.style.background = mix('#ffffff', '#ffffff');
+  c.style.boxShadow = t > 0.02 ? `0 ${L(0,2)}px ${L(0,6)}px rgba(28,27,26,${L(0,0.05)})` : 'none';
+  const ic = el('i' + (i + 1));
+  ic.style.width = ic.style.height = L(18, 30) + 'px';
+  ic.style.borderRadius = L(0, 8) + 'px';
+  ic.style.background = mix('#dcdcdc', '#f3ece2');
+  ic.style.color = mix('#7a7a7a', '#c96442');
+  ic.style.fontSize = L(11, 13) + 'px';
+  ic.style.marginRight = L(8, 12) + 'px';
+  c.querySelector('b').style.fontSize = L(13, 15) + 'px';
+  const d = c.querySelector('.d');
+  d.style.fontSize = L(12, 13) + 'px';
+  d.style.color = mix('#8a8a8a', '#6f6e69');
+  d.style.marginTop = L(0, 2) + 'px';
+});
+const btn = el('btn');
+btn.style.background = mix('#d9d9d9', '#c96442');
+btn.style.color = mix('#555555', '#ffffff');
+btn.style.borderRadius = L(0, 9) + 'px';
+btn.style.padding = `${L(7, 11)}px ${L(12, 20)}px`;
+btn.style.fontSize = L(13, 14) + 'px';
+btn.style.fontWeight = L(400, 600);
+btn.style.marginTop = L(6, 10) + 'px';
+el('fill').style.width = (t * 100).toFixed(0) + '%';
+el('pct').textContent = Math.round(t * 100) + '%';
+</script></body></html>"""
+
+
+def craft_rework_gif() -> None:
+    """Render the rework as a GIF: t steps from 0 to 1, one frame per step."""
+    import tempfile
+
+    magick = shutil.which("magick") or r"C://Program Files//ImageMagick-7.1.2-Q16-HDRI//magick.exe"
+    if not (magick and Path(magick).exists()):
+        print("  [skip] craft-rework.gif: ImageMagick not found")
+        return
+    exe = browser()
+    if not exe:
+        return
+    tmp = Path(tempfile.mkdtemp(prefix="rework-"))
+    page = tmp / "rework.html"
+    page.write_text(CRAFT_GIF_HTML, encoding="utf-8", newline="\n")
+    frames = []
+    n = 12
+    for i in range(n):
+        step = i / (n - 1)
+        out = tmp / f"f{i:02d}.png"
+        subprocess.run(
+            [exe, "--headless", "--disable-gpu", "--hide-scrollbars", "--no-first-run",
+             "--virtual-time-budget=1200", f"--screenshot={out}", "--window-size=900,620",
+             page.as_uri() + f"?t={step:.3f}"],
+            capture_output=True, timeout=120)
+        frames.append(str(out))
+    gif = SHOTS / "craft-rework.gif"
+    cmd = [magick, "-delay", "11", "-loop", "0"] + frames[:-1] + \
+          ["-delay", "140", frames[-1]] + \
+          ["-resize", "860x", "-colors", "256", "-dither", "None",
+           "-layers", "Optimize", str(gif)]
+    subprocess.run(cmd, capture_output=True, timeout=300)
+    shutil.rmtree(tmp, ignore_errors=True)
+    print(f"  gif craft-rework.gif: {gif.stat().st_size // 1024 if gif.exists() else 0} KB")
+
+
 # ---------------------------------------------------------------- browser
 def browser() -> str:
     env = os.environ.get("README_BROWSER")
@@ -568,6 +681,7 @@ def main() -> int:
         shutil.copy2(ROOT / src, DEMOS / Path(dst).name)
     write("assets/demos/ai-chat.html", CHAT_HTML)
     craft_demos()
+    craft_rework_gif()
     print("demo html written")
 
     # temporary wrapper, removed after the shot so the repo stays clean
