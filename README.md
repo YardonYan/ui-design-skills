@@ -321,7 +321,7 @@ AI 对话界面
 
 <img src="./assets/screenshots/craft-rework.gif" alt="使用 design-vocabulary 前后的界面对比" width="100%">
 
-同一份文案、同一套结构，动图在「使用前」和「使用后」之间来回切换。下面这张把两版并排，方便逐项对照。
+同一份文案、同一套结构，动图在`使用前`和`使用后`之间来回切换。下面这张把两版并排，方便逐项对照。
 
 <img src="./assets/screenshots/craft-before-after.png" alt="使用前与使用后的并排对比" width="100%">
 

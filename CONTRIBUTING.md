@@ -19,7 +19,7 @@ python tools/new_skill.py --name admin-report --category enterprise \
   --zh "后台报表" --desc "做什么。什么时候用。什么时候别用。"
 ```
 
-2. 写准 `description`。这是 AI 判断要不要读它的唯一依据，必须写清三件事：做什么、什么时候用、什么时候别用。只写「很好用」等于没写。
+2. 写准 `description`。这是 AI 判断要不要读它的唯一依据，必须写清三件事：做什么、什么时候用、什么时候别用。只写`很好用`等于没写。
 
 3. 放内容。规则与语料进 `references/`，能直接改的模板进 `templates/`，图标与示例进 `assets/`。大文件、图片、依赖不要进仓库。
 
