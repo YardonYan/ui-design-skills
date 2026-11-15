@@ -106,6 +106,34 @@ def main() -> int:
             else:
                 seen[name] = rel
 
+    # Numbers written in prose must match the actual tree, otherwise a skill
+    # addition silently leaves the docs stale.
+    counts = {}
+    for ns in sorted(p for p in SKILLS.iterdir() if p.is_dir()):
+        counts[ns.name] = len([d for d in ns.iterdir()
+                               if d.is_dir() and (d / "SKILL.md").exists()])
+    real_total = sum(counts.values())
+    for name in ["README.md", "README.en.md", "SKILL.md", "THIRD-PARTY.md",
+                 "docs/intent-routing.md", "docs/resource-routing.md"]:
+        f = ROOT / name
+        if not f.exists():
+            continue
+        text = f.read_text(encoding="utf-8", errors="replace")
+        zh = set()
+        for pat in (r"共\s*(\d+)\s*个技能", r"全库\s*(\d+)\s*个技能",
+                    r"仓库\s*(\d+)\s*个技能", r"上面的\s*(\d+)\s*个技能",
+                    r"(\d+)\s*个技能分六类"):
+            zh.update(re.findall(pat, text))
+        en = set()
+        for pat in (r"(\d+)\s+skills in six categories", r"has\s+(\d+)\s+skills"):
+            en.update(re.findall(pat, text))
+        for num in zh:
+            if int(num) != real_total:
+                errors.append(f"{name}: 写的 {num} 个技能与实际 {real_total} 不符")
+        for num in en:
+            if int(num) != real_total:
+                errors.append(f"{name}: 写的 {num} skills 与实际 {real_total} 不符")
+
     print(f"技能目录 {total} 个，问题 {len(errors)} 条")
     for e in errors:
         print("  - " + e)

@@ -52,17 +52,26 @@ function copyDir(from, to) {
 }
 
 const skills = allSkills();
+const q = opt("--search"), catFilter = opt("--category");
+const matches = (s) =>
+  (!q || q === true || s.name.includes(String(q))) &&
+  (!catFilter || catFilter === true || s.cat === String(catFilter));
+
 if (has("--list")) {
+  const pool = skills.filter(matches);
   const byCat = {};
-  for (const s of skills) (byCat[s.cat] ||= []).push(s.name);
-  console.log(`共 ${skills.length} 个技能`);
+  for (const s of pool) (byCat[s.cat] ||= []).push(s.name);
+  console.log(q || catFilter ? `匹配 ${pool.length} 个技能（共 ${skills.length} 个）` : `共 ${skills.length} 个技能`);
   for (const c of Object.keys(byCat).sort()) console.log(`  ${c} (${byCat[c].length}): ${byCat[c].join(", ")}`);
+  if (!pool.length) console.log("  没有匹配项，用 --list 查看全部");
   process.exit(0);
 }
 
 const pick = opt("--skill");
 if (!pick) die("需要 --skill <名> 或 --skill all，或用 --list 查看清单");
-const selected = pick === "all" ? skills : skills.filter((s) => s.name === pick);
+const selected = pick === "all"
+  ? skills.filter(matches)
+  : skills.filter((s) => s.name === pick);
 if (!selected.length) die(`找不到技能 ${pick}，用 --list 查看全部`);
 
 // Hard gate: refuse to install a half-broken skill.

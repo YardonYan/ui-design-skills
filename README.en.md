@@ -77,6 +77,14 @@ None of the four prompts names a skill; the repository decides which `SKILL.md` 
 
 ## 30-second start
 
+Find your situation first:
+
+| Your situation | Start here |
+|---|---|
+| Just want to see what it can do | Scroll up to See it working, or the four images in What the integrated skills can do |
+| Have a task and need an interface | Jump to Just describe the product and change the product name in one sentence |
+| Want it inside your project or team | See Install and supported assistants; clone once to call the whole repository |
+
 Three steps:
 
 1. Put the whole repository in your workspace, by cloning it or downloading a zip.
@@ -317,17 +325,17 @@ If the user says the match was wrong, switch skills and redo. They should not ha
 
 These five were adapted from other people's UI skill content and are now part of the 72 skills, installable and routable like the rest. The first four images are real output; the fifth skill produces text, so the prompt is printed instead.
 
-### Before and after: putting design vocabulary to work
+### Before and after: the lift from one skill
 
-<img src="./assets/screenshots/craft-rework.gif" alt="A design-vocabulary pass, step by step" width="100%">
+<img src="./assets/screenshots/craft-rework.gif" alt="The same interface before and after design-vocabulary" width="100%">
 
-One set of copy, going from a white background, a single type size and 8px spacing to warm paper, a three-step scale, 14px spacing and one accent colour. The still below puts the first and last frame side by side.
+Same copy, same structure; the GIF alternates between before and after. The still below puts both versions side by side for item-by-item comparison.
 
 <img src="./assets/screenshots/craft-before-after.png" alt="Before and after, side by side" width="100%">
 
 > This page feels flat. Rework it with design-vocabulary, dimension by dimension. Do not change the structure.
 
-Four kinds of change only: hierarchy, spacing, a single accent colour, icon alignment. Not one word of copy rewritten.
+Four kinds of change only: type scale, spacing, corner radius, one accent colour. No copy rewritten, no block moved.
 
 ### Three art directions: settle the tone first
 

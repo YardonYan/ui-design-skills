@@ -77,6 +77,14 @@ AI 对话界面 · AI 匹配 `assistant-ui` + `ai-chat-patterns`
 
 ## 30 秒上手
 
+先看你在哪种情况：
+
+| 你的情况 | 从这里开始 |
+|---|---|
+| 只想先看看能做什么 | 往上看 `先看效果`，或直接看 `整合技能能做什么` 那四张图 |
+| 手上有活，要做一个界面 | 跳到 `你只需说清产品`，复制一句话改掉产品名就行 |
+| 要接进自己的项目或团队 | 看 `安装与支持的助手`，clone 一次即可整体调用 |
+
 最短路径是三步：
 
 1. 把整个仓库放进工作区，`git clone` 或下载 zip 都行。
@@ -309,17 +317,17 @@ AI 对话界面
 
 这五个技能是从别人分享的 UI 技能内容改编来的，已纳入 72 个技能，和其余技能一样能被安装与路由。下面四张图是真跑出来的结果，第五个产出的是文本，直接贴出来。
 
-### 改前改后：设计词汇怎么用
+### 使用前后：设计词汇带来的提升
 
-<img src="./assets/screenshots/craft-rework.gif" alt="用 design-vocabulary 逐维整改的过程动图" width="100%">
+<img src="./assets/screenshots/craft-rework.gif" alt="使用 design-vocabulary 前后的界面对比" width="100%">
 
-同一份文案，从白底、一档字号、8px 间距，一步步走到暖纸底、三档字阶、14px 间距与单一强调色。下面这张是首尾并排，方便一眼对照。
+同一份文案、同一套结构，动图在「使用前」和「使用后」之间来回切换。下面这张把两版并排，方便逐项对照。
 
-<img src="./assets/screenshots/craft-before-after.png" alt="改前与用 design-vocabulary 整改后的并排对比" width="100%">
+<img src="./assets/screenshots/craft-before-after.png" alt="使用前与使用后的并排对比" width="100%">
 
 > 这份界面看着平，按 design-vocabulary 逐维整改，结构别动。
 
-改动只有四类：层级、间距、单一强调色、图标对齐。文案一个字没改。
+改动只有四类：字阶、间距、圆角、单一强调色。文案一个字没改，结构一个块没挪。
 
 ### 三种艺术方向：先定语气再落页面
 
