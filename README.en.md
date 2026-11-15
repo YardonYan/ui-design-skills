@@ -1,82 +1,272 @@
+<div align="center">
+
+[中文](./README.md) · English
+
+<img src="./assets/cover.svg" alt="UI Design Skills cover: 67 skills in six categories" width="100%">
+
 # UI Design Skills
 
-[中文](README.md) · English
+#### Turn one sentence into an interface your AI gets right the first time
 
-A skill library for AI agents working on interface design. 67 skills in six categories, 4332 files in total, each skill a standard `SKILL.md` directory that an agent can read and act on.
+<img src="./assets/badges.svg" alt="67 skills · Agent Skills · Apache-2.0 · CN tools first · no external CDN">
 
-Coverage spans web UI, enterprise back-office UI, mobile UI and AI chat interfaces, plus the components, icons, palettes, interaction rules and review criteria behind them. Material comes from a private skill library, a public skill library and several public upstream projects, filtered for licensing and privacy before inclusion.
+[See it working](#see-it-working) · [30-second start](#30-second-start) · [What UI do you want](#what-ui-do-you-want) · [Copy-paste prompts](#copy-paste-prompts) · [Six categories](#whats-in-the-six-categories) · [Install](#install)
 
-## Repository history
+</div>
 
-This repository was originally named daily-log and held daily technical notes, code snippets and hand-drawn figures. On 2026-11-15 it was converted into a dedicated UI design skill library and renamed ui-design-skills.
+A skill library for AI agents working on interface design. 67 skills, each solving one class of interface problem, with its rules, templates and assets in one directory. You only do three things: say what interface you want, pick a skill, and hand the prompt plus the skill path to your agent.
 
-| Item | Current state |
-|---|---|
-| Old URL | `github.com/YardonYan/daily-log` redirects automatically to the new address; old links keep working |
-| Commit history | Pre-conversion history fully preserved, no history rewrite, contribution graph unaffected |
-| Local working copy | The directory is still named daily-log because the daily contribution script writes to that path |
-| Log-style commits | The script still produces a few commits under `notes/`, `snippets/` and `assets/`; these are legacy, not skill content |
+No commands to memorise, no skill names to remember. Every prompt below can be copied as a whole block.
 
-Moving contribution commits to a separate repository means changing the script and its schedule, not this library. See `docs/troubleshooting.md`.
+## See it working
 
-## What this is and is not
+All four images are real output from skills in this repository, not mockups. Open the matching HTML in `assets/demos/` in a browser to reproduce them.
 
-| Is | Is not |
-|---|---|
-| Instructions, rules, templates and assets for AI agents | An installable npm component library |
-| Skill directories organised by the task at hand | A tutorial site arranged by framework |
-| HTML, TSX, SVG and palette values ready to copy | An archive of mockups or screenshots |
-| Public material with provenance and licence records | A full copy of anyone's private knowledge base |
+<table>
+<tr>
+<td width="50%" valign="top">
 
-The boundary is simple: if the output is a web page or an interface, it belongs in these six categories; if the output is a Word, PDF or PPT file, it is out of scope.
+<img src="./assets/screenshots/web-landing.png" alt="Landing page hero" width="100%">
 
-## Quick start
+Web · `saas-landing`
 
-1. Find a skill. Start with `ROUTER.md`, indexed by what you would say, then `docs/skill-map.md`, arranged along the six stages of making an interface.
-2. Install it. Use `tools/install.mjs` to copy it into your agent's skills directory, or point `--dir` anywhere you like.
-3. Use it. Hand the skill's `SKILL.md` to the agent, then let it read `references/` and `templates/` when it needs rules or a starting file.
+> Read `skills/web/saas-landing/SKILL.md` and build the homepage for a file-sync product following its layout. Include top nav, hero, three feature cards, pricing and FAQ. Desktop 1440 first, single column on mobile.
 
-Example: for an AI chat interface with tool-call approval, use `ai-chat-patterns` to enumerate states, `assistant-ui` to implement the components, and `web-design-guidelines` to review the result.
+</td>
+<td width="50%" valign="top">
 
-## Six categories
+<img src="./assets/screenshots/enterprise-dashboard.png" alt="Admin dashboard" width="100%">
 
-| Category | Scope | Skills | Typical request | Representative skills |
-|---|---|---:|---|---|
-| `foundations` | Direction, specs, colour, branding, interaction states, review | 15 | Remove the AI look, pick a palette, list chat states | `oil-ui`, `unslop`, `flexoki-palette`, `ai-chat-patterns` |
-| `web` | Public-facing pages and page types | 20 | Build a landing page, pricing page, docs site, clone a site | `saas-landing`, `pricing-page`, `docs-page`, `web-clone` |
-| `enterprise` | Back office, forms, information architecture, dashboards | 6 | Build a full admin, turn fields into a validated Schema | `enterprise-admin`, `admin-form-schema`, `admin-ia-patterns` |
-| `mobile` | App screens, onboarding, multi-platform dimensions | 3 | Render one app screen, look up platform specs | `mobile-app`, `mobile-design-spec` |
-| `components` | Components, blocks, icons, illustrations, charts, chat UI | 17 | Need motion component source, a full icon set, chat components | `cult-ui`, `ricoui-blocks`, `icon-system`, `assistant-ui` |
-| `tooling` | Debugging, conversion, canvas formats, delivery | 6 | Debug in the browser, HTML to PDF, read canvas data | `chrome-devtools`, `html-to-pdf`, `json-canvas` |
+Enterprise · `dashboard`
 
-## Contents
+> Read `skills/enterprise/dashboard/SKILL.md` and build an operations dashboard. Fixed left nav, top search and notifications, four KPI cards, a 30-day trend chart, an account table and a recent-events list.
 
-| Path | Contents | Count |
-|---|---|---:|
-| `skills/` | 67 skills in the six categories above | 67 skill directories |
-| `references/` | Shared corpus: 84 design-system references, Flexoki values, JSON Canvas spec | 174 files |
-| `docs/` | Skill map, privacy and licensing, troubleshooting | 3 files |
-| `tools/` | Installer and three checks | 4 files |
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-4332 files in total. Inside a skill, `SKILL.md` is the entry point, `SOURCE.md` and `CONTRIBUTORS` record provenance, and the remaining directories hold rules, templates and assets.
+<img src="./assets/screenshots/mobile-app.png" alt="Mobile app screen" width="100%">
 
-## Provenance
+Mobile · `mobile-app`
 
-| Source | What was included | Licence |
+> Read `skills/mobile/mobile-app/SKILL.md` and build one focus-timer app screen inside an iPhone 15 Pro frame. Include status bar, dynamic island, main timer card, today stats, a task list and a bottom tab bar.
+
+</td>
+<td width="50%" valign="top">
+
+<img src="./assets/screenshots/ai-chat-approval.png" alt="AI chat interface with a tool approval card" width="100%">
+
+AI chat · `assistant-ui` + `ai-chat-patterns`
+
+> Read `skills/foundations/ai-chat-patterns/SKILL.md` to enumerate every state, then build the chat interface following `skills/components/assistant-ui/SKILL.md`. Include a tool-approval card stating the action, its scope, whether it is reversible, with Approve and Reject side by side and a visible timeout rule.
+
+</td>
+</tr>
+</table>
+
+The four images cover web, enterprise, mobile and AI chat. The other 63 skills cover colour, icons, components, review, conversion and debugging. The pattern is identical: swap the skill path and describe the output.
+
+## 30-second start
+
+1. Get the repository. Clone it, or just download the one skill directory you need.
+2. Pick the closest scenario below and copy its prompt.
+3. Send it to your agent. The agent reads `SKILL.md` and, when needed, `references/` and `templates/` in the same directory.
+
+The smallest prompt that works. Replace the angle brackets:
+
+```
+Read skills/<category>/<skill>/SKILL.md and build <output> following its rules.
+Context: <who uses it, where>. Style: <one phrase>. Must include: <three to five items>.
+Avoid: <things to exclude>. Deliver a single self-contained HTML file I can open directly.
+```
+
+You can use it without installing anything: paste the body of `SKILL.md` into the conversation. Installing once simply means the agent reads the right file on its own when the situation calls for it.
+
+## What UI do you want
+
+<img src="./assets/flow-choose-skill.svg" alt="From the UI you want to six categories and representative skills" width="100%">
+
+When unsure, classify by the final output: if it is a web page or an interface, it belongs here; if it is a Word, PDF or PPT file, it is out of scope.
+
+| What you would probably say | Skill | What you get |
 |---|---|---|
-| Private skill library | Page recipes, back-office structures, components, icons, review rules | Original work Apache-2.0, third-party items attributed individually |
-| `YardonYan/for-my-self-skills` | Single-file HTML, mobile dimensions, Markdown fixes, conversion tooling | Apache-2.0 |
-| `assistant-ui/assistant-ui` | Chat UI docs, API declarations, component source, starter templates | MIT |
-| `kubai087/kubai-icons` | Icon definitions, badges, construction kit | MIT, icons portion only |
-| `ricocc/ricoui-blocks` | Motion blocks and design docs | MIT |
-| `kepano/flexoki`, `obsidianmd/jsoncanvas` | Palette values and canvas spec | MIT |
-| Design corpus | DESIGN.md references for 84 products | MIT |
+| Build a product homepage / landing page | `saas-landing` | Hero, features, social proof, pricing, one page |
+| Build a pricing page with three tiers | `pricing-page` | Monthly/annual toggle, comparison table, FAQ |
+| Build a FAQ or docs site | `faq-page`, `docs-page` | Q&A page and three-column docs page |
+| Build an admin with list, detail and edit pages | `enterprise-admin` | Back-office page structure and field definitions |
+| Turn a pile of fields into a validated form | `admin-form-schema` | Field list, types, validation rules, sample JSON |
+| Build a metrics dashboard | `dashboard`, `live-dashboard` | KPI grid, trend chart, activity feed |
+| Render one app screen | `mobile-app` | A single screen inside a device frame |
+| Look up iOS / Android / mini-program dimensions | `mobile-design-spec` | Five platform specs and safe-area values |
+| Build an AI chat interface / approval card | `assistant-ui` | Runtime wiring, components, ready-made elements |
+| Enumerate every state a chat UI must handle | `ai-chat-patterns` | State list and a 20-item acceptance checklist |
+| Need a full set of consistent icons | `icon-system` | Nearly a thousand icon definitions and naming rules |
+| Need illustrations / empty states | `spotkit` | Deterministic SVGs, light and dark |
+| Need a palette for a reading-heavy UI | `flexoki-palette` | Palette CSS and light/dark mapping |
+| This looks AI-generated, fix it | `unslop` | Line-by-line critique, no full rewrite |
+| Review interface and accessibility compliance | `web-design-guidelines` | A list of compliance issues |
+| Turn a mockup or screenshot into code | `image-to-code` | Reconstructed page code |
+| Clone a site | `web-clone` | Section-by-section reconstruction path |
+| HTML to PDF / single-file report | `html-to-pdf`, `html-skill-effectiveness` | Deliverable files |
 
-Per-skill sources, licences and inclusion notes are in `THIRD-PARTY.md`. Source-available skill documents and third-party skills with unclear terms are linked, not copied.
+All 67 skills are indexed in `ROUTER.md` (by what you would say) and `docs/skill-map.md` (by the six stages of making an interface).
+
+## Copy-paste prompts
+
+This section is for people who do not want to study the skills first. Copy a whole block and change only the bracketed parts.
+
+### Universal formula
+
+```
+Read skills/[category]/[skill]/SKILL.md and build [output] following its rules.
+Context: [who uses it, where]. Style: [restrained / editorial / enterprise / playful].
+Must include: [three to five items, e.g. top nav, hero, three feature cards, pricing, FAQ].
+Avoid: [purple gradients, glows, emoji labels, wide-tracked uppercase, ...].
+Constraints: single self-contained HTML, no external dependencies, works at 1440 and on mobile.
+When done, list the choices you made.
+```
+
+### By scenario
+
+Landing page
+
+```
+Read skills/web/saas-landing/SKILL.md and build the homepage for a developer-facing
+API monitoring product. Restrained style, warm paper background, no purple gradients
+or glows. Include top nav, large hero, dual CTA, four feature cards, a three-step
+flow, three pricing tiers, FAQ and footer. Single HTML file.
+```
+
+Pricing page
+
+```
+Read skills/web/pricing-page/SKILL.md and build a three-tier pricing page.
+Mark the middle tier as recommended. Include a monthly/annual toggle, a full
+feature comparison table and FAQ. Use placeholder numbers, do not invent real prices.
+```
+
+Enterprise admin
+
+```
+Read skills/enterprise/enterprise-admin/SKILL.md and build the list page of an
+order-management admin. Include filters, bulk actions, pagination, status badges
+and an inline-edit entry point. Use only these fields: order id, customer, amount,
+status, created at. Do not add fields I did not give you.
+```
+
+Form schema
+
+```
+Read skills/enterprise/admin-form-schema/SKILL.md and turn this field set into a
+validated schema: types, required flags, defaults, enum dictionaries, validation
+timing and error messages. Give sample JSON. Never invent fields absent from the input.
+```
+
+Mobile
+
+```
+Read skills/mobile/mobile-app/SKILL.md and build one habit-tracker screen.
+Put it in an iPhone frame with status bar, today's progress, a seven-day streak,
+a task list and four bottom tabs. Also read skills/mobile/mobile-design-spec/SKILL.md
+and check safe areas and touch targets.
+```
+
+AI chat interface
+
+```
+Read skills/foundations/ai-chat-patterns/SKILL.md to enumerate states, then build
+the chat interface following skills/components/assistant-ui/SKILL.md. Include
+streaming output, manual stop, retry on failure, follow-up suggestions, and a
+tool-approval card. The card must state the action, its scope, whether it is
+reversible, show Approve and Reject side by side, and display the timeout rule.
+```
+
+Colour
+
+```
+Read skills/foundations/flexoki-palette/SKILL.md and references/palette.css and
+give me light and dark themes for a long-form reading site. Body text must have
+enough contrast, colour is for semantics only. Deliver CSS variables; do not
+write a second copy of the hex values.
+```
+
+Icons
+
+```
+Read skills/components/icon-system/SKILL.md and make eight functional icons for a
+file manager: new, upload, download, share, archive, search, delete, settings.
+Stroke width, corner radius and padding must match across the set, all colours
+derived from one accent. Export standalone static SVGs at the end.
+```
+
+Fix an existing interface
+
+```
+Read skills/foundations/unslop/SKILL.md and critique this HTML. Do not rewrite the
+whole page. Keep the structure, first list the AI-look evidence with locations,
+then fix in passes: spacing, colour, icons, copy, type, layout. One class per pass.
+```
+
+Review
+
+```
+Read skills/foundations/web-design-guidelines/SKILL.md and
+skills/foundations/ai-chat-patterns/references/acceptance-checklist.md and review
+this interface. Report issues and their locations only, do not edit yet.
+```
+
+### More precise input, more predictable output
+
+| You might say | Say instead | Why |
+|---|---|---|
+| Make a nice page | Build a developer pricing page, three tiers, restrained, warm paper | Nice has no acceptance criteria; output, tiers and style do |
+| Build an admin | Build an order list page with exactly these five fields | Admin is too broad; unlisted fields appear by guesswork |
+| Make it like that big product | Large headline, narrow body column, hairline borders, no gradients | Describing traits is safer than copying a specific product |
+| A few icons, whatever | Eight functional icons, shared stroke and radius, one accent | Count and invariants are what make a set |
+| Make it look better | Only change card spacing and heading weight in section two | Without a boundary the agent rewrites everything |
+| Use our internal field names | Use abstract field names; I will fill real ones locally | Keep internal data out of external services and public output |
+
+### Follow-up prompts
+
+```
+Keep the overall structure. Change only [one property] of [one region]. Leave everything else alone.
+```
+
+```
+List every choice you made and flag the ones I did not ask for.
+```
+
+```
+Review the motion with skills/foundations/review-animations/SKILL.md. Report issues only, do not edit yet.
+```
+
+```
+Produce a dark variant using skills/foundations/flexoki-palette/references/palette.css.
+```
+
+## What's in the six categories
+
+<img src="./assets/category-bar.svg" alt="Six categories: foundations 15, web 20, enterprise 6, mobile 3, components 17, tooling 6" width="100%">
+
+| Category | Scope | Skills | Representative |
+|---|---|---:|---|
+| `foundations` | Direction, colour, branding, interaction states, review | 15 | `oil-ui`, `flexoki-palette`, `ai-chat-patterns`, `unslop` |
+| `web` | Public-facing pages and page types | 20 | `saas-landing`, `pricing-page`, `web-clone` |
+| `enterprise` | Back office, forms, information architecture, dashboards | 6 | `enterprise-admin`, `admin-form-schema` |
+| `mobile` | App screens, onboarding, platform dimensions | 3 | `mobile-app`, `mobile-design-spec` |
+| `components` | Components, blocks, icons, illustrations, charts, chat UI | 17 | `cult-ui`, `icon-system`, `assistant-ui` |
+| `tooling` | Debugging, conversion, canvas formats, delivery | 6 | `chrome-devtools`, `html-to-pdf`, `json-canvas` |
+
+## What a skill looks like
+
+<img src="./assets/skill-anatomy.svg" alt="Anatomy of a skill directory and the four steps an agent takes" width="100%">
+
+Each skill is a directory. `SKILL.md` is the entry point; its YAML frontmatter requires `name` and `description`, and the description states what it does, when to use it and when not to. The agent loads only the files it needs instead of pushing all 67 skills into context. Run `python tools/lint_skills.py` to validate the format.
 
 ## Install
 
-Zero dependencies, Node 18 or newer, no npm install required:
+Zero dependencies, Node 18 or newer:
 
 ```bash
 node tools/install.mjs --list
@@ -90,12 +280,12 @@ node tools/install.mjs --skill all --ai workbuddy --dry-run
 | `--skill <name>` / `--skill all` | Pick one skill or all |
 | `--ai <id>` / `--ai all` | Install into one assistant or all configured assistants |
 | `--project` | Install into the current project instead of the user-level directory |
-| `--dir <path>` | Explicit target directory, overrides the `--ai` default |
+| `--dir <path>` | Explicit target directory, overrides the default |
 | `--dry-run` | Print planned copies without writing |
 | `--force` | Overwrite an existing target |
 | `--uninstall` | Remove skills installed from this library |
 
-The installer refuses to copy anything unless every selected skill has `SKILL.md` at its root.
+Install only the one you need, not all of them. The installer verifies every selected skill has `SKILL.md` at its root and refuses the whole batch otherwise.
 
 ## Where it works
 
@@ -113,61 +303,31 @@ Domestic tools first (usable without a proxy in mainland China), then internatio
 | Codex | `codex` | `~/.codex/skills/` |
 | Cursor | `cursor` | `~/.cursor/skills/` |
 
-These are defaults and may change between releases; override with `--dir`.
-
-To install from a plugin marketplace, add this repository to your assistant's marketplace list. Four manifests ship at the repository root: `.claude-plugin/`, `.codebuddy-plugin/`, `.codex-plugin/` and `.cursor-plugin/`.
+These are defaults; override with `--dir`. The repository also works as a plugin-marketplace source, with four manifests at the root:
 
 ```bash
 claude plugin marketplace add YardonYan/ui-design-skills
 ```
 
-Not applicable: browser IDEs, cloud shells and online notebooks. Skills are instruction files for an agent, not a runnable app; those environments have no loader. To get a working interface, take the templates into your own project.
+Browser IDEs, cloud shells and online notebooks are not applicable: they have no skill loader. To get a running interface, take the templates into your own project.
 
-## Skill format
+## FAQ
 
-Each skill directory has at least `SKILL.md`. The YAML frontmatter requires `name` and `description`, and `name` must equal the directory name. `description` states three things: what it does, when to use it and when not to. Optional fields include `category`, `zh_name`, `en_name`, `tags`, `version` and `license`.
-
-```
-skills/<category>/<skill>/
-  SKILL.md          entry point, required
-  SOURCE.md         provenance and license record
-  CONTRIBUTORS      upstream attribution
-  references/       rules, specs, corpus
-  templates/        editable templates
-  assets/           icons, samples, config
-  scripts/          checks and generators
-```
-
-`tools/lint_skills.py` verifies these rules. Run it after changing a skill.
-
-## Privacy and licensing
-
-No real names or real company names appear in this public repository; `tools/scan_sensitive.py` scans the whole tree before every push. Public upstream credits and copyright notices are kept because their licences require it; see `docs/privacy-and-license.md`.
-
-Original content is Apache-2.0. Third-party material keeps its own license, listed per skill in `THIRD-PARTY.md`, with exceptions in `NOTICE`. The 34 skills whose licence could not be verified and the 2 skills that declare a LICENSE.txt but ship without it are listed separately in the pending-verification section of `THIRD-PARTY.md` rather than hidden behind a generic "see upstream".
-
-## Maintenance
-
-```bash
-python tools/lint_skills.py       # validate skill format
-python tools/scan_sensitive.py    # sensitive-term scan
-python tools/build_index.py       # regenerate the skill map
-```
-
-Counts are generated from `SKILL.md` files, never written by hand. Re-run `build_index.py` after renaming a skill or moving it between categories.
-
-## Troubleshooting
-
-See `docs/troubleshooting.md`. Every item comes from an actual run, not a guessed error message.
-
-## Changelog
-
-| Date | Change |
+| Question | Answer |
 |---|---|
-| 2026-11-15 | Converted from a daily notes repository into a UI design skill library: 67 skills in six categories, old content removed in a normal commit, history preserved |
-| 2026-11-15 | Added the assistant-ui component library and the AI chat interaction spec, 65 to 67 skills |
-| 2026-11-15 | Renamed to ui-design-skills; About description, topics and this document rewritten for the new purpose |
+| Can I use it without installing | Yes. Paste the body of `SKILL.md` into the chat. Installing just saves the pasting each time |
+| Do I need all 67 installed | No. Install one for the task at hand, add more when needed |
+| Is the generated UI production-ready | It is a starting point; wire real data, branding and backend, then review with `web-design-guidelines` |
+| Still off target after rewording | Make "must include" and "avoid" concrete, and add "list the choices you made" |
+| How do I reproduce the images | All sources are in `assets/demos/`; `python tools/gen_readme_images.py` regenerates the artwork |
+| I want a different style | Start with `oil-ui` to set a direction, then have the agent build from it. Saves a rewrite round |
+
+Troubleshooting notes from real runs are in `docs/troubleshooting.md`.
 
 ## License
 
-Apache-2.0, see `LICENSE`. Third-party material follows the terms in `THIRD-PARTY.md`.
+Original content is Apache-2.0, see `LICENSE`. Third-party material keeps its own license, listed per skill in `THIRD-PARTY.md`, with exceptions in `NOTICE`. Illustrations, diagrams and screenshots live in `assets/` and are reproducible via `tools/gen_readme_images.py`.
+
+---
+
+This repository was formerly named daily-log; the old URL redirects here. The local working copy keeps the old directory name, and occasional log-style commits are legacy rather than skill content.

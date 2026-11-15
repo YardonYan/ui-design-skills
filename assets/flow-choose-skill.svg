@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" width="1200" height="430">
+<rect x="0" y="0" width="1200" height="430" rx="0" fill="#FFFCF0" />
+<rect x="430" y="18" width="340" height="52" rx="26" fill="#1c1b1a" />
+<text x="600" y="51" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff" text-anchor="middle" >你想做哪种 UI？</text>
+<text x="600" y="96" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="14" font-weight="400" fill="#6f6e69" text-anchor="middle" >先说清楚产物是什么，再挑技能</text>
+<line x1="600" y1="70" x2="600" y2="122" stroke="#e3e0d5" stroke-width="2"/>
+<line x1="100" y1="122" x2="1100" y2="122" stroke="#e3e0d5" stroke-width="2"/>
+<line x1="115.0" y1="122" x2="115.0" y2="150" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="20" y="150" width="190" height="62" rx="10" fill="#ffffff" stroke="#e3e0d5" stroke-width="1.5" />
+<text x="115.0" y="178" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#1c1b1a" text-anchor="middle" >给产品做官网 / 落地页</text>
+<text x="115.0" y="199" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="700" fill="#c96442" text-anchor="middle" >→ web</text>
+<line x1="115.0" y1="212" x2="115.0" y2="242" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="20" y="242" width="190" height="84" rx="10" fill="#c96442" />
+<text x="115.0" y="272" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" >saas-landing</text>
+<text x="115.0" y="296" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#ffffff" text-anchor="middle" opacity="0.85">一页讲清价值</text>
+<text x="115.0" y="348" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#6f6e69" text-anchor="middle" >复制话术 → 交给助手</text>
+<line x1="310.0" y1="122" x2="310.0" y2="150" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="215" y="150" width="190" height="62" rx="10" fill="#ffffff" stroke="#e3e0d5" stroke-width="1.5" />
+<text x="310.0" y="178" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#1c1b1a" text-anchor="middle" >做管理后台 / 表单 / 看板</text>
+<text x="310.0" y="199" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="700" fill="#4b6b8a" text-anchor="middle" >→ enterprise</text>
+<line x1="310.0" y1="212" x2="310.0" y2="242" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="215" y="242" width="190" height="84" rx="10" fill="#4b6b8a" />
+<text x="310.0" y="272" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" >enterprise-admin</text>
+<text x="310.0" y="296" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#ffffff" text-anchor="middle" opacity="0.85">列表详情与校验</text>
+<text x="310.0" y="348" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#6f6e69" text-anchor="middle" >复制话术 → 交给助手</text>
+<line x1="505.0" y1="122" x2="505.0" y2="150" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="410" y="150" width="190" height="62" rx="10" fill="#ffffff" stroke="#e3e0d5" stroke-width="1.5" />
+<text x="505.0" y="178" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#1c1b1a" text-anchor="middle" >做 App 界面 / 引导页</text>
+<text x="505.0" y="199" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="700" fill="#7a6b9a" text-anchor="middle" >→ mobile</text>
+<line x1="505.0" y1="212" x2="505.0" y2="242" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="410" y="242" width="190" height="84" rx="10" fill="#7a6b9a" />
+<text x="505.0" y="272" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" >mobile-app</text>
+<text x="505.0" y="296" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#ffffff" text-anchor="middle" opacity="0.85">设备样机里的 App</text>
+<text x="505.0" y="348" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#6f6e69" text-anchor="middle" >复制话术 → 交给助手</text>
+<line x1="700.0" y1="122" x2="700.0" y2="150" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="605" y="150" width="190" height="62" rx="10" fill="#ffffff" stroke="#e3e0d5" stroke-width="1.5" />
+<text x="700.0" y="178" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#1c1b1a" text-anchor="middle" >做 AI 对话 / 审批卡</text>
+<text x="700.0" y="199" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="700" fill="#3f7d6a" text-anchor="middle" >→ components</text>
+<line x1="700.0" y1="212" x2="700.0" y2="242" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="605" y="242" width="190" height="84" rx="10" fill="#3f7d6a" />
+<text x="700.0" y="272" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" >assistant-ui</text>
+<text x="700.0" y="296" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#ffffff" text-anchor="middle" opacity="0.85">对话与工具审批</text>
+<text x="700.0" y="348" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#6f6e69" text-anchor="middle" >复制话术 → 交给助手</text>
+<line x1="895.0" y1="122" x2="895.0" y2="150" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="800" y="150" width="190" height="62" rx="10" fill="#ffffff" stroke="#e3e0d5" stroke-width="1.5" />
+<text x="895.0" y="178" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#1c1b1a" text-anchor="middle" >要图标 / 组件 / 配色</text>
+<text x="895.0" y="199" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="700" fill="#3f7d6a" text-anchor="middle" >→ components</text>
+<line x1="895.0" y1="212" x2="895.0" y2="242" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="800" y="242" width="190" height="84" rx="10" fill="#3f7d6a" />
+<text x="895.0" y="272" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" >icon-system</text>
+<text x="895.0" y="296" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#ffffff" text-anchor="middle" opacity="0.85">成套图标与色板</text>
+<text x="895.0" y="348" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#6f6e69" text-anchor="middle" >复制话术 → 交给助手</text>
+<line x1="1090.0" y1="122" x2="1090.0" y2="150" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="995" y="150" width="190" height="62" rx="10" fill="#ffffff" stroke="#e3e0d5" stroke-width="1.5" />
+<text x="1090.0" y="178" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#1c1b1a" text-anchor="middle" >已有界面想整改 / 验收</text>
+<text x="1090.0" y="199" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="700" fill="#8a6f4a" text-anchor="middle" >→ foundations</text>
+<line x1="1090.0" y1="212" x2="1090.0" y2="242" stroke="#e3e0d5" stroke-width="2"/>
+<rect x="995" y="242" width="190" height="84" rx="10" fill="#8a6f4a" />
+<text x="1090.0" y="272" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" >unslop</text>
+<text x="1090.0" y="296" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#ffffff" text-anchor="middle" opacity="0.85">红笔批改不重写</text>
+<text x="1090.0" y="348" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="11" font-weight="400" fill="#6f6e69" text-anchor="middle" >复制话术 → 交给助手</text>
+<text x="20" y="404" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="14" font-weight="400" fill="#6f6e69" text-anchor="start" >挑不出来就按最终产物归类：产出是界面进这六类，产出是 Word / PDF / PPT 不在本库范围。</text>
+</svg>

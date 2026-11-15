@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 对话界面演示 · 工具调用审批</title>
+<style>
+  :root{--bg:#fafaf9;--fg:#1c1b1a;--muted:#6b6964;--border:#e6e4e0;--accent:#c96442;--surface:#fff;--good:#2f7d4a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 -apple-system,"Microsoft YaHei",system-ui,sans-serif;display:flex;justify-content:center;padding:28px}
+  .app{width:820px;background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:0 12px 40px rgba(28,27,26,.07);overflow:hidden}
+  header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)}
+  .brand{font-weight:700;letter-spacing:-.01em}
+  .tag{font-size:12px;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:4px 10px}
+  .thread{padding:22px 24px 8px;min-height:470px}
+  .row{display:flex;margin-bottom:18px;gap:10px}
+  .row.user{justify-content:flex-end}
+  .av{width:28px;height:28px;border-radius:8px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;flex:none}
+  .row.user .av{background:var(--fg);color:#fff;border-color:var(--fg)}
+  .bubble{max-width:560px;background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:12px 15px}
+  .row.user .bubble{background:#f3ece6;border-color:#ead9cc}
+  .who{font-size:12px;color:var(--muted);margin-bottom:5px}
+  .approval{background:#fffdf7;border:1px solid #e8d7bf;border-radius:12px;padding:14px 16px;margin-top:10px}
+  .approval h4{margin:0 0 4px;font-size:14px}
+  .approval .scope{font-size:12px;color:var(--muted);margin-bottom:10px}
+  .kv{display:flex;gap:8px;font-size:12px;color:var(--muted);border-top:1px dashed var(--border);padding-top:9px;margin-top:9px}
+  .kv b{color:var(--fg);font-weight:600}
+  .actions{display:flex;gap:8px;margin-top:12px;align-items:center}
+  button{font:inherit;font-size:13px;padding:7px 16px;border-radius:8px;cursor:pointer;border:1px solid var(--border);background:#fff}
+  button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+  .timeout{font-size:11px;color:var(--muted);margin-left:auto}
+  .state{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--good);border:1px solid #cfe4d5;background:#f2f9f4;border-radius:999px;padding:3px 9px;margin-top:8px}
+  .suggest{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 18px 38px}
+  .chip{font-size:12px;border:1px solid var(--border);border-radius:999px;padding:5px 11px;background:#fff;color:var(--muted)}
+  .composer{display:flex;align-items:center;gap:10px;padding:14px 20px;border-top:1px solid var(--border);background:#fcfcfa}
+  input{flex:1;font:inherit;padding:10px 14px;border:1px solid var(--border);border-radius:10px;background:#fff}
+  .model{font-size:12px;color:var(--muted)}
+  .send{background:var(--fg);color:#fff;border-color:var(--fg);font-weight:600}
+</style>
+</head>
+<body>
+<div class="app">
+  <header><span class="brand">工作台助手</span><span class="tag">模型 · 通用版　|　对话 01</span></header>
+  <div class="thread">
+    <div class="row user"><div class="bubble"><div class="who">你</div>把上周的订单汇总发给运营组，先让我看一眼再发。</div><div class="av">你</div></div>
+    <div class="row"><div class="av">AI</div><div class="bubble">
+      <div class="who">助手 · 已生成</div>已整理好上周订单汇总，涉及 3 个字段：时间范围、订单数、金额合计。发送前需要你确认。
+      <div class="approval">
+        <h4>发送订单汇总到运营组</h4>
+        <div class="scope">作用对象：运营组频道　·　影响范围：会向外部频道发送一条消息　·　可撤回：否</div>
+        <div class="kv"><span>附件</span><b>weekly-orders.csv</b><span>时间范围</span><b>最近 7 天</b><span>收件方</span><b>运营组</b></div>
+        <div class="actions"><button class="primary">批准发送</button><button>拒绝</button><span class="timeout">30 秒未操作则自动取消</span></div>
+      </div>
+      <span class="state">● 已生成 · 等待审批</span>
+    </div></div>
+    <div class="suggest"><span class="chip">改成只发金额合计</span><span class="chip">先导出预览</span><span class="chip">换个时间范围</span></div>
+  </div>
+  <div class="composer"><span class="model">模型 ▾</span><input placeholder="继续描述，或按 Enter 发送"><button class="send">发送</button></div>
+</div>
+</body>
+</html>
