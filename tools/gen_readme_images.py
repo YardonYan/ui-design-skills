@@ -136,16 +136,43 @@ def cover() -> str:
 
 # ---------------------------------------------------------------- badges.svg
 def badges() -> str:
-    items = [("67 SKILLS", ACCENT), ("AGENT SKILLS", "#4b6b8a"),
-             ("APACHE-2.0", "#3f7d6a"), ("CN TOOLS FIRST", "#7a6b9a"),
-             ("NO CDN", "#8a6f4a")]
+    items = [("v2.3", ACCENT), ("67 SKILLS", "#4b6b8a"),
+             ("AGENT SKILLS", "#3f7d6a"), ("APACHE-2.0", "#7a6b9a"),
+             ("CN TOOLS FIRST", "#8a6f4a"), ("NO CDN", "#c96442")]
     x = 4
-    o = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 40" width="760" height="40">']
+    o = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 40" width="620" height="40">']
     for label, color in items:
-        w = 12 + len(label) * 8
+        w = 14 + len(label) * 8
         o.append(rect(x, 4, w, 30, color, rx=15))
         o.append(txt(x + w / 2, 24, label, 12, "#ffffff", 700, "middle"))
         x += w + 10
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+# ---------------------------------------------------------------- tech-stack.svg
+def tech_stack() -> str:
+    """Coloured pills, four rows from the standard down to the deliverables."""
+    rows = [
+        ("标准", ["Agent Skills", "SKILL.md"], "#8a6f4a"),
+        ("框架", ["React", "TypeScript", "Tailwind CSS", "HTML / CSS"], "#4b6b8a"),
+        ("组件", ["shadcn/ui", "Bootstrap", "React Native"], "#3f7d6a"),
+        ("工具与产物", ["Node.js", "Python", "SVG", "JSON Canvas"], "#7a6b9a"),
+    ]
+    o = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" width="1200" height="210">',
+         rect(0, 0, 1200, 210, PAPER)]
+    for i, (label, items, color) in enumerate(rows):
+        y = 14 + i * 48
+        label_w = len(label) * 16 + 16
+        pills = [(it, 20 + len(it) * 9) for it in items]
+        total = label_w + 14 + sum(w for _, w in pills) + 10 * len(pills)
+        x = (1200 - total) / 2
+        o.append(txt(x + label_w, y + 24, label, 15, INK, 600, "end"))
+        x += label_w + 14
+        for it, w in pills:
+            o.append(rect(x, y + 5, w, 32, color, rx=16))
+            o.append(txt(x + w / 2, y + 26, it, 13, "#ffffff", 600, "middle"))
+            x += w + 10
     o.append("</svg>")
     return "\n".join(o)
 
@@ -342,6 +369,7 @@ def main() -> int:
 
     write("assets/cover.svg", cover())
     write("assets/badges.svg", badges())
+    write("assets/tech-stack.svg", tech_stack())
     write("assets/category-bar.svg", category_bar())
     write("assets/flow-choose-skill.svg", flow())
     write("assets/skill-anatomy.svg", anatomy())

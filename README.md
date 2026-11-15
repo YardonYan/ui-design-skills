@@ -4,30 +4,27 @@
 
 #### 把一句需求，变成 AI 一次就能做对的界面
 
-标准 · `Agent Skills` `SKILL.md`<br>
-框架 · `React` `TypeScript` `Tailwind CSS` `HTML / CSS`<br>
-组件 · `shadcn/ui` `Bootstrap` `React Native`<br>
-工具与产物 · `Node.js` `Python` `SVG` `JSON Canvas`
+<img src="./assets/tech-stack.svg" alt="技术栈：标准 Agent Skills 与 SKILL.md，框架 React、TypeScript、Tailwind CSS、HTML/CSS，组件 shadcn/ui、Bootstrap、React Native，工具与产物 Node.js、Python、SVG、JSON Canvas" width="100%">
 
-v1.0 · 4 次内容迭代 · 67 个技能 · Apache-2.0
+<img src="./assets/badges.svg" alt="v2.3 · 67 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
+
+当前版本 v2.3 · 67 个技能 · Apache-2.0
 
 中文 · [English](./README.en.md) · [贡献其他语言](https://github.com/YardonYan/ui-design-skills/issues)
 
 <img src="./assets/cover.svg" alt="UI Design Skills 封面：67 个技能分六类" width="100%">
 
-<img src="./assets/badges.svg" alt="67 skills · Agent Skills · Apache-2.0 · 国内工具优先 · 无外部 CDN">
-
-[看效果](#先看效果) · [30 秒上手](#30-秒上手) · [你想要哪种 UI](#你想要哪种-ui) · [直接抄话术](#话术模板) · [六类里有什么](#六类里有什么) · [安装](#安装)
+[看效果](#先看效果) · [30 秒上手](#30-秒上手) · [安装](#安装与支持的助手) · [你想要哪种 UI](#你想要哪种-ui) · [直接抄话术](#话术模板) · [六类](#六类里有什么) · [v2.3 更新](#v23-更新内容) · [常见问题](#常见问题)
 
 </div>
 
 这是一个给 AI 助手用的界面设计技能库。67 个技能，每个解决一类界面问题，规则、模板、素材都在目录里。你要做的只有三件事：说清想要什么界面、挑一个技能、把话术连同技能路径交给助手。
 
-不需要背命令，不需要记技能名。下面每一段话术都可以直接整段复制。
+不需要背命令，不需要记技能名。下面每一段话术都可以直接整段复制。先往下看四张真实产出，再决定从哪一步开始。
 
 ## 先看效果
 
-下面四张图都是本库技能的真实产出，用浏览器直接打开 `assets/demos/` 里对应的 HTML 就能复现，不是示意图。
+下面四张图都是本库技能的真实产出，用浏览器打开 `assets/demos/` 里对应的 HTML 就能复现，不是示意图。每张图下面配的就是问出它的那句话。
 
 <table>
 <tr>
@@ -76,9 +73,11 @@ AI 对话界面 · `assistant-ui` + `ai-chat-patterns`
 
 ## 30 秒上手
 
+看完效果，最短的路径是三步：
+
 1. 拿到仓库。可以 `git clone`，也可以只下载你要用的那一个技能目录。
-2. 在下面选一个最接近的场景，复制它的话术。
-3. 把话术发给你的 AI 助手，助手会自己读 `SKILL.md` 和同目录的 `references/`、`templates/`。
+2. 翻到选型那一节，挑一个最接近的场景，复制它的话术。
+3. 把话术发给 AI 助手，助手会自己读 `SKILL.md` 和同目录的 `references/`、`templates/`。
 
 最小可用的一句，替换尖括号里的内容即可：
 
@@ -88,9 +87,56 @@ AI 对话界面 · `assistant-ui` + `ai-chat-patterns`
 不要：<明确排除的东西>。产出可直接打开的单文件 HTML。
 ```
 
-不装也能用：把 `SKILL.md` 的正文直接贴进对话，效果一样，只是每次要手动贴。装一次之后，助手会在该用的时候自己读，这是装的主要好处。
+不装也能用：把 `SKILL.md` 的正文直接贴进对话，效果一样，只是每次要手动贴。想让助手以后自己读，就往下看安装。
+
+## 安装与支持的助手
+
+零依赖安装器，Node 18 以上即可：
+
+```bash
+node tools/install.mjs --list
+node tools/install.mjs --skill saas-landing --ai workbuddy
+node tools/install.mjs --skill all --ai workbuddy --dry-run
+```
+
+一次只装用得到的那个就行，不必全装。安装器会在拷贝前检查每个技能根目录确有 `SKILL.md`，缺一个就整体拒绝。
+
+| 参数 | 作用 |
+|---|---|
+| `--list` | 列出全部技能与分类 |
+| `--skill <名>` / `--skill all` | 选一个技能或全部 |
+| `--ai <id>` / `--ai all` | 装到指定助手，或一次装到全部已配置的助手 |
+| `--project` | 装到当前项目，而不是用户级目录 |
+| `--dir <路径>` | 直接指定目标目录，覆盖默认值 |
+| `--dry-run` | 只打印将要复制的内容 |
+| `--force` | 目标已存在时覆盖 |
+| `--uninstall` | 移除本库装过的技能 |
+
+国内工具排在前面，默认可直接用；国外工具通常需要外网环境。
+
+| 助手 | `--ai` id | 用户级默认目录 |
+|---|---|---|
+| WorkBuddy | `workbuddy` | `~/.workbuddy/skills/` |
+| CodeBuddy | `codebuddy` | `~/.codebuddy/skills/` |
+| TRAE 国内版 | `trae-cn` | `~/.trae-cn/skills/` |
+| Qoder | `qoder` | `~/.qoder/skills/` |
+| Qwen Code | `qwen-code` | `~/.qwen/skills/` |
+| OpenClaw | `openclaw` | `~/.openclaw/skills/` |
+| Claude Code | `claude` | `~/.claude/skills/` |
+| Codex | `codex` | `~/.codex/skills/` |
+| Cursor | `cursor` | `~/.cursor/skills/` |
+
+目录是默认值，用 `--dir` 覆盖。也可以把仓库作为插件市场来源，根目录带了四套插件清单：
+
+```bash
+claude plugin marketplace add YardonYan/ui-design-skills
+```
+
+网页 IDE、云 Shell、在线 Notebook 不适用，它们没有技能加载入口。要一个能跑的界面时，把技能里的模板落到自己的项目里。
 
 ## 你想要哪种 UI
+
+装好之后，先别急着写提示词，把产物类型定下来，选错技能比措辞不准更浪费时间。
 
 <img src="./assets/flow-choose-skill.svg" alt="从你想做哪种 UI 出发，分出六类技能与代表技能" width="100%">
 
@@ -121,7 +167,7 @@ AI 对话界面 · `assistant-ui` + `ai-chat-patterns`
 
 ## 话术模板
 
-这一段是给不想研究技能细节的人准备的。整段复制，只改方括号里的内容。
+场景定了，接下来就是怎么把需求说清楚。这一段给不想研究技能细节的人准备，整段复制，只改方括号里的内容。
 
 ### 万能公式
 
@@ -247,6 +293,8 @@ skills/foundations/ai-chat-patterns/references/acceptance-checklist.md，
 
 ## 六类里有什么
 
+会用之后，回头看一下整个库的全貌，方便按需补技能，而不是每次都从头找。
+
 <img src="./assets/category-bar.svg" alt="六类构成：设计基础 15、网页端 20、企业后台 6、移动端 3、组件素材 17、工程链路 6" width="100%">
 
 | 类别 | 管什么 | 技能数 | 代表技能 |
@@ -260,56 +308,27 @@ skills/foundations/ai-chat-patterns/references/acceptance-checklist.md，
 
 ## 技能长什么样
 
+知道全貌之后，理解一个技能目录怎么被读取，改起话术和模板会更顺手。
+
 <img src="./assets/skill-anatomy.svg" alt="一个技能目录的结构，以及 AI 助手读取它的四步" width="100%">
 
 每个技能是一个目录，`SKILL.md` 是入口，YAML frontmatter 里 `name` 与 `description` 必填，`description` 写清做什么、什么时候用、什么时候别用。助手只加载用得到的文件，不会把 67 个技能全灌进上下文。想核对格式可以跑 `python tools/lint_skills.py`。
 
-## 安装
+## v2.3 更新内容
 
-零依赖安装器，Node 18 以上即可：
+当前版本 v2.3。这一版包含的内容：
 
-```bash
-node tools/install.mjs --list
-node tools/install.mjs --skill saas-landing --ai workbuddy
-node tools/install.mjs --skill all --ai workbuddy --dry-run
-```
-
-| 参数 | 作用 |
+| 更新 | 说明 |
 |---|---|
-| `--list` | 列出全部技能与分类 |
-| `--skill <名>` / `--skill all` | 选一个技能或全部 |
-| `--ai <id>` / `--ai all` | 装到指定助手，或一次装到全部已配置的助手 |
-| `--project` | 装到当前项目，而不是用户级目录 |
-| `--dir <路径>` | 直接指定目标目录，覆盖默认值 |
-| `--dry-run` | 只打印将要复制的内容 |
-| `--force` | 目标已存在时覆盖 |
-| `--uninstall` | 移除本库装过的技能 |
+| 六类重组 | 67 个技能按最终产物分成 foundations、web、enterprise、mobile、components、tooling，选型不再靠猜 |
+| AI 对话界面主线 | 新增 `assistant-ui` 组件载荷与 `ai-chat-patterns` 交互规范，覆盖流式输出、工具审批、分支与可访问性验收 |
+| 素材与配色 | 新增成套图标 `icon-system`、动效区块 `ricoui-blocks`、油墨配色 `flexoki-palette` |
+| 话术模板库 | 万能公式、10 个场景话术、反面对照与续接话术，全部可直接整段复制 |
+| 真实产出与插画 | 四张真实 UI 截图、封面与三张示意图，配零依赖生成脚本 `tools/gen_readme_images.py` 可复现 |
+| 工程配套 | 四套插件清单、零依赖安装器与三个校验脚本，格式、敏感词与索引都能一键核对 |
+| 对外呈现 | 双语 README 按新访客视角重写，仓库更名 ui-design-skills，About 描述与搜索标签同步优化 |
 
-一次只装用得到的那个就行，不必全装。安装器会在拷贝前检查每个技能根目录确有 `SKILL.md`，缺一个就整体拒绝。
-
-## 在哪用
-
-国内工具排在前面，默认可直接用；国外工具通常需要外网环境。
-
-| 助手 | `--ai` id | 用户级默认目录 |
-|---|---|---|
-| WorkBuddy | `workbuddy` | `~/.workbuddy/skills/` |
-| CodeBuddy | `codebuddy` | `~/.codebuddy/skills/` |
-| TRAE 国内版 | `trae-cn` | `~/.trae-cn/skills/` |
-| Qoder | `qoder` | `~/.qoder/skills/` |
-| Qwen Code | `qwen-code` | `~/.qwen/skills/` |
-| OpenClaw | `openclaw` | `~/.openclaw/skills/` |
-| Claude Code | `claude` | `~/.claude/skills/` |
-| Codex | `codex` | `~/.codex/skills/` |
-| Cursor | `cursor` | `~/.cursor/skills/` |
-
-目录是默认值，用 `--dir` 覆盖。也可以把仓库作为插件市场来源，根目录带了四套插件清单：
-
-```bash
-claude plugin marketplace add YardonYan/ui-design-skills
-```
-
-网页 IDE、云 Shell、在线 Notebook 不适用，它们没有技能加载入口。要一个能跑的界面时，把技能里的模板落到自己的项目里。
+要看某个技能的具体来源与许可，查 `THIRD-PARTY.md`；要看完整索引，查 `ROUTER.md` 与 `docs/skill-map.md`。
 
 ## 常见问题
 

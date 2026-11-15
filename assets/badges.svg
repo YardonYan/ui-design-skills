@@ -1,12 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 40" width="760" height="40">
-<rect x="4" y="4" width="84" height="30" rx="15" fill="#c96442" />
-<text x="46.0" y="24" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" >67 SKILLS</text>
-<rect x="98" y="4" width="108" height="30" rx="15" fill="#4b6b8a" />
-<text x="152.0" y="24" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" >AGENT SKILLS</text>
-<rect x="216" y="4" width="92" height="30" rx="15" fill="#3f7d6a" />
-<text x="262.0" y="24" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" >APACHE-2.0</text>
-<rect x="318" y="4" width="124" height="30" rx="15" fill="#7a6b9a" />
-<text x="380.0" y="24" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" >CN TOOLS FIRST</text>
-<rect x="452" y="4" width="60" height="30" rx="15" fill="#8a6f4a" />
-<text x="482.0" y="24" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" >NO CDN</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 40" width="620" height="40">
+<rect x="4" y="4" width="46" height="30" rx="15" fill="#c96442" />
+<text x="27.0" y="24" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" >v2.3</text>
+<rect x="60" y="4" width="86" height="30" rx="15" fill="#4b6b8a" />
+<text x="103.0" y="24" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" >67 SKILLS</text>
+<rect x="156" y="4" width="110" height="30" rx="15" fill="#3f7d6a" />
+<text x="211.0" y="24" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" >AGENT SKILLS</text>
+<rect x="276" y="4" width="94" height="30" rx="15" fill="#7a6b9a" />
+<text x="323.0" y="24" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" >APACHE-2.0</text>
+<rect x="380" y="4" width="126" height="30" rx="15" fill="#8a6f4a" />
+<text x="443.0" y="24" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" >CN TOOLS FIRST</text>
+<rect x="516" y="4" width="62" height="30" rx="15" fill="#c96442" />
+<text x="547.0" y="24" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle" >NO CDN</text>
 </svg>

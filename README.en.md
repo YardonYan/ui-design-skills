@@ -4,30 +4,27 @@
 
 #### Turn one sentence into an interface your AI gets right the first time
 
-Standard · `Agent Skills` `SKILL.md`<br>
-Framework · `React` `TypeScript` `Tailwind CSS` `HTML / CSS`<br>
-Components · `shadcn/ui` `Bootstrap` `React Native`<br>
-Tooling & output · `Node.js` `Python` `SVG` `JSON Canvas`
+<img src="./assets/tech-stack.svg" alt="Stack: standard Agent Skills and SKILL.md, frameworks React TypeScript Tailwind CSS HTML/CSS, components shadcn/ui Bootstrap React Native, tooling and output Node.js Python SVG JSON Canvas" width="100%">
 
-v1.0 · 4 content iterations · 67 skills · Apache-2.0
+<img src="./assets/badges.svg" alt="v2.3 · 67 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
+
+Current release v2.3 · 67 skills · Apache-2.0
 
 [中文](./README.md) · English · [Contribute a translation](https://github.com/YardonYan/ui-design-skills/issues)
 
 <img src="./assets/cover.svg" alt="UI Design Skills cover: 67 skills in six categories" width="100%">
 
-<img src="./assets/badges.svg" alt="67 skills · Agent Skills · Apache-2.0 · CN tools first · no external CDN">
-
-[See it working](#see-it-working) · [30-second start](#30-second-start) · [What UI do you want](#what-ui-do-you-want) · [Copy-paste prompts](#copy-paste-prompts) · [Six categories](#whats-in-the-six-categories) · [Install](#install)
+[See it working](#see-it-working) · [30-second start](#30-second-start) · [Install](#install-and-supported-assistants) · [What UI do you want](#what-ui-do-you-want) · [Copy-paste prompts](#copy-paste-prompts) · [Six categories](#whats-in-the-six-categories) · [What's new in v2.3](#whats-new-in-v23) · [FAQ](#faq)
 
 </div>
 
 A skill library for AI agents working on interface design. 67 skills, each solving one class of interface problem, with its rules, templates and assets in one directory. You only do three things: say what interface you want, pick a skill, and hand the prompt plus the skill path to your agent.
 
-No commands to memorise, no skill names to remember. Every prompt below can be copied as a whole block.
+No commands to memorise, no skill names to remember. Every prompt below can be copied as a whole block. Look at the four real outputs first, then decide where to start.
 
 ## See it working
 
-All four images are real output from skills in this repository, not mockups. Open the matching HTML in `assets/demos/` in a browser to reproduce them.
+All four images are real output from skills in this repository, not mockups. Open the matching HTML in `assets/demos/` in a browser to reproduce them. The line under each image is the prompt that produced it.
 
 <table>
 <tr>
@@ -76,8 +73,10 @@ The four images cover web, enterprise, mobile and AI chat. The other 63 skills c
 
 ## 30-second start
 
+The shortest path is three steps:
+
 1. Get the repository. Clone it, or just download the one skill directory you need.
-2. Pick the closest scenario below and copy its prompt.
+2. Pick the closest scenario in "What UI do you want" and copy its prompt.
 3. Send it to your agent. The agent reads `SKILL.md` and, when needed, `references/` and `templates/` in the same directory.
 
 The smallest prompt that works. Replace the angle brackets:
@@ -88,9 +87,56 @@ Context: <who uses it, where>. Style: <one phrase>. Must include: <three to five
 Avoid: <things to exclude>. Deliver a single self-contained HTML file I can open directly.
 ```
 
-You can use it without installing anything: paste the body of `SKILL.md` into the conversation. Installing once simply means the agent reads the right file on its own when the situation calls for it.
+You can use it without installing anything: paste the body of `SKILL.md` into the conversation. Installing once simply means the agent reads the right file on its own from then on.
+
+## Install and supported assistants
+
+Zero dependencies, Node 18 or newer:
+
+```bash
+node tools/install.mjs --list
+node tools/install.mjs --skill saas-landing --ai workbuddy
+node tools/install.mjs --skill all --ai workbuddy --dry-run
+```
+
+Install only the one you need, not all of them. The installer verifies every selected skill has `SKILL.md` at its root and refuses the whole batch otherwise.
+
+| Flag | Effect |
+|---|---|
+| `--list` | List every skill and category |
+| `--skill <name>` / `--skill all` | Pick one skill or all |
+| `--ai <id>` / `--ai all` | Install into one assistant or all configured assistants |
+| `--project` | Install into the current project instead of the user-level directory |
+| `--dir <path>` | Explicit target directory, overrides the default |
+| `--dry-run` | Print planned copies without writing |
+| `--force` | Overwrite an existing target |
+| `--uninstall` | Remove skills installed from this library |
+
+Domestic tools first (usable without a proxy in mainland China), then international tools (usually need outbound access).
+
+| Assistant | `--ai` id | Default user-level directory |
+|---|---|---|
+| WorkBuddy | `workbuddy` | `~/.workbuddy/skills/` |
+| CodeBuddy | `codebuddy` | `~/.codebuddy/skills/` |
+| TRAE CN | `trae-cn` | `~/.trae-cn/skills/` |
+| Qoder | `qoder` | `~/.qoder/skills/` |
+| Qwen Code | `qwen-code` | `~/.qwen/skills/` |
+| OpenClaw | `openclaw` | `~/.openclaw/skills/` |
+| Claude Code | `claude` | `~/.claude/skills/` |
+| Codex | `codex` | `~/.codex/skills/` |
+| Cursor | `cursor` | `~/.cursor/skills/` |
+
+These are defaults; override with `--dir`. The repository also works as a plugin-marketplace source, with four manifests at the root:
+
+```bash
+claude plugin marketplace add YardonYan/ui-design-skills
+```
+
+Browser IDEs, cloud shells and online notebooks are not applicable: they have no skill loader. To get a running interface, take the templates into your own project.
 
 ## What UI do you want
+
+Once installed, settle the output type before writing a prompt. Picking the wrong skill costs more than imperfect wording.
 
 <img src="./assets/flow-choose-skill.svg" alt="From the UI you want to six categories and representative skills" width="100%">
 
@@ -121,7 +167,7 @@ All 67 skills are indexed in `ROUTER.md` (by what you would say) and `docs/skill
 
 ## Copy-paste prompts
 
-This section is for people who do not want to study the skills first. Copy a whole block and change only the bracketed parts.
+Scenario settled, the remaining question is how to describe it. This section is for people who do not want to study the skills first. Copy a whole block and change only the bracketed parts.
 
 ### Universal formula
 
@@ -254,6 +300,8 @@ Produce a dark variant using skills/foundations/flexoki-palette/references/palet
 
 ## What's in the six categories
 
+Once you can use a skill, take in the whole library so you can add skills as needed instead of searching from scratch every time.
+
 <img src="./assets/category-bar.svg" alt="Six categories: foundations 15, web 20, enterprise 6, mobile 3, components 17, tooling 6" width="100%">
 
 | Category | Scope | Skills | Representative |
@@ -267,56 +315,27 @@ Produce a dark variant using skills/foundations/flexoki-palette/references/palet
 
 ## What a skill looks like
 
+With the map in mind, understanding how a single skill directory is read makes prompts and templates easier to adjust.
+
 <img src="./assets/skill-anatomy.svg" alt="Anatomy of a skill directory and the four steps an agent takes" width="100%">
 
 Each skill is a directory. `SKILL.md` is the entry point; its YAML frontmatter requires `name` and `description`, and the description states what it does, when to use it and when not to. The agent loads only the files it needs instead of pushing all 67 skills into context. Run `python tools/lint_skills.py` to validate the format.
 
-## Install
+## What's new in v2.3
 
-Zero dependencies, Node 18 or newer:
+Current release: v2.3. What this release contains:
 
-```bash
-node tools/install.mjs --list
-node tools/install.mjs --skill saas-landing --ai workbuddy
-node tools/install.mjs --skill all --ai workbuddy --dry-run
-```
-
-| Flag | Effect |
+| Update | Detail |
 |---|---|
-| `--list` | List every skill and category |
-| `--skill <name>` / `--skill all` | Pick one skill or all |
-| `--ai <id>` / `--ai all` | Install into one assistant or all configured assistants |
-| `--project` | Install into the current project instead of the user-level directory |
-| `--dir <path>` | Explicit target directory, overrides the default |
-| `--dry-run` | Print planned copies without writing |
-| `--force` | Overwrite an existing target |
-| `--uninstall` | Remove skills installed from this library |
+| Six-category reorganisation | 67 skills grouped by final output into foundations, web, enterprise, mobile, components and tooling, so selection no longer depends on guesswork |
+| AI chat interface track | Added the `assistant-ui` component payload and the `ai-chat-patterns` interaction spec, covering streaming, tool approval, branching and accessibility review |
+| Assets and colour | Added the `icon-system` icon set, `ricoui-blocks` motion blocks and the `flexoki-palette` ink palette |
+| Prompt library | A universal formula, ten scenario prompts, a before/after comparison table and four follow-up prompts, all copyable as whole blocks |
+| Real output and artwork | Four real UI screenshots, a cover and three diagrams, reproducible with the zero-dependency `tools/gen_readme_images.py` |
+| Engineering support | Four plugin manifests, a zero-dependency installer and three checks for format, sensitive terms and index generation |
+| Public presentation | Bilingual README rewritten for first-time visitors, repository renamed ui-design-skills, About description and search topics refreshed |
 
-Install only the one you need, not all of them. The installer verifies every selected skill has `SKILL.md` at its root and refuses the whole batch otherwise.
-
-## Where it works
-
-Domestic tools first (usable without a proxy in mainland China), then international tools (usually need outbound access).
-
-| Assistant | `--ai` id | Default user-level directory |
-|---|---|---|
-| WorkBuddy | `workbuddy` | `~/.workbuddy/skills/` |
-| CodeBuddy | `codebuddy` | `~/.codebuddy/skills/` |
-| TRAE CN | `trae-cn` | `~/.trae-cn/skills/` |
-| Qoder | `qoder` | `~/.qoder/skills/` |
-| Qwen Code | `qwen-code` | `~/.qwen/skills/` |
-| OpenClaw | `openclaw` | `~/.openclaw/skills/` |
-| Claude Code | `claude` | `~/.claude/skills/` |
-| Codex | `codex` | `~/.codex/skills/` |
-| Cursor | `cursor` | `~/.cursor/skills/` |
-
-These are defaults; override with `--dir`. The repository also works as a plugin-marketplace source, with four manifests at the root:
-
-```bash
-claude plugin marketplace add YardonYan/ui-design-skills
-```
-
-Browser IDEs, cloud shells and online notebooks are not applicable: they have no skill loader. To get a running interface, take the templates into your own project.
+For per-skill provenance and licences see `THIRD-PARTY.md`; for the full index see `ROUTER.md` and `docs/skill-map.md`.
 
 ## FAQ
 

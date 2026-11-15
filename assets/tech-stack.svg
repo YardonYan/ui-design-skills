@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" width="1200" height="210">
+<rect x="0" y="0" width="1200" height="210" rx="0" fill="#FFFCF0" />
+<text x="497.0" y="38" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#1c1b1a" text-anchor="end" >标准</text>
+<rect x="511.0" y="19" width="128" height="32" rx="16" fill="#8a6f4a" />
+<text x="575.0" y="40" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >Agent Skills</text>
+<rect x="649.0" y="19" width="92" height="32" rx="16" fill="#8a6f4a" />
+<text x="695.0" y="40" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >SKILL.md</text>
+<text x="390.5" y="86" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#1c1b1a" text-anchor="end" >框架</text>
+<rect x="404.5" y="67" width="65" height="32" rx="16" fill="#4b6b8a" />
+<text x="437.0" y="88" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >React</text>
+<rect x="479.5" y="67" width="110" height="32" rx="16" fill="#4b6b8a" />
+<text x="534.5" y="88" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >TypeScript</text>
+<rect x="599.5" y="67" width="128" height="32" rx="16" fill="#4b6b8a" />
+<text x="663.5" y="88" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >Tailwind CSS</text>
+<rect x="737.5" y="67" width="110" height="32" rx="16" fill="#4b6b8a" />
+<text x="792.5" y="88" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >HTML / CSS</text>
+<text x="437.0" y="134" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#1c1b1a" text-anchor="end" >组件</text>
+<rect x="451.0" y="115" width="101" height="32" rx="16" fill="#3f7d6a" />
+<text x="501.5" y="136" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >shadcn/ui</text>
+<rect x="562.0" y="115" width="101" height="32" rx="16" fill="#3f7d6a" />
+<text x="612.5" y="136" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >Bootstrap</text>
+<rect x="673.0" y="115" width="128" height="32" rx="16" fill="#3f7d6a" />
+<text x="737.0" y="136" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >React Native</text>
+<text x="459.5" y="182" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="15" font-weight="600" fill="#1c1b1a" text-anchor="end" >工具与产物</text>
+<rect x="473.5" y="163" width="83" height="32" rx="16" fill="#7a6b9a" />
+<text x="515.0" y="184" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >Node.js</text>
+<rect x="566.5" y="163" width="74" height="32" rx="16" fill="#7a6b9a" />
+<text x="603.5" y="184" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >Python</text>
+<rect x="650.5" y="163" width="47" height="32" rx="16" fill="#7a6b9a" />
+<text x="674.0" y="184" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >SVG</text>
+<rect x="707.5" y="163" width="119" height="32" rx="16" fill="#7a6b9a" />
+<text x="767.0" y="184" font-family="'Microsoft YaHei','PingFang SC','Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle" >JSON Canvas</text>
+</svg>
