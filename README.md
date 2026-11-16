@@ -85,7 +85,11 @@ AI 对话界面 · AI 匹配 `assistant-ui` + `ai-chat-patterns`
 
 看板把 72 个技能按六类铺在一张星图上：点节点或清单行，看中文介绍、关键词与产出；矩阵视图支持关键词搜索，输入 UI、企业这类词就能筛出相关技能；每个技能附一页可交互的示例演示，详情页一键跳到 GitHub 上对应的目录与 `SKILL.md`。右上角可切换中英文。
 
-看板数据同步自本仓库 main 分支；演示是各技能的产出示例，非实时生成。
+<img src="./assets/board-map.png" alt="在线看板星图视图：六类技能节点、左侧清单与右侧演示预览" width="100%">
+
+链接可以直达单个技能：`https://skill-observatory-x7alhjqexlp.qoder.zone/#skill=dashboard&view=grid&lang=en` 打开即是 dashboard 的英文矩阵视图；详情页的复制链接按钮会为当前技能生成同样的链接，搜索词、视图与语言一起带上。
+
+看板数据同步自本仓库 main 分支；演示是各技能的产出示例，非实时生成。快照零请求、离线可开、不吃 GitHub 限流。仓库更新后跑 `node tools/sync_board.mjs --site <站点目录>` 重新生成 `data/skills.json`（双语文案在 `board/content/`），再发布站点即可。
 
 ## 30 秒上手
 

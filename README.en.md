@@ -2,7 +2,7 @@
 
 # UI Design Skills
 
-Describe the product you want. The AI matches the right skill out of 67. No directory browsing, no skill names to remember.
+Describe the product you want. The AI matches the right skill out of 72. No directory browsing, no skill names to remember.
 
 </div>
 
@@ -85,7 +85,11 @@ The four images above are a sample. To browse all 72 skills without cloning, ope
 
 The board spreads the 72 skills across six sectors on one star map. Click a node or a list row for the introduction, keywords and output; the matrix view takes keyword search, so typing UI or enterprise filters the matching skills; every skill carries a one-page interactive sample demo, and the detail page links straight to its folder and `SKILL.md` on GitHub. The header toggle switches between Chinese and English.
 
-Board data is synced from this repository's main branch. Demos are sample skill outputs, not generated live.
+<img src="./assets/board-map.png" alt="Live board star-map view: six sectors of skill nodes, the fleet list and the demo preview" width="100%">
+
+Links can point at a single skill: `https://skill-observatory-x7alhjqexlp.qoder.zone/#skill=dashboard&view=grid&lang=en` opens the English matrix view of dashboard. The copy-link button in the detail page builds the same kind of link for the current skill, carrying search, view and language along.
+
+Board data is synced from this repository's main branch. Demos are sample skill outputs, not generated live. The snapshot makes zero requests, opens offline and never hits GitHub rate limits. After repository changes, run `node tools/sync_board.mjs --site <site-dir>` to regenerate `data/skills.json` (the bilingual copy lives in `board/content/`), then republish the site.
 
 ## 30-second start
 
@@ -456,7 +460,7 @@ For per-skill provenance and licences see `THIRD-PARTY.md`; for the full index s
 | Do I need to know skill names | No. Describe the product; the root `SKILL.md` and `docs/intent-routing.md` handle matching |
 | What if the AI matched the wrong skill | Add one sentence about the output shape or platform; if it is still off, say what you expect to receive and it will switch the primary skill |
 | Can I use it without installing | Yes. Paste the root `SKILL.md` into the chat and let the agent read the matching skill files from the repository |
-| Do I need all 67 installed | No. Cloning once is enough to call the repository as a whole |
+| Do I need all 72 installed | No. Cloning once is enough to call the repository as a whole |
 | Is the generated UI production-ready | It is a starting point; wire real data, branding and backend, then review it against the guidelines |
 | Will a vague request stall | No. There is a six-step fallback, at most two clarifying questions, or a direction draft to pick from |
 | Will all links and external skills flood the context | No. Both reference layers are skipped by default; only one class file, or at most three external files, is read when matched |
