@@ -18,7 +18,9 @@ Current release v2.3 · 72 skills · Apache-2.0
 
 [中文](./README.md) · English · [Contribute a translation](https://github.com/YardonYan/ui-design-skills/issues)
 
-[See it working](#see-it-working) · [30-second start](#30-second-start) · [Install](#install-and-supported-assistants) · [Describe the product](#just-describe-the-product) · [Copy-paste prompts](#copy-paste-prompts) · [Intent & fallback](#intent-routing-and-fallback) · [Integrated skills](#what-the-integrated-skills-can-do) · [Six categories](#whats-in-the-six-categories) · [FAQ](#faq)
+[Live skill board](https://skill-observatory-x7alhjqexlp.qoder.zone) · search, play demos and jump to source without cloning
+
+[Live board](#live-skill-board) · [See it working](#see-it-working) · [30-second start](#30-second-start) · [Install](#install-and-supported-assistants) · [Describe the product](#just-describe-the-product) · [Copy-paste prompts](#copy-paste-prompts) · [Intent & fallback](#intent-routing-and-fallback) · [Integrated skills](#what-the-integrated-skills-can-do) · [Six categories](#whats-in-the-six-categories) · [FAQ](#faq)
 
 </div>
 
@@ -75,12 +77,23 @@ AI chat · matched `assistant-ui` + `ai-chat-patterns`
 
 None of the four prompts names a skill; the repository decides which `SKILL.md` files to read. Open the matching HTML in `assets/demos/` to reproduce the images.
 
+## Live skill board
+
+The four images above are a sample. To browse all 72 skills without cloning, open the live board:
+
+**https://skill-observatory-x7alhjqexlp.qoder.zone**
+
+The board spreads the 72 skills across six sectors on one star map. Click a node or a list row for the introduction, keywords and output; the matrix view takes keyword search, so typing UI or enterprise filters the matching skills; every skill carries a one-page interactive sample demo, and the detail page links straight to its folder and `SKILL.md` on GitHub. The header toggle switches between Chinese and English.
+
+Board data is synced from this repository's main branch. Demos are sample skill outputs, not generated live.
+
 ## 30-second start
 
 Find your situation first:
 
 | Your situation | Start here |
 |---|---|
+| Want to browse all 72 skills first | Open the [live skill board](#live-skill-board): star map, search, demos, straight to source |
 | Just want to see what it can do | Scroll up to See it working, or the four images in What the integrated skills can do |
 | Have a task and need an interface | Jump to Just describe the product and change the product name in one sentence |
 | Want it inside your project or team | See Install and supported assistants; clone once to call the whole repository |
