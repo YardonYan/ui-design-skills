@@ -2,35 +2,137 @@
 
 # UI Design Skills
 
-Describe the product you want. The AI matches the right skill out of 72. No directory browsing, no skill names to remember.
-
-</div>
-
 <img src="./assets/cover.svg" alt="UI Design Skills cover: describe the product, skills match themselves, 72 skills in six categories" width="100%">
 
-<div align="center">
+**Describe the product you want. The AI matches the right skill out of 72.** No directory browsing, no skill names to remember.
 
 <img src="./assets/badges.svg" alt="v2.3 · 72 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
 
-<img src="./assets/tech-stack.svg" alt="Stack: standard Agent Skills and SKILL.md, frameworks React TypeScript Tailwind CSS HTML/CSS, components shadcn/ui Bootstrap React Native, tooling and output Node.js Python SVG JSON Canvas" width="100%">
+<a href="https://skill-observatory-x7alhjqexlp.qoder.zone"><img src="./assets/badges/board-en.svg" alt="Live board"></a>
+<a href="#03-30-second-start"><img src="./assets/badges/start-en.svg" alt="Quick start"></a>
+<a href="#06-the-six-categories"><img src="./assets/badges/catalog-en.svg" alt="Catalog"></a>
+<a href="#05-install-and-supported-assistants"><img src="./assets/badges/install-en.svg" alt="Install"></a>
 
-Current release v2.3 · 72 skills · Apache-2.0
+[中文](./README.md) · English · [Contribute another language](https://github.com/YardonYan/ui-design-skills/issues)
 
-[中文](./README.md) · English · [Contribute a translation](https://github.com/YardonYan/ui-design-skills/issues)
-
-[Live skill board](https://skill-observatory-x7alhjqexlp.qoder.zone) · search, play demos and jump to source without cloning
-
-[Live board](#live-skill-board) · [See it working](#see-it-working) · [30-second start](#30-second-start) · [Install](#install-and-supported-assistants) · [Describe the product](#just-describe-the-product) · [Copy-paste prompts](#copy-paste-prompts) · [Intent & fallback](#intent-routing-and-fallback) · [Integrated skills](#what-the-integrated-skills-can-do) · [Six categories](#whats-in-the-six-categories) · [FAQ](#faq)
+[01 Board](#01-live-board) · [02 Proof](#02-see-it-working) · [03 Start](#03-30-second-start) · [04 Describe](#04-just-describe-the-product) · [05 Install](#05-install-and-supported-assistants) · [06 Catalog](#06-the-six-categories) · [07 Craft & provenance](#07-craft-and-provenance) · [08 Layout](#08-repository-layout) · [09 FAQ](#09-faq) · [10 License](#10-license)
 
 </div>
 
-A UI design skill repository you can call as a whole. Point your agent at the repository, say what product you are building, who it is for and roughly what it should look like. The repository handles the routing: the root `SKILL.md` recognises intent, `docs/intent-routing.md` supplies the decision rules and fallbacks, and the selected skill produces the output.
+This is a UI-design skill repository you can call as a whole. Point your AI at it, describe what you are building, for whom, and roughly how it should look; the repository does the matching itself. The root `SKILL.md` handles intent recognition, `docs/intent-routing.md` holds the decision rules and fallbacks, and the matched skills produce the actual output.
 
-The sections below move from seeing the output, to getting started, to describing a product, to copying prompts, to understanding the fallback and the whole library. Every example can be copied as a block. None of them contains a skill name.
+No clone required either: introductions, search, demos and source links for all 72 skills live on the public board below.
 
-## See it working
+## 01 Live board
 
-All four images are real output. Under each one is what the person said, followed by the skill the repository matched. You only supply the first part; the second line is the AI's own decision.
+<div align="center">
+
+<a href="https://skill-observatory-x7alhjqexlp.qoder.zone">
+<img src="./assets/board/hero.png" alt="Board hero: large search bar, hot keywords and the 72 / 6 / 50.5 MB readouts" width="100%">
+</a>
+
+**Click anywhere on the image above to enter the board.** No clone, no login — all 72 skills on open.
+
+</div>
+
+The board is one scrollable page: search hero, skill star map, list & preview, skill matrix, library telemetry, about — six acts in order. The top bar sticks on scroll and navigation lands on each section; the star map pans by drag and zooms with Ctrl+wheel or the corner buttons.
+
+The three images below are clickable too, each landing on its own view:
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+<a href="https://skill-observatory-x7alhjqexlp.qoder.zone">
+<img src="./assets/board/map.png" alt="Star map: six skill clusters spread across a wide stage" width="100%">
+</a>
+
+Map · six clusters; click a node to select, click again for detail
+
+</td>
+<td width="33%" valign="top">
+
+<a href="https://skill-observatory-x7alhjqexlp.qoder.zone/#view=grid">
+<img src="./assets/board/matrix.png" alt="Skill matrix: wide card grid with sector filters" width="100%">
+</a>
+
+Matrix · every card after keyword and sector filters
+
+</td>
+<td width="33%" valign="top">
+
+<a href="https://skill-observatory-x7alhjqexlp.qoder.zone/#skill=dashboard">
+<img src="./assets/board/detail.png" alt="Skill detail: bilingual brief, keywords, interactive demo and GitHub links" width="100%">
+</a>
+
+Detail · bilingual brief + interactive demo + GitHub links
+
+</td>
+</tr>
+</table>
+
+### How to enter
+
+Three ways, pick one:
+
+1. **Click a badge or a screenshot**: the amber badge at the top of this page and every board image above are direct links.
+2. **Type the address**: open `https://skill-observatory-x7alhjqexlp.qoder.zone` in a browser.
+3. **Deep-link to an exact spot**: the URL hash carries view, query, language and skill id.
+
+| Where you want to land | Link |
+|---|---|
+| Board home (star map) | `https://skill-observatory-x7alhjqexlp.qoder.zone` |
+| Matrix view | `https://skill-observatory-x7alhjqexlp.qoder.zone/#view=grid` |
+| A specific skill | `https://skill-observatory-x7alhjqexlp.qoder.zone/#skill=dashboard` |
+| With a search query | `https://skill-observatory-x7alhjqexlp.qoder.zone/#q=poster` |
+| English interface | `https://skill-observatory-x7alhjqexlp.qoder.zone/#lang=en` |
+
+The copy-link button in the detail page builds the same kind of deep link for the current skill, carrying query, view and language — paste it to anyone and they land exactly where you were.
+
+### Search that suggests
+
+The search bar is the board's front door: type Chinese or English keywords and a dropdown answers immediately with two ranked groups — matching skills and related skills. A synonym table covers everyday wording: "admin" reaches dashboards, "pet" reaches the desktop-pet skill, "poster" pulls in visual-direction neighbours. ↑↓ to select, Enter opens the detail, Esc dismisses; the list and matrix filter and re-rank live.
+
+<div align="center">
+
+<img src="./assets/board/suggest.png" alt="Suggestion dropdown: five matches and three related skills for one query" width="100%">
+
+</div>
+
+### Fully usable on phones
+
+The same page stacks into one column on mobile with a fixed bottom bar jumping between map, list, matrix and data; suggestions, details and demos all work.
+
+<div align="center">
+
+<img src="./assets/board/mobile-pair.png" alt="Mobile hero and search suggestions, side by side" width="72%">
+
+</div>
+
+### What is on the board
+
+- Every skill carries a Chinese and an English introduction, bilingual search keywords and a one-page interactive sample demo.
+- Demos are sample outputs in each skill's own style, labelled as not live-generated; every demo page carries a one-line bilingual note.
+- Detail pages link straight to the skill folder and its `SKILL.md` on GitHub.
+- The header toggle switches Chinese/English; keyword chips, suggestions and briefs follow.
+- The telemetry act shows skill count, docs volume, demo coverage, sector distribution and recent commits.
+
+<details>
+<summary><b>Data scope and how to sync</b></summary>
+
+Board data is a snapshot of this repository's main branch: counts, file totals and commit activity make zero requests, open offline and never hit GitHub rate limits. Bilingual copy lives in `board/content/`. After repository changes run:
+
+```bash
+node tools/sync_board.mjs --site <site-dir>
+```
+
+The script scans `skills/` frontmatter, merges the copy, checks demo coverage and regenerates `data/skills.json`; then republish the site.
+
+</details>
+
+## 02 See it working
+
+All four images below are real output. Under each image is the sentence the user said, plus the skills the repository matched on its own. You only say the first part; the second line is the AI's own decision.
 
 <table>
 <tr>
@@ -38,89 +140,248 @@ All four images are real output. Under each one is what the person said, followe
 
 <img src="./assets/screenshots/web-landing.png" alt="Landing page hero" width="100%">
 
-Web · matched `saas-landing`
+Web · AI matched `saas-landing`
 
-> I need a homepage for a file-sync product. Top nav, hero, three feature cards, pricing and FAQ. Desktop 1440 first, single column on mobile.
+> I need a homepage for a file-sync product. Top bar, hero, three feature cards, pricing and FAQ. Desktop 1440 first, single column on mobile.
 
 </td>
 <td width="50%" valign="top">
 
 <img src="./assets/screenshots/enterprise-dashboard.png" alt="Admin dashboard" width="100%">
 
-Enterprise · matched `dashboard`
+Enterprise · AI matched `dashboard`
 
-> I need an operations dashboard. Fixed left nav, top search and notifications, four KPI cards, a 30-day trend chart, an account table and a recent-events list.
+> I need an operations dashboard. Fixed left nav, search and notifications on top, four KPI cards, a 30-day trend line, an accounts table and a recent-events list.
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-<img src="./assets/screenshots/mobile-app.png" alt="Mobile app screen" width="100%">
+<img src="./assets/screenshots/mobile-app.png" alt="Single mobile app screen" width="100%">
 
-Mobile · matched `mobile-app`
+Mobile · AI matched `mobile-app`
 
-> I'm building a focus-timer app, show me one screen inside an iPhone 15 Pro frame. Status bar, dynamic island, main timer card, today stats, a task list and a bottom tab bar.
+> I need a focus-timer app, one screen, inside an iPhone 15 Pro frame: status bar, dynamic island, main timer card, today stats, todo list and bottom tab bar.
 
 </td>
 <td width="50%" valign="top">
 
-<img src="./assets/screenshots/ai-chat-approval.png" alt="AI chat interface with a tool approval card" width="100%">
+<img src="./assets/screenshots/ai-chat-approval.png" alt="AI chat interface with tool approval card" width="100%">
 
-AI chat · matched `assistant-ui` + `ai-chat-patterns`
+AI chat · AI matched `assistant-ui` + `ai-chat-patterns`
 
-> I'm building an AI assistant with tool approval. Streaming output, manual stop, retry on failure, follow-up suggestions, and an approval card stating the action, its scope, whether it is reversible, with Approve and Reject side by side and a visible timeout rule.
+> I need an AI assistant interface with tool approval: streaming, manual stop, retry, follow-up suggestions, and an approval card stating target, impact, reversibility, approve/deny side by side, and timeout behaviour.
 
 </td>
 </tr>
 </table>
 
-None of the four prompts names a skill; the repository decides which `SKILL.md` files to read. Open the matching HTML in `assets/demos/` to reproduce the images.
+None of the four sentences names a skill; the repository decided which `SKILL.md` files to read. Open the matching HTML in `assets/demos/` to reproduce these images; the board's per-skill demo pages come from the same pipeline.
 
-## Live skill board
-
-The four images above are a sample. To browse all 72 skills without cloning, open the live board:
-
-**https://skill-observatory-x7alhjqexlp.qoder.zone**
-
-The board spreads the 72 skills across six sectors on one star map. Click a node or a list row for the introduction, keywords and output; the matrix view takes keyword search, so typing UI or enterprise filters the matching skills; every skill carries a one-page interactive sample demo, and the detail page links straight to its folder and `SKILL.md` on GitHub. The header toggle switches between Chinese and English.
-
-<img src="./assets/board-map.png" alt="Live board star-map view: six sectors of skill nodes, the fleet list and the demo preview" width="100%">
-
-Links can point at a single skill: `https://skill-observatory-x7alhjqexlp.qoder.zone/#skill=dashboard&view=grid&lang=en` opens the English matrix view of dashboard. The copy-link button in the detail page builds the same kind of link for the current skill, carrying search, view and language along.
-
-Board data is synced from this repository's main branch. Demos are sample skill outputs, not generated live. The snapshot makes zero requests, opens offline and never hits GitHub rate limits. After repository changes, run `node tools/sync_board.mjs --site <site-dir>` to regenerate `data/skills.json` (the bilingual copy lives in `board/content/`), then republish the site.
-
-## 30-second start
+## 03 30-second start
 
 Find your situation first:
 
 | Your situation | Start here |
 |---|---|
-| Want to browse all 72 skills first | Open the [live skill board](#live-skill-board): star map, search, demos, straight to source |
-| Just want to see what it can do | Scroll up to See it working, or the four images in What the integrated skills can do |
-| Have a task and need an interface | Jump to Just describe the product and change the product name in one sentence |
-| Want it inside your project or team | See Install and supported assistants; clone once to call the whole repository |
+| Want to browse all 72 skills | Open the [live board](#01-live-board): map, search, demos, straight to source |
+| Just want to see what it can do | Look at the four images in [02 See it working](#02-see-it-working) |
+| Have a task and need an interface | Jump to [04 Just describe the product](#04-just-describe-the-product) and adapt one sentence |
+| Want it inside your project or team | See [05 Install and supported assistants](#05-install-and-supported-assistants); clone once, call as a whole |
 
 Three steps:
 
 1. Put the whole repository in your workspace, by cloning it or downloading a zip.
-2. Tell your agent to use the repository and read the root `SKILL.md` first.
-3. Describe the product. No directory browsing, no skill names.
+2. Tell your AI to call this repository and read the root `SKILL.md` first.
+3. Describe only the product you want. No directory browsing, no skill names.
 
-The smallest prompt that works:
+The smallest usable prompt:
 
 ```
-Use the UI Design Skills repository, read the root SKILL.md first, and match the right skill to my request.
-I want to build: <one sentence describing the product and who it is for>.
-Deliver a single self-contained HTML file I can open directly.
+Call the UI Design Skills repository, read the root SKILL.md first, match skills from my description.
+I want: <one sentence: what the product is and who it is for>. Output a single-file HTML I can open directly.
 ```
 
-You can use it without installing anything: paste the root `SKILL.md` into the chat and let the agent read the matching skill files from the repository. Installing once simply removes the manual step.
+It also works without installing: paste the root `SKILL.md` into the conversation and let the AI read the matched skill files on demand. Installing once only saves you from pointing at files every time.
 
-## Install and supported assistants
+## 04 Just describe the product
 
-You install the whole repository, not a single skill directory. Zero-dependency installer, Node 18 or newer:
+This table is routing evidence for the AI, not a quiz for you. You do not need to memorise it or name skills in prompts; the more your description sounds like ordinary speech, the better the match.
+
+| You would probably say | AI usually matches | What you get |
+|---|---|---|
+| A product site, landing page, homepage | `saas-landing` | One page with hero, features, social proof, pricing |
+| A SaaS pricing page, three tiers | `pricing-page` | Monthly/yearly toggle, comparison table, FAQ |
+| A FAQ or docs site | `faq-page`, `docs-page` | Q&A page and three-column docs page |
+| An admin panel, order system, CRM pages | `enterprise-admin` | Admin page structure and field definitions |
+| Turn these fields into a validatable form | `admin-form-schema` | Field list, types, validation rules, example JSON |
+| A dashboard to watch data | `dashboard`, `live-dashboard` | KPI grid, trend charts, activity feed |
+| An app, show me one screen | `mobile-app` | One app screen inside a device frame |
+| iOS / Android / mini-program dimensions | `mobile-design-spec` | Five size specs with safe-area values |
+| An AI assistant with an approval chat UI | `assistant-ui` | Runtime wiring, components, ready UI elements |
+| Which states must a chat UI handle | `ai-chat-patterns` | State list and 20 acceptance items |
+| A consistent icon set | `icon-system` | ~1000 icon definitions and naming rules |
+| Illustrations, empty-state art | `spotkit` | Deterministic SVG, light and dark themes |
+| Light/dark palette for the product | `flexoki-palette` | Palette CSS with light/dark mapping |
+| This UI looks AI-generated, fix it | `unslop` | Itemised corrections, no full rewrite |
+| Audit guidelines and accessibility | `web-design-guidelines` | Compliance issue list |
+| Turn this design image into code | `image-to-code` | Recreated page code |
+| Clone this site | `web-clone` | Section-by-section recreation path |
+| A single-file report, then PDF | `html-skill-effectiveness`, `html-to-pdf` | Deliverable files |
+
+Full indexes: `ROUTER.md` (by spoken wording), `docs/skill-map.md` (by the six-stage interface pipeline), plus the intent notes below.
+
+### Prompt templates
+
+Every block below assumes the whole repository is already handed to your AI. You say what to build; which `SKILL.md` to read is decided by `docs/intent-routing.md`. Do not write skill paths in prompts, and do not browse the directory first.
+
+The universal formula:
+
+```
+Call the UI Design Skills repository, read the root SKILL.md first, match skills from my description and finish.
+I want: [one product / page / interface, one sentence on who it serves and what it solves].
+Constraints: [React / single-file HTML / mobile / no external deps — omit if none].
+Style and exclusions: [restrained / editorial / no purple gradients or glow — omit if none].
+Output: [a page I can open / an icon set / an acceptance checklist].
+Finish with one sentence naming the skills you matched and why.
+```
+
+<details>
+<summary><b>Copy by scenario: landing, pricing, admin, form, mobile, chat, palette, icons, rework, audit</b></summary>
+
+Landing page
+
+```
+I need a homepage for a developer-facing API monitoring product. Restrained style, warm paper background, no purple gradients or glow.
+Top bar, large-type hero, two CTAs, four feature cards, three-step flow, three pricing tiers, FAQ and footer.
+Give me a single-file HTML I can open directly.
+```
+
+Pricing page
+
+```
+I need a pricing page for a SaaS product, three tiers, middle one marked recommended.
+Monthly/yearly toggle, full feature comparison table and FAQ. Use placeholder prices, never invent real ones.
+```
+
+Enterprise admin
+
+```
+I need an order-management admin, list page first: filter zone, bulk actions, pagination, status tags and inline edit entry.
+Only these fields: order id, customer, amount, status, created at. Do not add fields on your own.
+```
+
+Form rules
+
+```
+Turn this field set into a validatable form schema: types, required, defaults, enum dictionaries, validation timing, error messages.
+Give me example JSON. Never add fields that are not in the material.
+```
+
+Mobile
+
+```
+I need a habit-tracker app, one screen, inside an iPhone frame: status bar, today progress,
+seven-day heat strip, todo list and four bottom tabs. Check safe areas and touch targets against the spec.
+```
+
+AI chat interface
+
+```
+I need an AI assistant interface with tool approval: streaming, manual stop, retry, follow-up suggestions,
+and a tool-call approval card stating target, impact, reversibility, approve/deny side by side, and timeout behaviour.
+```
+
+Palette
+
+```
+Give a long-form reading docs site light and dark palettes. Body contrast must pass; colour only as semantic accent.
+Give me a CSS variable table, not a second list of hex values.
+```
+
+Icons
+
+```
+Eight function icons for a file manager: new, upload, download, share, archive, search, delete, settings.
+Identical stroke width, radius and padding; derive colour from one primary; export standalone static SVG.
+```
+
+Rework an existing UI
+
+```
+This HTML looks AI-generated. Correct it, do not rewrite: keep the structure,
+list evidence with locations first, then fix in rounds by spacing, colour, icons, copy, type, layout — one class of problem per round.
+```
+
+Audit
+
+```
+Audit this interface against the checklist. Output issues and locations only, do not change anything.
+```
+
+</details>
+
+<details>
+<summary><b>The more precise the description, the steadier the output: seven contrasts</b></summary>
+
+| You might say | Better | Why |
+|---|---|---|
+| Make a nice page | A developer-facing pricing page, three tiers, restrained, warm paper | "Nice" has no acceptance criteria; artifact, tiers and style do |
+| Make an admin | An order-admin list page with exactly these five fields | "Admin" is too broad; without a field fence it invents fields |
+| Like some big company's site | Large type, narrow body column, thin borders, no gradients | Copying a product carries copyright risk; describing traits is safer |
+| A few icons | Eight function icons, uniform stroke and radius, one primary | Count and invariants decide whether it is a set |
+| Make it nicer | Only the second screen's card spacing and title weight | Without a boundary the assistant rewrites the page |
+| Which skill should I use | Don't worry about it, just say what you are building | Routing is the repository's job, not yours |
+| Use our internal fields | Abstract field names; I fill real values locally | Internal material never goes into public artifacts |
+
+For follow-up rounds:
+
+```
+Keep the overall structure; change only [one property] of [one region]; nothing else moves.
+```
+
+```
+List the trade-offs you made, marking which ones I never asked for.
+```
+
+```
+Audit the motion, report issues only, do not change yet.
+```
+
+```
+One more version on a dark background, reusing the same palette.
+```
+
+</details>
+
+### Intent recognition and fallbacks
+
+When the request is vague or spans categories, the repository does not stall. The decision logic lives in two files, both written for the AI:
+
+| File | Responsibility |
+|---|---|
+| Root `SKILL.md` | Entry point: four-step flow, quick mappings and hard rules — never ask the user to name a skill |
+| `docs/intent-routing.md` | Intent notes: four decision dimensions, natural-language signal words, six-category mapping, conflict arbitration, fallback path and counter-examples |
+
+Decisions walk four dimensions and stop as soon as one is enough: what is the artifact, what is the carrier, which stage, which constraints. Artifact weighs most, then carrier.
+
+The fallback is a fixed six-step path; stop at the first step that settles it:
+
+1. If the artifact fits one of six categories, enter that category's primary skill.
+2. Artifact unclear but carrier visible: web starts at landing, admin at admin pages, phone at one app screen, chat at the assistant interface.
+3. Carrier unclear but stage visible: rework goes to corrections, acceptance to guideline audit, direction-setting to art direction.
+4. All four vague: ask at most two questions — page, interface or file? For whom, on which device? No interrogation, no directory browsing.
+5. Still nothing: offer a direction draft to pick from, better than waiting.
+6. Clearly not an interface (Word, PDF, PPT, backend API, data analysis): say it does not apply, do not force a skill.
+
+Conflicts have explicit arbitration: CRUD plus fields goes to admin, display plus conversion goes to web; a whole page goes to page skills, one reusable block to component skills; icons plus palette picks the primary artifact's skill with palette as support. Multi-skill combinations follow direction, structure, draft, assets, acceptance — at most two supporting skills.
+
+If a match feels wrong, say so and it swaps the primary skill and redoes the work; no need to re-explain the requirement.
+
+## 05 Install and supported assistants
+
+You install the whole repository, not one skill directory. Zero-dependency installer, Node 18+:
 
 ```bash
 node tools/install.mjs --list
@@ -128,20 +389,9 @@ node tools/install.mjs --skill saas-landing --ai workbuddy
 node tools/install.mjs --skill all --ai workbuddy --dry-run
 ```
 
-If you only want to call the repository as a whole, cloning it is enough. The installer is for placing skills into a specific assistant's directory; install only what you need. It verifies every selected skill has `SKILL.md` at its root and refuses the whole batch otherwise.
+For whole-repository calling, cloning into the workspace is enough. The installer suits cases where skills must land in a specific assistant directory; install only what you use. It verifies every skill root actually contains `SKILL.md` before copying and refuses the whole batch if one is missing.
 
-| Flag | Effect |
-|---|---|
-| `--list` | List every skill and category |
-| `--skill <name>` / `--skill all` | Pick one skill or all |
-| `--ai <id>` / `--ai all` | Install into one assistant or all configured assistants |
-| `--project` | Install into the current project instead of the user-level directory |
-| `--dir <path>` | Explicit target directory, overrides the default |
-| `--dry-run` | Print planned copies without writing |
-| `--force` | Overwrite an existing target |
-| `--uninstall` | Remove skills installed from this library |
-
-Domestic tools first (usable without a proxy in mainland China), then international tools (usually need outbound access).
+Chinese tools come first and work out of the box; overseas tools usually need external network access.
 
 | Assistant | `--ai` id | Default user-level directory |
 |---|---|---|
@@ -155,320 +405,194 @@ Domestic tools first (usable without a proxy in mainland China), then internatio
 | Codex | `codex` | `~/.codex/skills/` |
 | Cursor | `cursor` | `~/.cursor/skills/` |
 
-These are defaults; override with `--dir`. The repository also works as a plugin-marketplace source, with four manifests at the root:
+Directories are defaults; override with `--dir`. The repository also works as a plugin marketplace source, with four plugin manifests at the root:
 
 ```bash
 claude plugin marketplace add YardonYan/ui-design-skills
 ```
 
-Browser IDEs, cloud shells and online notebooks are not applicable: they have no skill loader. To get a running interface, take the templates into your own project.
+Web IDEs, cloud shells and online notebooks do not apply — they have no skill-loading entry. When you need a running interface, drop the skill's templates into your own project.
 
-## Just describe the product
+<details>
+<summary><b>Full installer parameter table</b></summary>
 
-This table is a routing reference for the AI, not a multiple-choice question for you. You do not need to memorise it or put skill names in your prompt. The more naturally you describe what you want, the easier it is to match correctly.
-
-| What you would probably say | AI usually matches | What you get |
-|---|---|---|
-| I need a product homepage / landing page | `saas-landing` | Hero, features, social proof, pricing, one page |
-| I need a pricing page with three tiers | `pricing-page` | Monthly/annual toggle, comparison table, FAQ |
-| I need a FAQ or docs site | `faq-page`, `docs-page` | Q&A page and three-column docs page |
-| I'm building an admin, order system, CRM | `enterprise-admin` | Back-office page structure and field definitions |
-| Turn these fields into a validated form | `admin-form-schema` | Field list, types, validation rules, sample JSON |
-| I need a dashboard for our metrics | `dashboard`, `live-dashboard` | KPI grid, trend chart, activity feed |
-| I'm building an app, show me one screen | `mobile-app` | A single screen inside a device frame |
-| What are the iOS / Android / mini-program sizes | `mobile-design-spec` | Five platform specs and safe-area values |
-| I'm building an AI assistant with approvals | `assistant-ui` | Runtime wiring, components, ready-made elements |
-| What states does a chat UI have to handle | `ai-chat-patterns` | State list and a 20-item acceptance checklist |
-| I need a consistent set of icons | `icon-system` | Nearly a thousand icon definitions and naming rules |
-| I need illustrations / empty states | `spotkit` | Deterministic SVGs, light and dark |
-| Give the product light and dark colours | `flexoki-palette` | Palette CSS and light/dark mapping |
-| This looks AI-generated, fix it | `unslop` | Line-by-line critique, no full rewrite |
-| Review interface and accessibility | `web-design-guidelines` | A list of compliance issues |
-| Turn this mockup into code | `image-to-code` | Reconstructed page code |
-| Rebuild a site like this one | `web-clone` | Section-by-section reconstruction path |
-| A single-file report, or HTML to PDF | `html-skill-effectiveness`, `html-to-pdf` | Deliverable files |
-
-Full indexes: `ROUTER.md` (by everyday phrasing), `docs/skill-map.md` (by the six stages of making an interface), and the intent-routing notes below.
-
-## Copy-paste prompts
-
-Every block below assumes you have already given the agent the whole repository. You describe what you want; the repository decides which `SKILL.md` to read, following `docs/intent-routing.md`. Do not put skill paths in your prompt and do not browse the directory first.
-
-### Universal formula
-
-```
-Use the UI Design Skills repository, read the root SKILL.md, and match the right skill to my request.
-I want to build: [a product / page / interface; one sentence on what it is and who it is for].
-Constraints: [React / single HTML file / mobile / no external dependencies, omit if none].
-Style & exclusions: [restrained / editorial / no purple gradients or glows, omit if none].
-Deliver: [an openable page / a set of icons / a review checklist].
-When done, tell me in one sentence which skills you matched and why.
-```
-
-### By scenario
-
-Landing page
-
-```
-I need a homepage for a developer-facing API monitoring product. Restrained style, warm paper
-background, no purple gradients or glows. Top nav, large hero, dual CTA, four feature cards,
-a three-step flow, three pricing tiers, FAQ and footer. Give me a single HTML file I can open.
-```
-
-Pricing page
-
-```
-I need a three-tier pricing page for a SaaS product, with the middle tier marked as recommended.
-Include a monthly/annual toggle, a full feature comparison table and FAQ. Use placeholder numbers,
-do not invent real prices.
-```
-
-Enterprise admin
-
-```
-I'm building an order-management admin, start with the list page. Filters, bulk actions,
-pagination, status badges and an inline-edit entry point. Use only these fields: order id,
-customer, amount, status, created at. Do not add fields I did not give you.
-```
-
-Form schema
-
-```
-Turn this field set into a validated form schema: types, required flags, defaults, enum
-dictionaries, validation timing and error messages. Give me sample JSON. Never invent fields
-that are not in the input.
-```
-
-Mobile
-
-```
-I'm building a habit tracker, show me one screen. Put it in an iPhone frame with a status bar,
-today's progress, a seven-day streak, a task list and four bottom tabs. Check safe areas and
-touch targets against the platform specs.
-```
-
-AI chat interface
-
-```
-I'm building an AI assistant with tool approval. Streaming output, manual stop, retry on failure,
-follow-up suggestions, and a tool-approval card stating the action, its scope, whether it is
-reversible, with Approve and Reject side by side and a visible timeout rule.
-```
-
-Colour
-
-```
-Give me light and dark themes for a long-form reading site. Body text must have enough contrast,
-colour is for semantics only. Deliver CSS variables; do not write a second copy of the hex values.
-```
-
-Icons
-
-```
-Make eight functional icons for a file manager: new, upload, download, share, archive, search,
-delete, settings. Stroke width, corner radius and padding must match across the set, all colours
-derived from one accent. Export standalone static SVGs at the end.
-```
-
-Fix an existing interface
-
-```
-This HTML looks AI-generated, critique it for me. Do not rewrite the whole page. Keep the structure,
-first list the evidence with locations, then fix in passes: spacing, colour, icons, copy, type,
-layout. One class per pass.
-```
-
-Review
-
-```
-Review this interface against the checklist. Report issues and their locations only, do not edit yet.
-```
-
-### More precise input, more predictable output
-
-| You might say | Say instead | Why |
-|---|---|---|
-| Make a nice page | Build a developer pricing page, three tiers, restrained, warm paper | Nice has no acceptance criteria; output, tiers and style do |
-| Build an admin | Build an order list page with exactly these five fields | Admin is too broad; unlisted fields appear by guesswork |
-| Make it like that big product | Large headline, narrow body column, hairline borders, no gradients | Describing traits is safer than copying a specific product |
-| A few icons, whatever | Eight functional icons, shared stroke and radius, one accent | Count and invariants are what make a set |
-| Make it look better | Only change card spacing and heading weight in section two | Without a boundary the agent rewrites everything |
-| Which skill should I use | Don't worry about it, just say what you are building | Routing is the repository's job, not yours |
-| Use our internal field names | Use abstract field names; I will fill real ones locally | Keep internal data out of external services and public output |
-
-### Follow-up prompts
-
-```
-Keep the overall structure. Change only [one property] of [one region]. Leave everything else alone.
-```
-
-```
-List every choice you made and flag the ones I did not ask for.
-```
-
-```
-Review the motion, report issues only, do not edit yet.
-```
-
-```
-Produce a dark variant using the same palette as before.
-```
-
-## Intent routing and fallback
-
-Vague requests, or requests spanning several categories, do not stall the repository. Two files carry the decision logic, both written for the AI to read:
-
-| File | Responsibility |
+| Parameter | Effect |
 |---|---|
-| Root `SKILL.md` | Entry point for the whole repository. The agent reads it first for the four-step flow, a shortcut map, and one hard rule: never ask the user to name a skill |
-| `docs/intent-routing.md` | Intent notes: four judgement dimensions, a natural-language signal table, the six-category map, conflict rules, fallback paths and anti-patterns |
+| `--list` | List all skills and categories |
+| `--skill <name>` / `--skill all` | One skill or all |
+| `--ai <id>` / `--ai all` | One assistant, or every configured assistant at once |
+| `--project` | Install into the current project instead of the user directory |
+| `--dir <path>` | Explicit target directory, overriding defaults |
+| `--dry-run` | Print what would be copied |
+| `--force` | Overwrite existing targets |
+| `--uninstall` | Remove skills installed by this repository |
 
-Judgement uses four dimensions and stops as soon as it has enough: what the output is, what platform it lives on, what stage the work is at, and what constraints apply. Output carries the most weight, platform second.
+</details>
 
-The fallback has six fixed steps; stop at the first one that resolves:
+## 06 The six categories
 
-1. If the output fits one of the six categories, use that category's primary skill.
-2. If the output is unclear but the platform is clear, start with a landing page for web, an admin for back office, an app screen for mobile, or a chat interface for AI assistants.
-3. If the platform is unclear but the stage is clear, use critique for fixes, the guidelines for review, or a direction skill for positioning.
-4. If all four dimensions are vague, ask at most two questions: page, interface or file? Who uses it and on what device? No follow-up chains, no directory browsing.
-5. If there is still nothing to go on, offer a direction draft to choose from rather than waiting.
-6. If the output clearly is not an interface (Word, PDF, PPT, backend APIs, data analysis), say it is out of scope instead of forcing a skill.
-
-Conflicts have explicit rules: create/read/update/delete and fields go to enterprise, display and conversion go to web; a whole page goes to page skills, a reusable block goes to component skills; icons plus colour means the main output picks the primary skill and colour becomes the assistant. Multi-skill work follows direction, structure, output, assets, review, with at most two supporting skills.
-
-If the user says the match was wrong, switch skills and redo. They should not have to explain the request again.
-
-## What the integrated skills can do
-
-These five were adapted from other people's UI skill content and are now part of the 72 skills, installable and routable like the rest. The first four images are real output; the fifth skill produces text, so the prompt is printed instead.
-
-### Before and after: the lift from one skill
-
-<img src="./assets/screenshots/craft-rework.gif" alt="The same interface before and after design-vocabulary" width="100%">
-
-Same copy, same structure; the GIF alternates between before and after. The still below puts both versions side by side for item-by-item comparison.
-
-<img src="./assets/screenshots/craft-before-after.png" alt="Before and after, side by side" width="100%">
-
-> This page feels flat. Rework it with design-vocabulary, dimension by dimension. Do not change the structure.
-
-Four kinds of change only: type scale, spacing, corner radius, one accent colour. No copy rewritten, no block moved.
-
-### Three art directions: settle the tone first
-
-<img src="./assets/screenshots/craft-directions.png" alt="Three visual directions from art-direction" width="100%">
-
-> I'm building an AI notes tool. Use art-direction to give me three visual directions side by side.
-
-One product description, three tones: restrained editorial, warm paper, technical. Pick one and build from it; cheaper than rewriting a page.
-
-### Accessibility review: a list, not a rewrite
-
-<img src="./assets/screenshots/craft-a11y.png" alt="An accessibility review output" width="100%">
-
-> Review this interface with a11y-rules. List issues and locations only, do not edit yet.
-
-The output is graded findings with evidence and a fix, citing WCAG clauses. This kind of review will not quietly rewrite your code.
-
-### Motion recipe: one interaction in three frames
-
-<img src="./assets/screenshots/craft-motion.png" alt="A three-frame motion recipe from motion-craft" width="100%">
-
-> This card hover feels stiff. Give me a recipe from motion-craft.
-
-Offset, shadow, easing and duration are all stated, including what to keep under reduced motion.
-
-### Motion prompt: turning an effect into reusable text
-
-`motion-prompts` returns text. To reproduce the card lift above, this is what you hand the AI:
-
-```
-Write a reusable prompt for a card hover lift in the motion-prompts format.
-Name: hover lift
-Timing: 0 -> -10px -> -3px, 240ms, ease-out
-Shadow: 2px -> 14px -> 6px, in step with the offset
-Fallback: under prefers-reduced-motion keep only the shadow change
-```
-
-## External resources and integrated skills
-
-The repository has 72 skills, five of them adapted from other people's UI skill content and promoted into `skills/`. Calling this one repository is enough; there is no need to hunt through other skill libraries. A nine-class resource index is available for on-demand lookup.
-
-| Part | Path | Contents | When |
-|---|---|---|---|
-| Integrated skills | `skills/foundations/` | `design-vocabulary`, `art-direction`, `a11y-rules`, `motion-craft`, `motion-prompts` | Polish, art direction, accessibility, motion, prompt writing |
-| Resource index | `references/resources/` | 37 repository links + 103 sites | Component libraries, inspiration galleries, colour tools, UI prompt libraries, templates |
-
-The integrated skills are real skills with uniform names and `SKILL.md` files: installable, routable and validated. Their rule text has been adapted into each skill's `references/`. The `hallmark`, `ui-ux-pro-max`, `frontend-design` and `emil-design-eng` skills and the 84-brand DESIGN.md corpus already here are not duplicated. Attribution and licences are registered in `THIRD-PARTY.md`.
-
-The resource index is skipped by default. When the user wants an output, go straight to a skill; only signals such as find, is there, reference or inspiration open it, and then read `references/resources/INDEX.md` plus the one matching class file. Full rules are in `docs/resource-routing.md`.
-
-To use a skill and external experience together, a prompt can look like this:
-
-```
-Use the UI Design Skills repository. I'm building a landing page for an AI notes product.
-Match the right skill and build the page, then use design-vocabulary to check spacing and colour polish.
-```
-
-The link truth source is `references/resources/SOURCE.md`. Class files and the INDEX are generated by `tools/build_resource_index.py`; change the truth source and re-run the script.
-
-## What's in the six categories
-
-Once you can use a skill, take in the whole library so you can add skills as needed instead of searching from scratch every time.
+Once you can use it, look at the whole library once so you can add skills on demand instead of searching from scratch each time. Category names are the `cat` parameter in board deep links.
 
 <img src="./assets/category-bar.svg" alt="Six categories: foundations 20, web 20, enterprise 6, mobile 3, components 17, tooling 6" width="100%">
 
-| Category | Scope | Skills | Representative |
-|---|---|---:|---|
-| `foundations` | Direction, colour, branding, interaction states, review | 20 | `oil-ui`, `flexoki-palette`, `ai-chat-patterns`, `unslop` |
-| `web` | Public-facing pages and page types | 20 | `saas-landing`, `pricing-page`, `web-clone` |
-| `enterprise` | Back office, forms, information architecture, dashboards | 6 | `enterprise-admin`, `admin-form-schema` |
-| `mobile` | App screens, onboarding, platform dimensions | 3 | `mobile-app`, `mobile-design-spec` |
-| `components` | Components, blocks, icons, illustrations, charts, chat UI | 17 | `cult-ui`, `icon-system`, `assistant-ui` |
-| `tooling` | Debugging, conversion, canvas formats, delivery | 6 | `chrome-devtools`, `html-to-pdf`, `json-canvas` |
+| Category | Covers | Skills | Representatives | Board |
+|---|---|---:|---|---|
+| `foundations` | Direction, palette, brand, interaction states, acceptance & rework | 20 | `oil-ui`, `flexoki-palette`, `ai-chat-patterns`, `unslop` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=foundations) |
+| `web` | Public-facing pages and page types | 20 | `saas-landing`, `pricing-page`, `web-clone` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=web) |
+| `enterprise` | Admin, forms, information architecture, dashboards | 6 | `enterprise-admin`, `admin-form-schema` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=enterprise) |
+| `mobile` | App screens, onboarding, multi-device specs | 3 | `mobile-app`, `mobile-design-spec` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=mobile) |
+| `components` | Components, blocks, icons, illustration, charts, AI chat parts | 17 | `cult-ui`, `icon-system`, `assistant-ui` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=components) |
+| `tooling` | Debugging, conversion, canvas formats, delivery | 6 | `chrome-devtools`, `html-to-pdf`, `json-canvas` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=tooling) |
 
-## What a skill looks like
+### What a skill looks like
 
-With the map in mind, understanding how a single skill directory is read makes templates easier to adjust.
+After the whole picture, understand how one skill directory is read — editing templates gets easier.
 
-<img src="./assets/skill-anatomy.svg" alt="Anatomy of a skill directory and the four steps an agent takes" width="100%">
+<img src="./assets/skill-anatomy.svg" alt="Anatomy of a skill directory and the four steps an assistant reads it in" width="100%">
 
-Each skill is a directory. `SKILL.md` is the entry point; its YAML frontmatter requires `name` and `description`, and the description states what it does, when to use it and when not to. The agent loads only matched files instead of pushing all 72 skills into context. Run `python tools/lint_skills.py` to validate the format.
+Each skill is a directory; `SKILL.md` is the entry. Its YAML frontmatter requires `name` and `description`, and the description states what it does, when to use it and when not to. The agent loads only matched files, never all 72 skills into context. Validate formats with `python tools/lint_skills.py`.
 
-## What's new in v2.3
+## 07 Craft and provenance
 
-Current release: v2.3. What this release contains:
+Five skills were adapted from UI-skill content other people shared; they are now part of the 72, installable and routable like the rest. Four images below are real runs; the fifth produces text, printed directly.
 
-| Update | Detail |
+### Before / after: what design vocabulary buys
+
+<img src="./assets/screenshots/craft-rework.gif" alt="Interface before and after design-vocabulary" width="100%">
+
+Same copy, same structure; the animation alternates before and after. The next image puts both versions side by side for item-by-item comparison.
+
+<img src="./assets/screenshots/craft-before-after.png" alt="Before and after side by side" width="100%">
+
+> This interface looks flat. Rework it dimension by dimension with design-vocabulary; keep the structure.
+
+Only four classes of change: type scale, spacing, radius, one accent colour. Not one word of copy changed, not one block moved.
+
+### Three art directions: set the tone before the page
+
+<img src="./assets/screenshots/craft-directions.png" alt="Three visual directions from art-direction" width="100%">
+
+> I'm building an AI note tool. Give me three visual directions side by side with art-direction first.
+
+One product sentence, three tones: restrained editorial, warm paper, cold tech. Pick one before building — one rework round saved.
+
+### Accessibility audit: list only, hands off
+
+<img src="./assets/screenshots/craft-a11y.png" alt="Audit checklist from a11y-rules" width="100%">
+
+> Audit this interface with a11y-rules. Issues and locations only, do not change yet.
+
+Output is graded items with evidence and suggestions, citing WCAG clauses. Audits never quietly edit your code.
+
+### Motion recipes: three frames per interaction
+
+<img src="./assets/screenshots/craft-motion.png" alt="Three-frame motion recipe from motion-craft" width="100%">
+
+> This card hover is stiff. Give me a recipe with motion-craft.
+
+Travel, shadow, easing and duration are all spelled out, including what survives reduced motion.
+
+### Motion prompts: freeze the effect into reusable words
+
+`motion-prompts` outputs text. To reproduce the card lift above, this is what you hand the AI:
+
+```
+In motion-prompts format, write a reusable prompt for a card hover lift.
+Name: hover lift
+Rhythm: 0 → -10px → -3px, 240ms, ease-out
+Shadow: 2px → 14px → 6px, in sync with travel
+Fallback: under prefers-reduced-motion keep only the shadow change
+```
+
+### External resource index
+
+The repository holds 72 skills, five of them adapted from shared UI-skill content and promoted into `skills/`. Calling this one repository is enough; no need to hunt through other skill libraries. A nine-class resource index is available on demand.
+
+| Part | Path | Content | When to use |
+|---|---|---|---|
+| Integrated skills | `skills/foundations/` | `design-vocabulary`, `art-direction`, `a11y-rules`, `motion-craft`, `motion-prompts` | Craft, art direction, accessibility, motion, prompt writing |
+| Resource index | `references/resources/` | 37 repository links + 103 sites | Component libraries, inspiration sites, palette tools, UI prompt libraries, templates |
+
+Integrated skills are formal skills with uniformly named `SKILL.md`: installable, routable, validatable. External rule texts were adapted into each skill's `references/`. Existing `hallmark`, `ui-ux-pro-max`, `frontend-design`, `emil-design-eng` and the 84 DESIGN.md corpora are not duplicated. Attribution and licenses are registered in `THIRD-PARTY.md`.
+
+The resource index is not read by default. Artifact requests go to skills; only signals like find / is-there / reference / inspiration open `references/resources/INDEX.md` and then one matched category file. Full rules in `docs/resource-routing.md`.
+
+To combine skills with external experience:
+
+```
+Call the UI Design Skills repository. I want a landing page for an AI note product.
+Match skills by intent and build the page first, then check spacing and colour craft with design-vocabulary.
+```
+
+The link list's source of truth is `references/resources/SOURCE.md`; category files and INDEX are generated by `tools/build_resource_index.py`. Change links only in the source, then rerun the script.
+
+## 08 Repository layout
+
+```
+ui-design-skills/
+├── SKILL.md               # Entry: intent recognition, four-step flow, hard rules
+├── ROUTER.md              # Spoken wording → skill index
+├── skills/                # 72 skills in six categories by final artifact
+│   ├── foundations/       #   20 · direction, palette, brand, acceptance
+│   ├── web/               #   20 · landing, pricing, docs, cloning
+│   ├── enterprise/        #    6 · admin, forms, dashboards
+│   ├── mobile/            #    3 · app screens and device specs
+│   ├── components/        #   17 · components, icons, illustration, charts
+│   └── tooling/           #    6 · debugging, conversion, delivery
+├── board/content/         # Bilingual copy and keywords for the live board
+├── docs/                  # Intent routing, skill map, resource routing, troubleshooting
+├── references/resources/  # Nine-class external resource index
+├── assets/                # Cover, diagrams, real screenshots, board images, badges
+└── tools/                 # Installer, validators, index builders, board sync
+```
+
+Engineering companions live in `tools/`: zero-dependency installer `install.mjs`, format validator `lint_skills.py`, sensitive-word scan `scan_sensitive.py`, resource index `build_resource_index.py`, README diagrams `gen_readme_images.py`, board data sync `sync_board.mjs`.
+
+<details>
+<summary><b>What changed in v2.3</b></summary>
+
+| Change | Notes |
 |---|---|
-| External resources and integrated skills | Nine classes of resource links (37 repositories + 103 sites); five external skill sets adapted into real skills under `skills/foundations/`, uniformly named, installable, routable and validated |
-| Intent routing entry | Added the root `SKILL.md` and `docs/intent-routing.md` so the whole repository can be called as one Skill; users describe the product and the AI matches skills, with conflict rules and a six-step fallback |
-| Six-category reorganisation | 72 skills grouped by final output into foundations, web, enterprise, mobile, components and tooling |
-| AI chat interface track | Added the `assistant-ui` component payload and the `ai-chat-patterns` interaction spec, covering streaming, tool approval, branching and accessibility review |
-| Assets and colour | Added the `icon-system` icon set, `ricoui-blocks` motion blocks and the `flexoki-palette` ink palette |
-| Prompt library | A universal formula, ten scenario prompts, a before/after comparison table and four follow-up prompts, all phrased as product descriptions with no skill paths |
-| Real output and artwork | Four real UI screenshots, a cover and three diagrams, reproducible with the zero-dependency `tools/gen_readme_images.py` |
-| Engineering support | Four plugin manifests, a zero-dependency installer and three checks for format, sensitive terms and index generation |
-| Public presentation | Bilingual README rewritten for first-time visitors, repository renamed ui-design-skills, About description and search topics refreshed |
+| External resources & integrated skills | Nine-class index (37 repos + 103 sites); five external skills adapted into `skills/foundations/` as formal, installable, validatable, routable skills |
+| Intent entry | Root `SKILL.md` + `docs/intent-routing.md`: the whole repository callable as one Skill; users describe products, AI matches, with conflict arbitration and six-step fallback |
+| Six-category reorganisation | 72 skills grouped by final artifact into foundations, web, enterprise, mobile, components, tooling |
+| AI chat pipeline | `assistant-ui` component payload + `ai-chat-patterns` interaction spec: streaming, tool approval, branching, accessibility acceptance |
+| Assets & palette | `icon-system` icon set, `ricoui-blocks` motion blocks, `flexoki-palette` ink palette |
+| Prompt template library | Universal formula, ten scenario prompts, contrasts and follow-ups — all product-description style, no skill paths |
+| Real output & diagrams | Four real UI screenshots, cover and three diagrams, reproducible via `tools/gen_readme_images.py` |
+| Engineering | Four plugin manifests, zero-dependency installer, three validators |
+| Public face | Bilingual README rewritten for new visitors; repository renamed ui-design-skills; About and topics updated |
+| Live board | Bilingual briefs, suggesting search, interactive demos and GitHub deep links for all 72 skills on one scrollable public site |
 
-For per-skill provenance and licences see `THIRD-PARTY.md`; for the full index see `ROUTER.md` and `docs/skill-map.md`.
+</details>
 
-## FAQ
+For a skill's provenance and license see `THIRD-PARTY.md`; for full indexes see `ROUTER.md` and `docs/skill-map.md`.
+
+## 09 FAQ
 
 | Question | Answer |
 |---|---|
-| Do I need to know skill names | No. Describe the product; the root `SKILL.md` and `docs/intent-routing.md` handle matching |
-| What if the AI matched the wrong skill | Add one sentence about the output shape or platform; if it is still off, say what you expect to receive and it will switch the primary skill |
-| Can I use it without installing | Yes. Paste the root `SKILL.md` into the chat and let the agent read the matching skill files from the repository |
-| Do I need all 72 installed | No. Cloning once is enough to call the repository as a whole |
-| Is the generated UI production-ready | It is a starting point; wire real data, branding and backend, then review it against the guidelines |
-| Will a vague request stall | No. There is a six-step fallback, at most two clarifying questions, or a direction draft to pick from |
-| Will all links and external skills flood the context | No. Both reference layers are skipped by default; only one class file, or at most three external files, is read when matched |
-| How do I reproduce the images | All sources are in `assets/demos/`; `python tools/gen_readme_images.py` regenerates the artwork |
-| I want a different style | Just say the style. If unsure, ask for two or three direction drafts first |
+| Do I need to know skill names | No. Describe the product; the AI matches via root `SKILL.md` and `docs/intent-routing.md` |
+| What if the match is wrong | Add one sentence on artifact form or platform; if still wrong, state the expected output and it swaps the primary skill |
+| Can I use it without installing | Yes. Paste the root `SKILL.md` into the conversation and let the AI read matched files on demand |
+| Do I install all 72 at once | No. For whole-repository calling, one clone is enough |
+| Can generated UIs ship as-is | Templates are a start: wire real data, brand and backend; audit against guidelines before shipping |
+| Will vague requests stall it | No. Six-step fallback, at most two clarifying questions, or a direction draft to pick from |
+| Will links and external skills flood context | No. The resource index is not loaded by default; integrated skills hit 1–3 per normal flow |
+| How do I reproduce the images | Source HTML in `assets/demos/`; rerun `python tools/gen_readme_images.py` |
+| Are board demos live-generated | No. They are pre-generated sample outputs in each skill's style, labelled on the page; data is a main-branch snapshot |
+| I want a different style | Just say the style; when unsure, ask for two or three direction drafts first |
 
-Troubleshooting notes from real runs are in `docs/troubleshooting.md`.
+Troubleshooting notes live in `docs/troubleshooting.md`, every entry from real run output.
 
-## License
+## 10 License
 
-Original content is Apache-2.0, see `LICENSE`. Third-party material keeps its own license, listed per skill in `THIRD-PARTY.md`, with exceptions in `NOTICE`. Illustrations, diagrams and screenshots live in `assets/` and are reproducible via `tools/gen_readme_images.py`.
+Own content Apache-2.0, see `LICENSE`. Third-party content keeps its own licenses, itemised in `THIRD-PARTY.md`, exceptions in `NOTICE`. Illustrations, diagrams and screenshots live in `assets/`, generated by `tools/gen_readme_images.py` and reproducible; board screenshots come from the public site's actual pages.
+
+<div align="center">
+
+<a href="https://skill-observatory-x7alhjqexlp.qoder.zone"><img src="./assets/badges/board-en.svg" alt="Live board"></a>
+
+[Back to top](#ui-design-skills) · [Live board](https://skill-observatory-x7alhjqexlp.qoder.zone) · [中文](./README.md)
+
+</div>

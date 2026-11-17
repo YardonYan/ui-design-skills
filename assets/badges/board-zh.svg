@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="188" height="30" viewBox="0 0 188 30" role="img" aria-label="SKILLDECK 在线看板">
+  <rect width="188" height="30" rx="7" fill="#1b2a2c"/>
+  <rect x="92" width="96" height="30" rx="7" fill="#e8a577"/>
+  <rect x="92" width="10" height="30" fill="#e8a577"/>
+  <circle cx="104" cy="15" r="3" fill="#182526"/>
+  <text x="14" y="20" font-family="Verdana,DejaVu Sans,sans-serif" font-size="11" letter-spacing="1.2" fill="#9fada9">SKILLDECK</text>
+  <text x="114" y="20" font-family="Verdana,DejaVu Sans,'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="bold" fill="#182526">在线看板 ↗</text>
+</svg>
