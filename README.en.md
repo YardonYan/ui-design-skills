@@ -15,7 +15,7 @@
 
 [中文](./README.md) · English · [Contribute another language](https://github.com/YardonYan/ui-design-skills/issues)
 
-[01 Board](#01-live-board) · [02 Proof](#02-see-it-working) · [03 Start](#03-30-second-start) · [04 Describe](#04-just-describe-the-product) · [05 Install](#05-install-and-supported-assistants) · [06 Catalog](#06-the-six-categories) · [07 Craft & provenance](#07-craft-and-provenance) · [08 Layout](#08-repository-layout) · [09 FAQ](#09-faq) · [10 License](#10-license)
+[01 Board](#01-live-board) · [02 Proof](#02-see-it-working) · [03 Start](#03-30-second-start) · [04 Describe](#04-just-describe-the-product) · [05 Install](#05-install-and-supported-assistants) · [06 Catalog](#06-the-six-categories) · [07 Craft](#07-craft-skills) · [08 Layout](#08-repository-layout) · [09 FAQ](#09-faq) · [10 License](#10-license)
 
 </div>
 
@@ -452,9 +452,9 @@ After the whole picture, understand how one skill directory is read — editing 
 
 Each skill is a directory; `SKILL.md` is the entry. Its YAML frontmatter requires `name` and `description`, and the description states what it does, when to use it and when not to. The agent loads only matched files, never all 72 skills into context. Validate formats with `python tools/lint_skills.py`.
 
-## 07 Craft and provenance
+## 07 Craft skills
 
-Five skills were adapted from UI-skill content other people shared; they are now part of the 72, installable and routable like the rest. Four images below are real runs; the fifth produces text, printed directly.
+The craft group makes output hold up: design vocabulary, art direction, accessibility, motion and prompt writing, all in `skills/foundations/`, installable and routable like every other skill. The repository is one fused whole — when you call it, you never need to care where each skill came from. Four images below are real runs; the fifth produces text, printed directly.
 
 ### Before / after: what design vocabulary buys
 
@@ -504,16 +504,14 @@ Shadow: 2px → 14px → 6px, in sync with travel
 Fallback: under prefers-reduced-motion keep only the shadow change
 ```
 
-### External resource index
+### Resource index
 
-The repository holds 72 skills, five of them adapted from shared UI-skill content and promoted into `skills/`. Calling this one repository is enough; no need to hunt through other skill libraries. A nine-class resource index is available on demand.
+The repository holds 72 skills; calling this one is enough, no need to hunt through other skill libraries. A nine-class resource index is available on demand.
 
 | Part | Path | Content | When to use |
 |---|---|---|---|
-| Integrated skills | `skills/foundations/` | `design-vocabulary`, `art-direction`, `a11y-rules`, `motion-craft`, `motion-prompts` | Craft, art direction, accessibility, motion, prompt writing |
+| Craft group | `skills/foundations/` | `design-vocabulary`, `art-direction`, `a11y-rules`, `motion-craft`, `motion-prompts` | Craft, art direction, accessibility, motion, prompt writing |
 | Resource index | `references/resources/` | 37 repository links + 103 sites | Component libraries, inspiration sites, palette tools, UI prompt libraries, templates |
-
-Integrated skills are formal skills with uniformly named `SKILL.md`: installable, routable, validatable. External rule texts were adapted into each skill's `references/`. Existing `hallmark`, `ui-ux-pro-max`, `frontend-design`, `emil-design-eng` and the 84 DESIGN.md corpora are not duplicated. Attribution and licenses are registered in `THIRD-PARTY.md`.
 
 The resource index is not read by default. Artifact requests go to skills; only signals like find / is-there / reference / inspiration open `references/resources/INDEX.md` and then one matched category file. Full rules in `docs/resource-routing.md`.
 
@@ -553,7 +551,7 @@ Engineering companions live in `tools/`: zero-dependency installer `install.mjs`
 
 | Change | Notes |
 |---|---|
-| External resources & integrated skills | Nine-class index (37 repos + 103 sites); five external skills adapted into `skills/foundations/` as formal, installable, validatable, routable skills |
+| Craft group & resource index | Five craft skills — vocabulary, art direction, accessibility, motion, prompt writing — joined `skills/foundations/` as formal, installable, validatable, routable skills; nine-class index (37 repos + 103 sites) added |
 | Intent entry | Root `SKILL.md` + `docs/intent-routing.md`: the whole repository callable as one Skill; users describe products, AI matches, with conflict arbitration and six-step fallback |
 | Six-category reorganisation | 72 skills grouped by final artifact into foundations, web, enterprise, mobile, components, tooling |
 | AI chat pipeline | `assistant-ui` component payload + `ai-chat-patterns` interaction spec: streaming, tool approval, branching, accessibility acceptance |
@@ -566,7 +564,7 @@ Engineering companions live in `tools/`: zero-dependency installer `install.mjs`
 
 </details>
 
-For a skill's provenance and license see `THIRD-PARTY.md`; for full indexes see `ROUTER.md` and `docs/skill-map.md`.
+For licenses and third-party notices see `THIRD-PARTY.md` and `NOTICE`; for full indexes see `ROUTER.md` and `docs/skill-map.md`.
 
 ## 09 FAQ
 
@@ -578,7 +576,7 @@ For a skill's provenance and license see `THIRD-PARTY.md`; for full indexes see 
 | Do I install all 72 at once | No. For whole-repository calling, one clone is enough |
 | Can generated UIs ship as-is | Templates are a start: wire real data, brand and backend; audit against guidelines before shipping |
 | Will vague requests stall it | No. Six-step fallback, at most two clarifying questions, or a direction draft to pick from |
-| Will links and external skills flood context | No. The resource index is not loaded by default; integrated skills hit 1–3 per normal flow |
+| Will the resource index flood context | No. The resource index is not loaded by default; craft skills hit 1–3 per normal flow |
 | How do I reproduce the images | Source HTML in `assets/demos/`; rerun `python tools/gen_readme_images.py` |
 | Are board demos live-generated | No. They are pre-generated sample outputs in each skill's style, labelled on the page; data is a main-branch snapshot |
 | I want a different style | Just say the style; when unsure, ask for two or three direction drafts first |
