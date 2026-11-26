@@ -12,12 +12,17 @@
 | 要一整套色板 | `foundations` | `flexoki-palette` |
 | 做官网首页 / 落地页 | `web` | `saas-landing` |
 | 做定价页 / FAQ / 文档站 | `web` | `pricing-page` |
+| 讲清一个概念 / 术语，一页讲明白 | `web` | `concept-explainer` |
+| 留读书笔记 / 文章精读归档 | `web` | `reading-notes-page` |
+| 长文压成一页结论摘要 | `web` | `article-digest` |
+| 一组要点做竖版信息长图分享 | `web` | `infographic-poster` |
 | 做海报 / 社交卡片 | `web` | `poster-hero` |
 | 复刻一个站 / 把设计图变代码 | `web` | `web-clone` |
 | 做企业后台整套页面 | `enterprise` | `enterprise-admin` |
 | 做列表详情页 / 导入向导 / 权限矩阵 | `enterprise` | `admin-ia-patterns` |
 | 把一堆字段整理成可校验的 Schema | `enterprise` | `admin-form-schema` |
 | 做数据看板 | `enterprise` | `dashboard` |
+| 一期数据出可交付汇报报告 | `enterprise` | `data-report-page` |
 | 做 App 界面 / 引导页 | `mobile` | `mobile-app` |
 | 查五端移动端尺寸规范 | `mobile` | `mobile-design-spec` |
 | 要 React 动效组件源码 | `components` | `cult-ui` |
@@ -27,6 +32,7 @@
 | 要一套风格统一的图标 | `components` | `icon-system` |
 | 要功能插图 / 空状态图 | `components` | `spotkit` |
 | 要图表模板 | `components` | `lieflat-charts` |
+| 要可编辑 SVG 概念图 / 知识地图 | `components` | `chinese-infographic` |
 | 在浏览器里调试页面 | `tooling` | `chrome-devtools` |
 | 让 Agent 操作网页取结构化内容 | `tooling` | `agent-browser` |
 | 出单文件 HTML 工件 | `tooling` | `html-skill-effectiveness` |

@@ -2,11 +2,11 @@
 
 本库自有内容（README、NOTICE、docs/、tools/、四个新编技能及各技能的 SKILL.md 改编部分）采用 Apache-2.0，见根目录 `LICENSE`。其余内容保留各自上游许可，逐条列在下面。
 
-共 72 个技能。许可分布：Apache-2.0 9 个, CC BY 4.0 1 个, MIT 15 个, 其他 / 见上游 42 个。
+共 78 个技能。许可分布：Apache-2.0 15 个, CC BY 4.0 1 个, MIT 15 个, 其他 / 见上游 47 个。
 
 ## 外部资源与整合技能的口径
 
-整合技能已计入上面的 72 个技能；资源索引只是网址清单，不计入。
+整合技能已计入上面的 78 个技能；资源索引只是网址清单，不计入。
 
 | 部分 | 内容 | 口径 |
 |---|---|---|
@@ -64,12 +64,17 @@ MIT 要求随副本保留版权声明与许可声明，Apache-2.0 另要求标�
 | `web-design` | `web` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
 | `web-i18n-storefront` | `web` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
 | `wireframe-sketch` | `web` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
+| `concept-explainer` | `web` | 本库编写 | 本库自撰，Apache-2.0 | 自撰规范，正文经敏感词扫描 |
+| `reading-notes-page` | `web` | 本库编写 | 本库自撰，Apache-2.0 | 自撰规范，正文经敏感词扫描 |
+| `infographic-poster` | `web` | 本库编写 | 本库自撰，Apache-2.0 | 自撰规范，正文经敏感词扫描 |
+| `article-digest` | `web` | 本库编写 | 本库自撰，Apache-2.0 | 自撰规范，正文经敏感词扫描 |
 | `admin-form-schema` | `enterprise` | 本库编写 | 本库自撰，Apache-2.0 | 目录原样收录，正文经敏感词扫描 |
 | `admin-ia-patterns` | `enterprise` | 本库编写 | 本库自撰，Apache-2.0 | 目录原样收录，正文经敏感词扫描 |
 | `dashboard` | `enterprise` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
 | `enterprise-admin` | `enterprise` | https://github.com/satnaing/shadcn-admin | MIT | 目录原样收录，正文经敏感词扫描 |
 | `iga-pages` | `enterprise` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
 | `live-dashboard` | `enterprise` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
+| `data-report-page` | `enterprise` | 本库编写 | 本库自撰，Apache-2.0 | 自撰规范，正文经敏感词扫描 |
 | `mobile-app` | `mobile` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
 | `mobile-design-spec` | `mobile` | https://github.com/YardonYan/for-my-self-skills | Apache-2.0（来源仓 LICENSE） | 目录原样收录，正文经敏感词扫描 |
 | `mobile-onboarding` | `mobile` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
@@ -90,6 +95,7 @@ MIT 要求随副本保留版权声明与许可声明，Apache-2.0 另要求标�
 | `shader-dev` | `components` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
 | `spotkit` | `components` | https://github.com/Devesh-Shirsath/spotkit | MIT | 目录原样收录，正文经敏感词扫描 |
 | `threejs` | `components` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
+| `chinese-infographic` | `components` | 本库编写 | 本库自撰，Apache-2.0 | 自撰规范，正文经敏感词扫描 |
 | `agent-browser` | `tooling` | https://github.com/YardonYan/yan-teamai | MIT | 目录原样收录，正文经敏感词扫描 |
 | `chrome-devtools` | `tooling` | https://github.com/YardonYan/yan-teamai | 上游公开仓库，许可见目录内 LICENSE 或上游 | 目录原样收录，正文经敏感词扫描 |
 | `html-to-pdf` | `tooling` | https://github.com/YardonYan/for-my-self-skills | Apache-2.0（来源仓 LICENSE） | 目录原样收录，正文经敏感词扫描 |

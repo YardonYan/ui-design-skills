@@ -2,11 +2,11 @@
 
 # UI Design Skills
 
-<img src="./assets/cover.svg" alt="UI Design Skills 封面：说清产品，自动匹配，72 个技能分六类" width="100%">
+<img src="./assets/cover.svg" alt="UI Design Skills 封面：说清产品，自动匹配，78 个技能分六类" width="100%">
 
-**说清要做什么产品，AI 自动从 72 个技能里匹配该用哪一个。** 你不需要查目录，也不需要记技能名。
+**说清要做什么产品，AI 自动从 78 个技能里匹配该用哪一个。** 你不需要查目录，也不需要记技能名。
 
-<img src="./assets/badges.svg" alt="v2.3 · 72 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
+<img src="./assets/badges.svg" alt="v2.3 · 78 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
 
 <a href="https://skill-observatory-x7alhjqexlp.qoder.zone"><img src="./assets/badges/board-zh.svg" alt="在线看板"></a>
 <a href="#03-30-秒上手"><img src="./assets/badges/start-zh.svg" alt="30 秒上手"></a>
@@ -21,7 +21,7 @@
 
 这是一个可以直接整体调用的界面设计技能仓库。把仓库指给 AI，说清你要做什么产品、给谁用、大概什么样子，剩下的匹配工作由仓库自己完成：根目录 `SKILL.md` 负责意图识别，`docs/intent-routing.md` 负责判断规则与兜底，被选中的技能负责具体产出。
 
-不想 clone 也没关系：72 个技能的介绍、搜索、演示与源码入口，都在下面这块在线看板里。
+不想 clone 也没关系：78 个技能的介绍、搜索、演示与源码入口，都在下面这块在线看板里。
 
 ## 01 在线看板
 
@@ -31,7 +31,7 @@
 <img src="./assets/board/hero.png" alt="在线看板首屏：大搜索栏、热门关键词与 72 / 6 / 50.5 MB 三个读数" width="100%">
 </a>
 
-**点上图任意位置，直接进入看板。** 不用 clone、不用登录，打开就是全部 72 个技能。
+**点上图任意位置，直接进入看板。** 不用 clone、不用登录，打开就是全部 78 个技能。
 
 </div>
 
@@ -111,7 +111,7 @@
 
 ### 看板里有什么
 
-- 72 个技能各有一份中文与英文介绍、一组双语搜索关键词、一页可交互的输出演示。
+- 78 个技能各有一份中文与英文介绍、一组双语搜索关键词、一页可交互的输出演示。
 - 演示是各技能风格的产出示例，页内明确标注非实时生成；每页演示顶部有一行中英文说明条。
 - 详情页一键跳到 GitHub 上对应的技能目录与 `SKILL.md`。
 - 右上角切换中英文；关键词 chips、联想与介绍随之切换。
@@ -185,7 +185,7 @@ AI 对话界面 · AI 匹配 `assistant-ui` + `ai-chat-patterns`
 
 | 你的情况 | 从这里开始 |
 |---|---|
-| 想先翻遍 72 个技能 | 打开[在线看板](#01-在线看板)：星图、搜索、演示、直达源码 |
+| 想先翻遍 78 个技能 | 打开[在线看板](#01-在线看板)：星图、搜索、演示、直达源码 |
 | 只想先看看能做什么 | 往上看 [02 先看效果](#02-先看效果) 的四张图 |
 | 手上有活，要做一个界面 | 跳到 [04 你只需说清产品](#04-你只需说清产品)，复制一句话改掉产品名就行 |
 | 要接进自己的项目或团队 | 看 [05 安装与支持的助手](#05-安装与支持的助手)，clone 一次即可整体调用 |
@@ -433,15 +433,15 @@ claude plugin marketplace add YardonYan/ui-design-skills
 
 会用之后，回头看一下整个库的全貌，方便按需补技能，而不是每次都从头找。类别名即看板深链里的 `cat` 参数。
 
-<img src="./assets/category-bar.svg" alt="六类构成：设计基础 20、网页端 20、企业后台 6、移动端 3、组件素材 17、工程链路 6" width="100%">
+<img src="./assets/category-bar.svg" alt="六类构成：设计基础 20、网页端 24、企业后台 7、移动端 3、组件素材 18、工程链路 6" width="100%">
 
 | 类别 | 管什么 | 技能数 | 代表技能 | 看板 |
 |---|---|---:|---|---|
 | `foundations` | 方向、配色、品牌、交互状态、验收整改 | 20 | `oil-ui`、`flexoki-palette`、`ai-chat-patterns`、`unslop` | [看这一类](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=foundations) |
-| `web` | 面向公众的网页与页面类型 | 20 | `saas-landing`、`pricing-page`、`web-clone` | [看这一类](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=web) |
-| `enterprise` | 中后台、表单、信息架构、看板 | 6 | `enterprise-admin`、`admin-form-schema` | [看这一类](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=enterprise) |
+| `web` | 面向公众的网页与页面类型 | 24 | `saas-landing`、`pricing-page`、`web-clone` | [看这一类](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=web) |
+| `enterprise` | 中后台、表单、信息架构、看板 | 7 | `enterprise-admin`、`admin-form-schema` | [看这一类](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=enterprise) |
 | `mobile` | App 界面、引导页、多端尺寸 | 3 | `mobile-app`、`mobile-design-spec` | [看这一类](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=mobile) |
-| `components` | 组件、区块、图标、插画、图表、AI 对话组件 | 17 | `cult-ui`、`icon-system`、`assistant-ui` | [看这一类](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=components) |
+| `components` | 组件、区块、图标、插画、图表、AI 对话组件 | 18 | `cult-ui`、`icon-system`、`assistant-ui` | [看这一类](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=components) |
 | `tooling` | 调试、转换、画布格式、交付链路 | 6 | `chrome-devtools`、`html-to-pdf`、`json-canvas` | [看这一类](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=tooling) |
 
 ### 技能长什么样
@@ -450,7 +450,7 @@ claude plugin marketplace add YardonYan/ui-design-skills
 
 <img src="./assets/skill-anatomy.svg" alt="一个技能目录的结构，以及 AI 助手读取它的四步" width="100%">
 
-每个技能是一个目录，`SKILL.md` 是入口，YAML frontmatter 里 `name` 与 `description` 必填，`description` 写清做什么、什么时候用、什么时候别用。AI 只加载被匹配到的文件，不会把 72 个技能全灌进上下文。想核对格式可以跑 `python tools/lint_skills.py`。
+每个技能是一个目录，`SKILL.md` 是入口，YAML frontmatter 里 `name` 与 `description` 必填，`description` 写清做什么、什么时候用、什么时候别用。AI 只加载被匹配到的文件，不会把 78 个技能全灌进上下文。想核对格式可以跑 `python tools/lint_skills.py`。
 
 ## 07 质感技能
 
@@ -506,7 +506,7 @@ claude plugin marketplace add YardonYan/ui-design-skills
 
 ### 资源索引
 
-仓库共 72 个技能，调用这一个仓库就够，不用再到处翻别的技能库。另有共具 9 类资源索引，按需查询。
+仓库共 78 个技能，调用这一个仓库就够，不用再到处翻别的技能库。另有共具 9 类资源索引，按需查询。
 
 | 部分 | 路径 | 内容 | 什么时候用 |
 |---|---|---|---|
@@ -530,7 +530,7 @@ claude plugin marketplace add YardonYan/ui-design-skills
 ui-design-skills/
 ├── SKILL.md               # 入口：意图识别、四步流程与硬规则
 ├── ROUTER.md              # 口语 → 技能索引
-├── skills/                # 72 个技能，按最终产物分六类
+├── skills/                # 78 个技能，按最终产物分六类
 │   ├── foundations/       #   20 · 方向、配色、品牌、验收
 │   ├── web/               #   20 · 落地页、定价、文档、复刻
 │   ├── enterprise/        #    6 · 中后台、表单、看板
@@ -553,14 +553,14 @@ ui-design-skills/
 |---|---|
 | 质感技能组与资源索引 | 设计词汇、艺术方向、可访问性、动效、提示词写法五个技能纳入 `skills/foundations/`，统一命名、可安装、可校验、可路由；另建共具 9 类资源索引（37 条仓库 + 103 条站点） |
 | 意图识别入口 | 新增根目录 `SKILL.md` 与 `docs/intent-routing.md`，整个仓库可作为一个 Skill 调用；使用者只说产品，AI 自动匹配技能，含冲突裁决与六步兜底 |
-| 六类重组 | 72 个技能按最终产物分成 foundations、web、enterprise、mobile、components、tooling，选型不再靠猜 |
+| 六类重组 | 78 个技能按最终产物分成 foundations、web、enterprise、mobile、components、tooling，选型不再靠猜 |
 | AI 对话界面主线 | 新增 `assistant-ui` 组件载荷与 `ai-chat-patterns` 交互规范，覆盖流式输出、工具审批、分支与可访问性验收 |
 | 素材与配色 | 新增成套图标 `icon-system`、动效区块 `ricoui-blocks`、油墨配色 `flexoki-palette` |
 | 话术模板库 | 万能公式、10 个场景话术、反面对照与续接话术，全部改成产品描述式，不需要写技能路径 |
 | 真实产出与插画 | 四张真实 UI 截图、封面与三张示意图，配零依赖生成脚本 `tools/gen_readme_images.py` 可复现 |
 | 工程配套 | 四套插件清单、零依赖安装器与三个校验脚本，格式、敏感词与索引都能一键核对 |
 | 对外呈现 | 双语 README 按新访客视角重写，仓库更名 ui-design-skills，About 描述与搜索标签同步优化 |
-| 在线看板 | 72 个技能的双语介绍、联想搜索、可交互演示与 GitHub 深链，集中在一个可滚动的公开站点 |
+| 在线看板 | 78 个技能的双语介绍、联想搜索、可交互演示与 GitHub 深链，集中在一个可滚动的公开站点 |
 
 </details>
 

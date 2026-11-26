@@ -374,5 +374,69 @@
       "SaaS",
       "CTA"
     ]
+  },
+  {
+    "id": "concept-explainer",
+    "category": "web",
+    "nameZh": "概念讲解一页",
+    "nameEn": "Concept Explainer One-Pager",
+    "taglineZh": "一页 HTML 把复杂概念讲清：定义、类比、要点、误解",
+    "taglineEn": "Explain a hard concept on one self-contained HTML page",
+    "descZh": "用一页自包含 HTML 讲清一个复杂概念：一句话定义、日常类比、3–5 条要点拆解、最小例子与常见误解。术语首次出现配白话解释，类比要指出失效处，数字必须有据。适合别人问某个东西到底是什么、不想打一大段字的场景。",
+    "descEn": "Turns a hard question into one readable HTML page: one-line definition, everyday analogy, key points, a minimal example and common misconceptions. Jargon is explained on first use; analogies note where they break down; every figure stays sourced.",
+    "keywords": [
+      "概念解释",
+      "科普",
+      "讲清楚",
+      "一页纸",
+      "类比",
+      "图解概念",
+      "explainer",
+      "concept"
+    ],
+    "keywordsEn": [
+      "explainer",
+      "concept",
+      "one-pager",
+      "education",
+      "analogy",
+      "html"
+    ],
+    "outputZh": "单页讲解 HTML",
+    "outputEn": "One-page explainer HTML",
+    "demoCaptionZh": "一页讲清一个概念的讲解页示例",
+    "demoCaptionEn": "Sample one-page concept explainer"
+  },
+  {
+    "id": "reading-notes-page",
+    "category": "web",
+    "nameZh": "读书笔记页",
+    "nameEn": "Reading Notes Page",
+    "taglineZh": "把摘录与思考整理成可长期翻阅的笔记归档页",
+    "taglineEn": "Archive highlights and thoughts into a readable notes page",
+    "descZh": "把一本书或一篇长文的摘录、划线与个人思考整理成固定结构的单文件 HTML：书目信息、笔记统计、章节分组摘录、个人思考与整书综述。生成前先体检材料是否齐全，区分原文摘录与综述，不补材料里没有的情节和论点。",
+    "descEn": "Organizes highlights, annotations and personal thoughts into a structured single-file HTML: book metadata, note counts, chapter-grouped excerpts, reflections and a synthesized recap. Completeness is checked first; excerpts stay verbatim and synthesis never invents missing material.",
+    "keywords": [
+      "读书笔记",
+      "划线",
+      "摘录",
+      "书评",
+      "文章精读",
+      "归档笔记",
+      "reading",
+      "notes"
+    ],
+    "keywordsEn": [
+      "reading",
+      "notes",
+      "book",
+      "highlights",
+      "review",
+      "editorial"
+    ],
+    "outputZh": "长页归档 HTML",
+    "outputEn": "Long-form notes HTML",
+    "demoCaptionZh": "读书笔记归档页示例",
+    "demoCaptionEn": "Sample reading notes page"
   }
 ]

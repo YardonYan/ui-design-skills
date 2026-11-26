@@ -288,5 +288,37 @@
       "interaction",
       "UI"
     ]
+  },
+  {
+    "id": "chinese-infographic",
+    "category": "components",
+    "nameZh": "中文可编辑 SVG 信息图",
+    "nameEn": "Editable Chinese SVG Infographic",
+    "taglineZh": "中文友好、可继续在矢量工具里编辑的概念图与知识地图",
+    "taglineEn": "Chinese-friendly editable SVG diagrams and knowledge maps",
+    "descZh": "用内联 SVG 绘制中文友好、可二次编辑的信息图与知识结构图：按中文字宽预留文本空间防错行，盒内留文字内边距，连线先画节点后画，语义配色不用彩虹序列，文字可选中、图形可导出矢量。当图要放进 PPT/设计工具继续调、不能是死位图时使用。",
+    "descEn": "Builds Chinese-friendly, editable inline SVG diagrams and knowledge maps: text width is reserved for CJK glyphs to avoid overflow, boxes keep inner padding, connectors draw before nodes, colors are semantic rather than rainbow, and text stays selectable as exportable vector.",
+    "keywords": [
+      "SVG",
+      "知识地图",
+      "概念图",
+      "关系图",
+      "流程图",
+      "中文排版",
+      "可编辑矢量",
+      "diagram"
+    ],
+    "keywordsEn": [
+      "svg",
+      "diagram",
+      "knowledge-map",
+      "flowchart",
+      "chinese-typography",
+      "vector"
+    ],
+    "outputZh": "矢量信息图 HTML",
+    "outputEn": "Vector infographic HTML",
+    "demoCaptionZh": "可编辑 SVG 信息图示例",
+    "demoCaptionEn": "Sample editable SVG infographic"
   }
 ]

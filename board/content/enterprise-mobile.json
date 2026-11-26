@@ -328,5 +328,37 @@
       "sign in",
       "iOS"
     ]
+  },
+  {
+    "id": "data-report-page",
+    "category": "enterprise",
+    "nameZh": "数据汇报页",
+    "nameEn": "Data Report Page",
+    "taglineZh": "KPI 卡、真渲染图表、色阶表格与洞察一体的报告页",
+    "taglineEn": "Report page with KPIs, rendered charts, scaled tables and insights",
+    "descZh": "把结构化数据渲染成可交付的单文件 HTML 数据汇报：头部口径、3–5 张 KPI 卡、至少两张真渲染图表、带色阶标注的数据表、基于真实数据的洞察块与方法论折叠区。数字必须来自用户输入；图表容器给固定高度；交付前核对文档声称的图表库是否随包提供，缺库降级为内联 SVG。",
+    "descEn": "Turns structured data into a deliverable single-file report: header with scope and source, 3–5 KPI cards, at least two rendered charts, a color-scaled table, evidence-based insights and a folded methodology section. Numbers come only from input; chart containers get fixed heights; claimed chart libraries are verified before delivery, falling back to inline SVG.",
+    "keywords": [
+      "数据报告",
+      "经营分析",
+      "KPI",
+      "图表",
+      "报表",
+      "洞察",
+      "report",
+      "dashboard"
+    ],
+    "keywordsEn": [
+      "report",
+      "data",
+      "kpi",
+      "chart",
+      "table",
+      "insight"
+    ],
+    "outputZh": "长页报告 HTML",
+    "outputEn": "Long-form report HTML",
+    "demoCaptionZh": "数据汇报页示例",
+    "demoCaptionEn": "Sample data report page"
   }
 ]

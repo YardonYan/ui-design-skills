@@ -2,11 +2,11 @@
 
 # UI Design Skills
 
-<img src="./assets/cover.svg" alt="UI Design Skills cover: describe the product, skills match themselves, 72 skills in six categories" width="100%">
+<img src="./assets/cover.svg" alt="UI Design Skills cover: describe the product, skills match themselves, 78 skills in six categories" width="100%">
 
-**Describe the product you want. The AI matches the right skill out of 72.** No directory browsing, no skill names to remember.
+**Describe the product you want. The AI matches the right skill out of 78.** No directory browsing, no skill names to remember.
 
-<img src="./assets/badges.svg" alt="v2.3 · 72 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
+<img src="./assets/badges.svg" alt="v2.3 · 78 skills · Agent Skills · Apache-2.0 · CN tools first · No CDN">
 
 <a href="https://skill-observatory-x7alhjqexlp.qoder.zone"><img src="./assets/badges/board-en.svg" alt="Live board"></a>
 <a href="#03-30-second-start"><img src="./assets/badges/start-en.svg" alt="Quick start"></a>
@@ -21,17 +21,17 @@
 
 This is a UI-design skill repository you can call as a whole. Point your AI at it, describe what you are building, for whom, and roughly how it should look; the repository does the matching itself. The root `SKILL.md` handles intent recognition, `docs/intent-routing.md` holds the decision rules and fallbacks, and the matched skills produce the actual output.
 
-No clone required either: introductions, search, demos and source links for all 72 skills live on the public board below.
+No clone required either: introductions, search, demos and source links for all 78 skills live on the public board below.
 
 ## 01 Live board
 
 <div align="center">
 
 <a href="https://skill-observatory-x7alhjqexlp.qoder.zone">
-<img src="./assets/board/hero.png" alt="Board hero: large search bar, hot keywords and the 72 / 6 / 50.5 MB readouts" width="100%">
+<img src="./assets/board/hero.png" alt="Board hero: large search bar, hot keywords and the 78 / 6 / 50.5 MB readouts" width="100%">
 </a>
 
-**Click anywhere on the image above to enter the board.** No clone, no login — all 72 skills on open.
+**Click anywhere on the image above to enter the board.** No clone, no login — all 78 skills on open.
 
 </div>
 
@@ -185,7 +185,7 @@ Find your situation first:
 
 | Your situation | Start here |
 |---|---|
-| Want to browse all 72 skills | Open the [live board](#01-live-board): map, search, demos, straight to source |
+| Want to browse all 78 skills | Open the [live board](#01-live-board): map, search, demos, straight to source |
 | Just want to see what it can do | Look at the four images in [02 See it working](#02-see-it-working) |
 | Have a task and need an interface | Jump to [04 Just describe the product](#04-just-describe-the-product) and adapt one sentence |
 | Want it inside your project or team | See [05 Install and supported assistants](#05-install-and-supported-assistants); clone once, call as a whole |
@@ -438,10 +438,10 @@ Once you can use it, look at the whole library once so you can add skills on dem
 | Category | Covers | Skills | Representatives | Board |
 |---|---|---:|---|---|
 | `foundations` | Direction, palette, brand, interaction states, acceptance & rework | 20 | `oil-ui`, `flexoki-palette`, `ai-chat-patterns`, `unslop` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=foundations) |
-| `web` | Public-facing pages and page types | 20 | `saas-landing`, `pricing-page`, `web-clone` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=web) |
-| `enterprise` | Admin, forms, information architecture, dashboards | 6 | `enterprise-admin`, `admin-form-schema` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=enterprise) |
+| `web` | Public-facing pages and page types | 24 | `saas-landing`, `pricing-page`, `web-clone` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=web) |
+| `enterprise` | Admin, forms, information architecture, dashboards | 7 | `enterprise-admin`, `admin-form-schema` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=enterprise) |
 | `mobile` | App screens, onboarding, multi-device specs | 3 | `mobile-app`, `mobile-design-spec` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=mobile) |
-| `components` | Components, blocks, icons, illustration, charts, AI chat parts | 17 | `cult-ui`, `icon-system`, `assistant-ui` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=components) |
+| `components` | Components, blocks, icons, illustration, charts, AI chat parts | 18 | `cult-ui`, `icon-system`, `assistant-ui` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=components) |
 | `tooling` | Debugging, conversion, canvas formats, delivery | 6 | `chrome-devtools`, `html-to-pdf`, `json-canvas` | [View sector](https://skill-observatory-x7alhjqexlp.qoder.zone/#cat=tooling) |
 
 ### What a skill looks like
@@ -450,7 +450,7 @@ After the whole picture, understand how one skill directory is read — editing 
 
 <img src="./assets/skill-anatomy.svg" alt="Anatomy of a skill directory and the four steps an assistant reads it in" width="100%">
 
-Each skill is a directory; `SKILL.md` is the entry. Its YAML frontmatter requires `name` and `description`, and the description states what it does, when to use it and when not to. The agent loads only matched files, never all 72 skills into context. Validate formats with `python tools/lint_skills.py`.
+Each skill is a directory; `SKILL.md` is the entry. Its YAML frontmatter requires `name` and `description`, and the description states what it does, when to use it and when not to. The agent loads only matched files, never all 78 skills into context. Validate formats with `python tools/lint_skills.py`.
 
 ## 07 Craft skills
 
@@ -506,7 +506,7 @@ Fallback: under prefers-reduced-motion keep only the shadow change
 
 ### Resource index
 
-The repository holds 72 skills; calling this one is enough, no need to hunt through other skill libraries. A nine-class resource index is available on demand.
+The repository holds 78 skills; calling this one is enough, no need to hunt through other skill libraries. A nine-class resource index is available on demand.
 
 | Part | Path | Content | When to use |
 |---|---|---|---|
@@ -530,7 +530,7 @@ The link list's source of truth is `references/resources/SOURCE.md`; category fi
 ui-design-skills/
 ├── SKILL.md               # Entry: intent recognition, four-step flow, hard rules
 ├── ROUTER.md              # Spoken wording → skill index
-├── skills/                # 72 skills in six categories by final artifact
+├── skills/                # 78 skills in six categories by final artifact
 │   ├── foundations/       #   20 · direction, palette, brand, acceptance
 │   ├── web/               #   20 · landing, pricing, docs, cloning
 │   ├── enterprise/        #    6 · admin, forms, dashboards
@@ -553,14 +553,14 @@ Engineering companions live in `tools/`: zero-dependency installer `install.mjs`
 |---|---|
 | Craft group & resource index | Five craft skills — vocabulary, art direction, accessibility, motion, prompt writing — joined `skills/foundations/` as formal, installable, validatable, routable skills; nine-class index (37 repos + 103 sites) added |
 | Intent entry | Root `SKILL.md` + `docs/intent-routing.md`: the whole repository callable as one Skill; users describe products, AI matches, with conflict arbitration and six-step fallback |
-| Six-category reorganisation | 72 skills grouped by final artifact into foundations, web, enterprise, mobile, components, tooling |
+| Six-category reorganisation | 78 skills grouped by final artifact into foundations, web, enterprise, mobile, components, tooling |
 | AI chat pipeline | `assistant-ui` component payload + `ai-chat-patterns` interaction spec: streaming, tool approval, branching, accessibility acceptance |
 | Assets & palette | `icon-system` icon set, `ricoui-blocks` motion blocks, `flexoki-palette` ink palette |
 | Prompt template library | Universal formula, ten scenario prompts, contrasts and follow-ups — all product-description style, no skill paths |
 | Real output & diagrams | Four real UI screenshots, cover and three diagrams, reproducible via `tools/gen_readme_images.py` |
 | Engineering | Four plugin manifests, zero-dependency installer, three validators |
 | Public face | Bilingual README rewritten for new visitors; repository renamed ui-design-skills; About and topics updated |
-| Live board | Bilingual briefs, suggesting search, interactive demos and GitHub deep links for all 72 skills on one scrollable public site |
+| Live board | Bilingual briefs, suggesting search, interactive demos and GitHub deep links for all 78 skills on one scrollable public site |
 
 </details>
 

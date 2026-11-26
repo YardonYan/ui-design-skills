@@ -361,5 +361,69 @@
       "information hierarchy",
       "draft"
     ]
+  },
+  {
+    "id": "infographic-poster",
+    "category": "web",
+    "nameZh": "竖版信息长图",
+    "nameEn": "Infographic Long Poster",
+    "taglineZh": "一组要点一屏讲完的竖版长图，点开前就能看完",
+    "taglineEn": "Vertical long infographic that reads without opening",
+    "descZh": "把一组要点做成竖版长图 HTML：编号区块、大标题与短句并列，内容完整落在固定尺寸内不滚动。培训要点、活动流程、清单步骤发群里不用点开就能看完。截图脚本不得写死本机绝对路径，路径参数化，网页可直接打开后手动截图。",
+    "descEn": "Renders a set of points as a vertical long-image HTML: numbered blocks, large headings and short lines, all inside a fixed size without scrolling. Built for group shares where viewers read without opening. Export scripts must use parameterized relative paths, never hardcoded local absolute paths.",
+    "keywords": [
+      "信息图",
+      "长图",
+      "要点卡片",
+      "竖版海报",
+      "流程清单",
+      "社群分享",
+      "infographic",
+      "poster"
+    ],
+    "keywordsEn": [
+      "infographic",
+      "poster",
+      "long-image",
+      "vertical",
+      "checklist",
+      "share"
+    ],
+    "outputZh": "竖版长图 HTML",
+    "outputEn": "Vertical long-poster HTML",
+    "demoCaptionZh": "竖版信息长图示例",
+    "demoCaptionEn": "Sample vertical infographic poster"
+  },
+  {
+    "id": "article-digest",
+    "category": "web",
+    "nameZh": "长文一页摘要",
+    "nameEn": "One-Page Article Digest",
+    "taglineZh": "核心结论前置，长文压成一页不失真",
+    "taglineEn": "Compress a long article into one faithful summary page",
+    "descZh": "把一篇长文、报告或公众号文章压成一页 HTML 摘要：核心结论前置、3–5 条要点、关键数据与引用、行动建议与原文来源。压缩不失真、不改变原意，摘录与概括分区呈现，材料里没有的不补。适合没时间读原文、只要结论与精华的场景。",
+    "descEn": "Compresses a long article or report into one HTML digest: conclusion first, three to five key points, key figures and quotes, suggested use and source. The summary stays faithful to the original; quotes and paraphrase are separated; nothing missing is invented.",
+    "keywords": [
+      "摘要",
+      "精华",
+      "一页纸",
+      "干货",
+      "要点提炼",
+      "公众号摘要",
+      "digest",
+      "summary"
+    ],
+    "keywordsEn": [
+      "digest",
+      "summary",
+      "one-page",
+      "article",
+      "highlights",
+      "share"
+    ],
+    "outputZh": "单页摘要 HTML",
+    "outputEn": "One-page digest HTML",
+    "demoCaptionZh": "长文一页摘要示例",
+    "demoCaptionEn": "Sample one-page article digest"
   }
 ]

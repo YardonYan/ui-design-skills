@@ -45,16 +45,20 @@
 
 | 技能 | 说明 |
 |---|---|
+| `article-digest` | 把一篇长文、报告或公众号文章压成一页 HTML 摘要：核心结论前置、3–5 条要点、关键数据与引用、行动建议与原文来源。压缩不失真、不改变原意，摘录与概括分区呈现，材料里没有的不补。当只想看结… |
 | `card-xiaohongshu` | Xiaohongshu-style knowledge cards, arranged as a swipeable multi-card carousel." zh_description:… |
+| `concept-explainer` | 用一页自包含 HTML 把一个复杂概念讲清楚：一句话定义、日常类比、要点拆解、最小例子与常见误解。当别人问某个东西到底是什么、不想打一大段字，或要把一个新概念给同事/客户一次讲明白时使用。产出… |
 | `docs-page` | 做三栏文档页：侧导航、正文、右侧目录。当产品要一份可检索的说明文档或开发文档页面时用。产出是单页 HTML 文档模板。做问答页用 faq-page；需要多页路由的完整文档站不在本技能范围内。关… |
 | `faq-page` | | A Frequently Asked Questions (FAQ) page with collapsible accordion sections, search functional… |
 | `frontend-design` | 创建具有高设计品质、可交付生产的前端界面。当用户要求构建 Web 组件、页面、海报或应用（如官网、落地页、仪表盘、React/Vue 组件、HTML/CSS 布局，或对任意 Web UI 进行… |
 | `html-skill-effectiveness` | >- Generates self-contained single-file HTML artifacts — visually polished, zero dependencies, o… |
 | `image-to-code` | | Elite website image-to-code skill for Codex. For visually important web tasks, it must first g… |
+| `infographic-poster` | 把一组要点做成竖版长图 HTML：一屏讲完一组要点，编号区块、大标题与短句并列，内容完整落在固定尺寸内不滚动。培训要点、活动流程、清单步骤、结论合集要发群里或朋友圈、别人不用点开就能看完时使用… |
 | `magazine-poster` | 做杂志风长图：大号衬线标题、双栏正文、编号与版面节奏。当要一份有编辑感的长图而不是一张主视觉时用。产出是单页 HTML 长图模板。单张竖版海报用 poster-hero，社交平台方形卡片用 s… |
 | `poster-hero` | 做竖版海报与朋友圈分享图，强视觉冲击、单张成图。当要一张能直接发的主视觉，而不是一整套页面时用。产出是单页 HTML 竖版模板。做长图多栏用 magazine-poster，做落地页用 saa… |
 | `pricing-page` | 做 SaaS 三档定价页：定价卡片、月付年付切换、特性对比表与 FAQ。当产品要公开价格、要把档位差异一屏讲清时用。产出是单页 HTML 模板。做整站落地页用 saas-landing，做单个… |
 | `prototype-web` | 做可点击的功能性 Web 原型，含导航、英雄区、特性区与 CTA。当要给人走一遍流程看交互，而不是只看静态版式时用。产出是单页 HTML 原型。只要骨架不要交互用 wireframe-sket… |
+| `reading-notes-page` | 把一本书或一篇长文的摘录、划线与个人思考整理成一份可长期翻阅的单文件 HTML 笔记页：书目信息、笔记统计、章节分组摘录、个人思考与整书综述。生成前先体检材料是否齐全，区分原文摘录与综述，不补… |
 | `saas-landing` | 做单页 SaaS 落地页，含英雄区、特性、社会证明与定价区。当产品要一页讲清价值并引导注册时用。产出是单页 HTML 模板。只做定价页用 pricing-page，只做等待列表用 waitli… |
 | `slides-workflow` | 从素材到成稿的幻灯片生产流程。先把内容定死，再定风格，最后在 HTML Slides、整页图片、可编辑 PPTX 三种形态里选一种制作，再按页局部打磨。当用户要做 PPT、幻灯片、演示文稿、汇… |
 | `social-reddit-card` | Realistic Reddit post card with vote rail and comment count, suited to video overlays or story s… |
@@ -73,6 +77,7 @@
 | `admin-form-schema` | 把一堆业务字段整理成可校验的表单 Schema：字段类型、必填与默认值、字典与枚举、主从表关系、编号规则、校验时机。当要做录入表单、编辑页、导入模板，或要把业务口述的字段落成可被程序消费的定义… |
 | `admin-ia-patterns` | 中后台的信息架构与页面配方：列表页、详情页、编辑页三件套，导入向导，审批流，权限矩阵，导航层级与页面间的跳转关系。当要从零规划一个管理端、或现有后台页面之间关系混乱要重整时用。产出是页面清单、… |
 | `dashboard` | 做单页数据看板：固定侧栏、顶栏、KPI 网格与一到两张图。当只要一个能看数的概览页时用。产出是单页 HTML 模板。要增删改查、列表详情与字段校验用 enterprise-admin，要团队实… |
+| `data-report-page` | 把 CSV/Excel/JSON 等结构化数据渲染成可交付的单文件 HTML 数据汇报：头部口径、3–5 张 KPI 卡、至少两张真渲染图表、带色阶标注的数据表、基于真实数据的洞察块与方法论折… |
 | `enterprise-admin` | 企业级后台（ERP / CRM / SaaS 管理端）的页面配方与字段约定。当要把业务做成能用的管理端、要给现有系统补列表页详情页、要做导入向导或权限矩阵、要把一堆字段整理成可校验的表单 Sc… |
 | `iga-pages` | Deploy frontend and full-stack projects to IGA Pages. Use when the user mentions IGA Pages or re… |
 | `live-dashboard` | 做团队实时动态看板，含 KPI、七日趋势线与活动流。当要显示团队正在做什么、现在进展如何时用。产出是单页 HTML 模板。只要静态数据概览用 dashboard，要完整中后台用 enterpr… |
@@ -93,6 +98,7 @@
 | `baoyu-design` | >- Create polished design artifacts as self-contained HTML: UI mockups, interactive prototypes, … |
 | `bootstrap` | Bootstrap 5.3.8 离线全套（编译好的 CSS/JS、SCSS 主题变量、42 个官方示例、117 篇官方文档正文）的选型与落地手册。当要做 SaaS 后台/管理端、需要不引构建链… |
 | `canvas-design` | Create beautiful visual art in .png and .pdf documents using design philosophy. You should use t… |
+| `chinese-infographic` | 用内联 SVG 绘制中文友好、可继续在 PPT/设计工具里编辑的信息图与知识结构图：概念关系、知识地图、流程与层级。按中文字宽预留文本空间防错行，盒内留文字内边距，连线先画、节点后画，语义配色… |
 | `components-build` | Build modern, composable, and accessible React UI components following the components.build spec… |
 | `cult-ui` | cult/ui 动效组件库（154 个组件条目 / 141 个 React + Tailwind + Motion 源文件、153 个示例条目）的选型与落地手册。当要做落地页/后台/AI 产品… |
 | `ecommerce-image-workflow` | | Reference-product ecommerce image workflow for generating a compact set of product-faithful ma… |
